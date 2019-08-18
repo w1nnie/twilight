@@ -1,8 +1,6 @@
 <template>
   <div>
-    {{ msg }}
-    <br>
-    waaai
+    <!-- {{ msg }} -->
     <MikageDelta message="ieeei" />
   </div>
 </template>

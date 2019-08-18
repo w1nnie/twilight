@@ -1,40 +1,47 @@
 <template lang="pug">
   div
-    h1 {{ message }}
-    .wrap
-      img.th(src="../assets/th/th_1.png")
-      img.th.po(src="../assets/th/th_2.png")
-      img.th.po(src="../assets/th/th_3.png")
-      img.th.po(src="../assets/th/th_4.png")
-      img.th.po(src="../assets/th/th_5.png")
-      img.th.po(src="../assets/th/th_6.png")
-      img.th.po(src="../assets/th/th_7.png")
-      img.th.po.yo(src="../assets/th/th_8.png")
+    .images
+      img(v-for="image in imageNames" :src="image")     
 </template>
 
 <script>
 export default {
   name: "MikageDelta",
   data() {
+    return{
+      imagePath: '../assets/th/',
+      imageNames: [
+        require('../assets/th/th_1.png'),
+        require('../assets/th/th_2.png'),
+        require('../assets/th/th_3.png'),
+        require('../assets/th/th_4.png'),
+        require('../assets/th/th_5.png'),
+        require('../assets/th/th_6.png'),
+        require('../assets/th/th_7.png'),
+        require('../assets/th/th_8.png'),
+      ],
+    }
   },
   props: {
     message: String
   },
   computed: {
+    imageNamesWithPath: function(){
+      return this.imageNames.map((value) => {
+        return `${this.imagePath}${value}`
+      })
+    }
   }
 };
 </script>
 
 <style scoped lang="sass">
-.wrap
+.images
   display: flex
   justify-content: center
   align-items: center
-.th
   height: 100vh
-  &.po
+  &.underLayer
     position: absolute
     opacity: 0.1
-    &.yo
-    opacity: 1
 </style>
