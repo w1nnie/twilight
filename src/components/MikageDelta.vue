@@ -1,7 +1,8 @@
 <template lang="pug">
-  div
-    .images
-      img(v-for="image in imageNames" :src="image")     
+  .images
+    img(class="surface" :src="surfaceImageName")
+    .underLayer
+      img(v-for="image in underImageNames" :src="image" class="under")     
 </template>
 
 <script>
@@ -9,16 +10,15 @@ export default {
   name: "MikageDelta",
   data() {
     return{
-      imagePath: '../assets/th/',
-      imageNames: [
-        require('../assets/th/th_1.png'),
-        require('../assets/th/th_2.png'),
-        require('../assets/th/th_3.png'),
-        require('../assets/th/th_4.png'),
-        require('../assets/th/th_5.png'),
-        require('../assets/th/th_6.png'),
-        require('../assets/th/th_7.png'),
-        require('../assets/th/th_8.png'),
+      surfaceImageName: 'img/th/th_1.png',
+      underImageNames: [
+        'img/th/th_2.png',
+        'img/th/th_3.png',
+        'img/th/th_4.png',
+        'img/th/th_5.png',
+        'img/th/th_6.png',
+        'img/th/th_7.png',
+        'img/th/th_8.png'
       ],
     }
   },
@@ -26,11 +26,6 @@ export default {
     message: String
   },
   computed: {
-    imageNamesWithPath: function(){
-      return this.imageNames.map((value) => {
-        return `${this.imagePath}${value}`
-      })
-    }
   }
 };
 </script>
@@ -40,8 +35,22 @@ export default {
   display: flex
   justify-content: center
   align-items: center
+  opacity: 0.3
   height: 100vh
-  &.underLayer
-    position: absolute
-    opacity: 0.1
+
+.surface
+  max-height: 100%
+
+.underLayer 
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  box-sizing: border-box
+  height: 100vh
+
+.under
+  position: absolute
+  max-height: 100%
+  opacity: 0.1
 </style>

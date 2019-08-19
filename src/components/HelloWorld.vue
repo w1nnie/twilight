@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- {{ msg }} -->
-    <MikageDelta message="ieeei" />
+    <MikageDelta/>
   </div>
 </template>
 
