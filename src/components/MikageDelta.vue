@@ -1,15 +1,18 @@
 <template lang="pug">
   .md
     .images
-      img(class="layer8" :src="ImageLayer8")
-      img(class="layer7" :src="ImageLayer7")
-      img(class="layer6" :src="ImageLayer6")
-      img(class="layer5" :src="ImageLayer5")
-      img(class="layer4" :src="ImageLayer4")
-      img(class="layer3" :src="ImageLayer3")
-      img(class="layer2" :src="ImageLayer2")
-      img(class="layer1" :src="ImageLayer1")
-    button(v-on:click="po")='po'
+      img(:style="{ opacity: opacities[7] }" :src="ImageLayer8")
+      img(:style="{ opacity: opacities[6] }" :src="ImageLayer7")
+      img(:style="{ opacity: opacities[5] }" :src="ImageLayer6")
+      img(:style="{ opacity: opacities[4] }" :src="ImageLayer5")
+      img(:style="{ opacity: opacities[3] }" :src="ImageLayer4")
+      img(:style="{ opacity: opacities[2] }" :src="ImageLayer3")
+      img(:style="{ opacity: opacities[1] }" :src="ImageLayer2")
+      img(:style="{ opacity: opacities[0] }" :src="ImageLayer1")
+    button(v-on:click="transitionUnder")='+'
+    button(v-on:click="transitionUp")='-'
+    p {{nowLayer}}
+
   
 </template>
 
@@ -25,45 +28,48 @@ export default {
       ImageLayer5: 'img/th/th_5.png',
       ImageLayer6: 'img/th/th_6.png',
       ImageLayer7: 'img/th/th_7.png',
-      ImageLayer8: 'img/th/th_8.png'
+      ImageLayer8: 'img/th/th_8.png',
+      nowLayer: 1,
+      opacities: [1,1,1,1,1,1,1,1]
     }
   },
   props: {
     message: String
   },
-  computed: {
-    // poyo: 
+  methods: {
+    transitionUnder: function() {
+      if (this.nowLayer < 8){
+        this.opacities[this.nowLayer-1] = 0
+        this.nowLayer ++
+      }
+    },
+    transitionUp: function() {
+      if (this.nowLayer > 1){
+        this.nowLayer --
+        this.opacities[this.nowLayer-1] = 1
+      }
+      return this.nowLayer
+    }
   }
 };
 </script>
 
 <style scoped lang="sass">
-.images
+.md
   display: flex
   justify-content: center
   align-items: center
-  height: 100vh
+
+.images
+  width: 20%
 
 .images img
   position: absolute
   top: 0
   left: 0
   height: 100vh
-  opacity: 0.2
+  opacity: 0
 
-.surface
-  max-height: 100%
-
-.underLayer 
-  position: absolute
-  display: flex
-  justify-content: center
-  align-items: center
-  box-sizing: border-box
-  height: 100vh
-
-.under
-  position: absolute
-  max-height: 100%
-  opacity: 0.1
+p
+  margin-left: 3%
 </style>
