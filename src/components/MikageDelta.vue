@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { setInterval } from 'timers';
 export default {
   name: "MikageDelta",
   data() {
@@ -39,7 +40,8 @@ export default {
   methods: {
     transitionUnder: function() {
       if (this.nowLayer < 8){
-        this.opacities[this.nowLayer-1] = 0
+        // this.opacities[this.nowLayer - 1] = 0
+        this.feedOut()
         this.nowLayer ++
       }
     },
@@ -48,7 +50,15 @@ export default {
         this.nowLayer --
         this.opacities[this.nowLayer-1] = 1
       }
-      return this.nowLayer
+    },
+    feedOut: function(){
+      console.log("poyo")
+      if (this.opacities[this.nowLayer - 1] > 0){
+        this.opacities[this.nowLayer - 1] -= 1
+      } 
+      else {
+        this.opacities[this.nowLayer - 1] = 0
+      }
     }
   }
 };
