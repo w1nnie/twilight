@@ -1,17 +1,18 @@
 <template lang="pug">
   .md
     .images
-      img(:style="{ opacity: opacities[7] }" :src="ImageLayer8")
-      img(:style="{ opacity: opacities[6] }" :src="ImageLayer7")
-      img(:style="{ opacity: opacities[5] }" :src="ImageLayer6")
-      img(:style="{ opacity: opacities[4] }" :src="ImageLayer5")
-      img(:style="{ opacity: opacities[3] }" :src="ImageLayer4")
-      img(:style="{ opacity: opacities[2] }" :src="ImageLayer3")
-      img(:style="{ opacity: opacities[1] }" :src="ImageLayer2")
-      img(:style="{ opacity: opacities[0] }" :src="ImageLayer1")
+      transition-group(name="fade" tag="img" :key="img")
+        img(v-if="shows[7]" :src="layer8")
+        img(v-if="shows[6]" :src="layer7")
+        img(v-if="shows[5]" :src="layer6")
+        img(v-if="shows[4]" :src="layer5")
+        img(v-if="shows[3]" :src="layer4")
+        img(v-if="shows[2]" :src="layer3")
+        img(v-if="shows[1]" :src="layer2")
+        img(v-if="shows[0]" :src="layer1")
     button(v-on:click="transitionUnder")='+'
     button(v-on:click="transitionUp")='-'
-    p {{nowLayer}}
+    p {{currentLayer}}
 
   
 </template>
@@ -22,16 +23,17 @@ export default {
   name: "MikageDelta",
   data() {
     return{
-      ImageLayer1: 'img/th/th_1.png',
-      ImageLayer2: 'img/th/th_2.png',
-      ImageLayer3: 'img/th/th_3.png',
-      ImageLayer4: 'img/th/th_4.png',
-      ImageLayer5: 'img/th/th_5.png',
-      ImageLayer6: 'img/th/th_6.png',
-      ImageLayer7: 'img/th/th_7.png',
-      ImageLayer8: 'img/th/th_8.png',
-      nowLayer: 1,
-      opacities: [1,1,1,1,1,1,1,1]
+      layer8: 'img/th/th_8.png',
+      layer7: 'img/th/th_7.png',
+      layer6: 'img/th/th_6.png',
+      layer5: 'img/th/th_5.png',
+      layer4: 'img/th/th_4.png',
+      layer3: 'img/th/th_3.png',
+      layer2: 'img/th/th_2.png',
+      layer1: 'img/th/th_1.png',
+      currentLayer: 1,
+      shows: [true,false,false,false,false,false,false,false,false]
+
     }
   },
   props: {
@@ -39,27 +41,17 @@ export default {
   },
   methods: {
     transitionUnder: function() {
-      if (this.nowLayer < 8){
-        // this.opacities[this.nowLayer - 1] = 0
-        this.feedOut()
-        this.nowLayer ++
+      if (this.currentLayer < 8){
+        this.shows[this.currentLayer] = true;
+        this.currentLayer ++;
       }
     },
     transitionUp: function() {
-      if (this.nowLayer > 1){
-        this.nowLayer --
-        this.opacities[this.nowLayer-1] = 1
+      if (this.currentLayer > 1){
+        this.currentLayer --;
+        this.shows[this.currentLayer] = false;
       }
     },
-    feedOut: function(){
-      console.log("poyo")
-      if (this.opacities[this.nowLayer - 1] > 0){
-        this.opacities[this.nowLayer - 1] -= 1
-      } 
-      else {
-        this.opacities[this.nowLayer - 1] = 0
-      }
-    }
   }
 };
 </script>
@@ -78,7 +70,9 @@ export default {
   top: 0
   left: 0
   height: 100vh
-  opacity: 0
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s
 
 p
   margin-left: 3%
