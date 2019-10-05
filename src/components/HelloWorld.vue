@@ -13,6 +13,7 @@ export default {
     MikageDelta
   },
   data() {
+    return {}
   },
   props: {
     msg: String
