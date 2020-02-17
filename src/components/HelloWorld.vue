@@ -1,16 +1,18 @@
 <template>
   <div>
     <!-- {{ msg }} -->
-    <MikageDelta/>
+    <Top/>
   </div>
 </template>
 
 <script>
 import MikageDelta from "./MikageDelta.vue";
+import Top from "./Top.vue";
+
 export default {
   name: "HelloWorld",
   components: {
-    MikageDelta
+    Top
   },
   data() {
     return {}
