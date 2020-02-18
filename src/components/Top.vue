@@ -1,17 +1,14 @@
-<template>
-  <div class="content">
-    <img :src=bgIllust>
-    <div class="bu">
-      <router-link class="about" to="/about">kani</router-link>
-    </div>
-    <router-view></router-view>
-</div>
-    
+<template lang="pug">
+  .content
+    img(:src="bgIllust")
+    .bu
+      router-link.about(:to="'/about'") about
+      router-link.works(:to="'/works'") works
+    router-view
   
 </template>
 
 <script>
-import ComponentB from "@/components/About.vue";
 import router from "@/router.js";
 
 export default {

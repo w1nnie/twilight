@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
+import Works from "@/components/Works.vue";
 
 Vue.use(Router);
 
@@ -16,6 +17,10 @@ const router = new Router({
     {
       path: "/about",
       component: About
+    },
+    {
+      path: "/works",
+      component: Works
     }
   ]
 });
