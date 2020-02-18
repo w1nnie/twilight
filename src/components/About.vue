@@ -1,5 +1,5 @@
 <template lang="pug">
-  p('poyo')
+  p poyopoyo
 </template>
 
 <script>

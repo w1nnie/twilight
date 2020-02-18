@@ -1,13 +1,12 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <Top/>
-    <router-view/>
+    <top/>
   </div>
 </template>
 
 <script>
-import Top from "./components/Top.vue";
+import Top from "@/components/Top.vue";
 
 export default {
   name: "app",

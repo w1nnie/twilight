@@ -1,26 +1,27 @@
-<template lang="pug">
-  .content
-    img(:src="a")
-    .bu
-      router-link.about(:to="About")
-    //-   router-link.product(:to="Product")
-    //-   router-link.gallery(:to="Gallery")
-
+<template>
+  <div class="content">
+    <img :src=bgIllust>
+    <div class="bu">
+      <router-link class="about" to="/about">kani</router-link>
+    </div>
+    <router-view></router-view>
+</div>
     
   
 </template>
 
 <script>
-import About from "@/components/About.vue";
-// import Product from "./Product.vue";
-// import Gallery from "./Gallery.vue";
+import ComponentB from "@/components/About.vue";
+import router from "@/router.js";
 
 export default {
   name: "Top",
   data() {
     return{
-      a: ['img/top.png']
+      bgIllust: ['img/top.png']
     }
+  },
+  components: {
   }
 }
 </script>
@@ -41,7 +42,11 @@ export default {
   position: absolute
   width: 20vw
   height: 15vh
-  opacity: 0.7
+  color: #000
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 3rem
 
 
 .about
