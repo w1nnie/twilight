@@ -1,7 +1,7 @@
 <template lang="pug">
   .content
     img(:src="bgIllust")
-    .bu
+    .links
       router-link.about(:to="'/about'") about
       router-link.works(:to="'/works'") works
     router-view
@@ -14,22 +14,34 @@ import router from "@/router.js";
 export default {
   name: "Top",
   data() {
-    return{
-      bgIllust: ['img/top.png']
-    }
+    return {
+      bgIllust: ["img/top.png"]
+    };
   },
-  components: {
-  }
-}
+  components: {}
+};
 </script>
 
 <style scoped lang="sass">
-.content img
+.content
+  width: 100vw
   height: 100vh
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  background-color: #bbb
+  overflow: hidden
 
-.bu
+
+.content img
+  object-fit: contain
+  width: 100%
+  filter: blur
+
+
+.links
   position: absolute
-  top: 10%
   width: 100vw
   height: 100vh
   background-color: #000
@@ -52,16 +64,9 @@ export default {
   left: 40%
   background-color: #0ff
 
-.product
+.works
   @extend .button
   top: 40%
   left: 10%
   background-color: #ff0
-
-.gallery
-  @extend .button
-  top: 40%
-  left: 70%
-  background-color: #f0f
-
 </style>
