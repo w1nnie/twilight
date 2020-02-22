@@ -2,9 +2,10 @@
   .content
     img(:src="bgIllust")
     .links
-      router-link.about(:to="'/about'") about
-      router-link.works(:to="'/works'") works
-    router-view
+      router-link.about(to="/about") about
+      router-link.works(to="/works") works
+    transition(name="fade")
+      router-view
   
 </template>
 
@@ -33,12 +34,10 @@ export default {
   background-color: #bbb
   overflow: hidden
 
-
 .content img
   object-fit: contain
   width: 100%
   filter: blur
-
 
 .links
   position: absolute
@@ -57,7 +56,6 @@ export default {
   align-items: center
   font-size: 3rem
 
-
 .about
   @extend .button
   top: 25%
@@ -69,4 +67,10 @@ export default {
   top: 40%
   left: 10%
   background-color: #ff0
+
+.fade-enter-active, .fade-leave-active
+  transition: all 0.6s ease
+
+.fade-enter, .fade-leave-to
+  opacity: 0
 </style>

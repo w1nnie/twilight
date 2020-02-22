@@ -22,7 +22,7 @@
 
     .bullet
       .matters Likes
-      .description Drawing Illust / Pixelart 
+      .description Illust / Pixelart 
 
 </template>
 
