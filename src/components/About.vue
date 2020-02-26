@@ -36,7 +36,6 @@ $color-border: #999285
   align-items: center
   color: $color-text
 
-
   .modal
     position: absolute
     width: 70vw

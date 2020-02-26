@@ -4,6 +4,7 @@ import Router from "vue-router";
 import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
+import Graphics from "@/components/works/Graphics.vue";
 
 Vue.use(Router);
 
@@ -20,7 +21,13 @@ const router = new Router({
     },
     {
       path: "/works",
-      component: Works
+      component: Works,
+      children: [
+        {
+          path: "Graphics",
+          component: Graphics
+        }
+      ]
     }
   ]
 });

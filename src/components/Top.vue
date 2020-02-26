@@ -35,7 +35,7 @@ export default {
   overflow: hidden
 
 .content img
-  object-fit: contain
+  object-fit: cover
   width: 100%
   filter: blur
 
