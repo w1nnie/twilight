@@ -55,18 +55,19 @@ export default {
   justify-content: center
   align-items: center
   font-size: 3rem
+  text-decoration: none
 
 .about
   @extend .button
   top: 25%
   left: 40%
-  background-color: #0ff
+  background-color: rgba(255,255,255,0.9)
 
 .works
   @extend .button
   top: 40%
   left: 10%
-  background-color: #ff0
+  background-color: rgba(255,255,255,0.9)
 
 .fade-enter-active, .fade-leave-active
   transition: all 0.6s ease

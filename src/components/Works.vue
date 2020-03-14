@@ -51,7 +51,7 @@ $color-border: #999285
     .header
       width: 100%
       height: 10%
-      background-color: #00f
+      background-color: rgba(255,255,255,0.1)
       display: flex
       align-items: center
       justify-content: center
