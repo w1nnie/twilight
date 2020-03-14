@@ -3,7 +3,7 @@
     img(:src="bgIllust")
     .links
       router-link.about(to="/about") about
-      router-link.works(to="/works") works
+      router-link.works(to="/works/graphics") works
     transition(name="fade")
       router-view
   

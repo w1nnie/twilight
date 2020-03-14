@@ -5,6 +5,8 @@ import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
 import Graphics from "@/components/works/Graphics.vue";
+import Games from "@/components/works/Games.vue";
+import Music from "@/components/works/Music.vue";
 
 Vue.use(Router);
 
@@ -24,8 +26,16 @@ const router = new Router({
       component: Works,
       children: [
         {
-          path: "Graphics",
+          path: "graphics",
           component: Graphics
+        },
+        {
+          path: "games",
+          component: Games
+        },
+        {
+          path: "music",
+          component: Music
         }
       ]
     }

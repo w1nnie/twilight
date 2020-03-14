@@ -4,9 +4,9 @@
       .header works
       .body
         .drawer
-          router-link.item(to="/works/Graphics") Graphics
-          router-link.item(to="/works/Music") Music
-          router-link.item(to="/works/Games") Games
+          router-link.item(to="/works/graphics") Graphics
+          router-link.item(to="/works/games") Games
+          router-link.item(to="/works/music") Music
         .content
           router-view
     router-link.collapse(:to="'/'") ×
