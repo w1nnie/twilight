@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>AlphaPicker</title>
+<style>
+body {
+	background: url(images/check.gif);
+	color: #333;
+	text-align: center;
+}
+h1 {
+	font: 48px/1.6 "Myriad Pro", sans-serif;
+}
+img {
+	border: 1px solid #999;
+}
+.alphapicker {
+	cursor: default;
+}
+.hover {
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>AlphaPicker</h1>
+<p>リンクを非透過部分のみに設定するサンプル</p>
+<p><a href="https://github.com/" title="GitHub" target="_blank"><img src="images/image.png" alt="" /></a></p>
+<script src="../alphapicker.js"></script>
+<script>
+window.addEventListener("load", function() {
+	var a = document.getElementsByTagName("a")[0], // a要素を取得
+		img = a.getElementsByTagName("img")[0], // img要素を取得
+		url = a.href, // リンクURLを取得
+		alpha;
+	
+	try {
+		/* Alphapickerにimg要素を渡し、Alphapickerオブジェクトを取得 */
+		alpha = AlphaPicker(img);
+	}
+	catch(e) {
+		/* エラー処理 */
+		console.log(e.name + ":" + e.message);
+		return;
+	}
+	
+	/* a要素のイベントを無効にします */
+	a.className = "alphapicker";
+	a.addEventListener("click", function(e) {
+		e.preventDefault();
+	}, false);
+	
+	/* Alphapickerオブジェクトのメソッドでマウスオーバーとリンクを設定します */
+	alpha.mousemove(function(e) {
+		/* イベントオブジェクトのalphaプロパティに、マウス座標のアルファ値が入っています */
+		if(e.alpha) {
+			this.className = "hover";
+		} else {
+			this.className = "";
+		}
+	}).mouseout(function(e) {
+		this.className = "";
+	}).click(function(e) {
+		if(e.alpha) {
+			window.open(url);
+		}
+	});
+}, false);
+</script>
+</body>
+</html>
