@@ -3,7 +3,7 @@
     img(v-for="layer in layers" :src="layer")
     .links
       router-link.about(to="/about")
-      router-link.works(to="/works/graphics")
+      router-link.works(to="/works/graphics" :style="{left:(0.64*ww-0.47*wh)+'px'}")
     transition(name="fade")
       router-view
   
@@ -20,7 +20,9 @@ export default {
         "img/topBackground/p_f.png",
         "img/topBackground/p_m.png",
         "img/topBackground/p_n.png"
-      ]
+      ],
+      ww: window.parent.screen.width,
+      wh: window.parent.screen.height
     };
   },
   components: {},
@@ -68,17 +70,16 @@ export default {
 
 .about
   @extend .button
-  top: 20%
+  top: 25%
   left: 60%
-  width: 300px
-  height: 80%
+  width: 35vh
+  height: 75%
   background-color: rgba(255,255,255,0.9)
 
 .works
   @extend .button
   top: 20%
-  left: 30%
-  width: 350px
+  width: 43vh
   height: 50%
   background-color: rgba(255,255,255,0.9)
 
