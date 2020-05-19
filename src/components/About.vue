@@ -1,10 +1,9 @@
 <template lang="pug">
   .about-container
     .modal
-      .character
       .text
         about-text
-    router-link.collapse(:to="'/'") ×
+      router-link.collapse(:to="'/'") ×
 </template>
 
 <script>
@@ -30,7 +29,7 @@ $color-border: #999285
   position: absolute
   width: 100vw
   height: 100vh
-  background-color: rgba(0,0,0,0.6)
+  background-color: rgba(0,0,0,0.1)
   display: flex
   justify-content: center
   align-items: center
@@ -40,16 +39,12 @@ $color-border: #999285
     position: absolute
     width: 70vw
     height: 70vh
+
     background-color: rgba($color-box,0.5)
     display: flex
     align-items: center
     justify-content: space-around
-    border: 1px solid #999285
 
-    .character
-      width: 25%
-      height: 85%
-      background-color: #c77
 
     .text
       width: 60%
@@ -58,8 +53,8 @@ $color-border: #999285
 
   .collapse
     position: absolute
-    top: 15vh
-    right: 15vw
+    top: 0
+    right: 0
     width: 4rem
     height: 4rem
     background-color: rgba(0,0,0,0.3)
