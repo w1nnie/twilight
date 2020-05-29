@@ -12,7 +12,9 @@ import AboutText from "@/components/AboutText.vue";
 export default {
   name: "About",
   data() {
-    return {};
+    return {
+      character: "img/topBackground/p_n.png"
+    };
   },
   components: {
     AboutText

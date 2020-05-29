@@ -6,8 +6,10 @@
       img.middle(:src='layers[1]' :style="{filter: middleBlur,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearBlur,transform: nearZoom}")
     .links
-      router-link.about(to="/about" @mouseover.native="showProfile" @mouseout.native="neutral")
-      router-link.works(to="/works/graphics" :style="{left:(0.62*ww-0.5*wh)+'px'}" @mouseover.native="goToGallery" @mouseout.native="neutral")
+      router-link.about(to="/about" @mouseover.native="showProfile" 
+       @mouseout.native="neutral" @click.native="showProfile")
+      router-link.works(to="/works/graphics" :style="{left:calcWorksLeft}" 
+       @mouseover.native="goToGallery" @mouseout.native="neutral" @click.native="go")
     transition(name="fade")
       router-view
   
@@ -30,26 +32,44 @@ export default {
       middleBlur: "blur(0px)",
       nearBlur: "blur(0px)",
       middleZoom: "translate3D(0,0,0)",
-      nearZoom: "translate3D(0,0,0)"
+      nearZoom: "translate3D(0,0,0)",
+      isClicked: false
     };
   },
   components: {},
   methods: {
     goToGallery() {
       this.nearBlur = "blur(3px)";
-      this.nearZoom = "translate3D(0,0,8px)";
+      this.nearZoom = "translate3D(0px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
+      console.log("g");
+    },
+    go() {
+      this.middleZoom = "translate3D(100px,0,25px)";
+      this.nearZoom = "translate3D(0,0,25px)";
+      this.isClicked = true;
+      console.log("go");
     },
     showProfile() {
       this.middleBlur = "blur(5px)";
       this.middleZoom = "translate3D(0,0,2px)";
       this.nearZoom = "translate3D(0,0,5px)";
+      console.log("s");
     },
     neutral() {
-      this.middleBlur = "blur(0px)";
-      this.nearBlur = "blur(0px)";
-      this.middleZoom = "translate3D(0,0,0)";
-      this.nearZoom = "translate3D(0,0,0)";
+      if (!this.isClicked) {
+        this.middleBlur = "blur(0px)";
+        this.nearBlur = "blur(0px)";
+        this.middleZoom = "translate3D(0,0,0)";
+        this.nearZoom = "translate3D(0,0,0)";
+        console.log("n");
+      }
+    }
+  },
+  computed: {
+    calcWorksLeft() {
+      let left = this.ww * 0.62 - this.wh * 0.5;
+      return left + "px";
     }
   }
 };
@@ -110,8 +130,6 @@ export default {
   width: 35vh
   height: 75%
   background-color: rgba(255,255,255,0)
-  z-index: 100
-
 .works
   @extend .button
   top: 20%

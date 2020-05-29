@@ -1,7 +1,7 @@
 <template lang="pug">
 .graphics-container
   .cambus
-    .pictures(v-for="item in items" :key="item") {{item.message}}{{item.poyo}}
+    .pictures(v-for="item in items") {{item.message}}{{item.poyo}}
 </template>
 
 <script>
@@ -9,7 +9,10 @@ export default {
   name: "Graphics",
   data() {
     return {
-      items: [{ message: "Foo", poyo: "po" }, { message: "Bar", poyo: "yo" }]
+      items: [
+        { message: "Foo", poyo: "po" },
+        { message: "Bar", poyo: "yo" }
+      ]
     };
   }
 };
