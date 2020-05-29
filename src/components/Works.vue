@@ -1,5 +1,6 @@
 <template lang="pug">
   .works-container
+    img.bg(:src='bgImg')
     .modal
       .header works
       .body
@@ -18,7 +19,9 @@ import Graphics from "@/components/works/Graphics.vue";
 export default {
   name: "Works",
   data() {
-    return {};
+    return {
+      bgImg: "img/topBackground/p_g.png"
+    };
   },
   components: {
     Graphics
@@ -40,6 +43,10 @@ $color-border: #999285
   justify-content: center
   align-items: center
   color: $color-text
+
+  .bg
+    width: 100%
+    height: 100%
 
   .modal
     position: absolute

@@ -20,9 +20,8 @@ export default {
 
 <style scoped lang="sass">
 .graphics-container
-  background-color: rgba(255,255,255,0.2)
-  height: 100%
   width: 100%
+  height: 100%
 
   .cambus
     display: flex
