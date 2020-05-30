@@ -42,19 +42,16 @@ export default {
       this.nearBlur = "blur(3px)";
       this.nearZoom = "translate3D(0px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
-      console.log("g");
     },
     go() {
       this.middleZoom = "translate3D(100px,0,25px)";
       this.nearZoom = "translate3D(0,0,25px)";
       this.isClicked = true;
-      console.log("go");
     },
     showProfile() {
       this.middleBlur = "blur(5px)";
       this.middleZoom = "translate3D(0,0,2px)";
       this.nearZoom = "translate3D(0,0,5px)";
-      console.log("s");
     },
     neutral() {
       if (!this.isClicked) {
@@ -62,7 +59,6 @@ export default {
         this.nearBlur = "blur(0px)";
         this.middleZoom = "translate3D(0,0,0)";
         this.nearZoom = "translate3D(0,0,0)";
-        console.log("n");
       }
     }
   },
