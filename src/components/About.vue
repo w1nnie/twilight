@@ -8,12 +8,13 @@
 
 <script>
 import AboutText from "@/components/AboutText.vue";
+import p_a from "@/assets/bg/p_n.png";
 
 export default {
   name: "About",
   data() {
     return {
-      character: "img/topBackground/p_n.png"
+      charaImg: p_a
     };
   },
   components: {

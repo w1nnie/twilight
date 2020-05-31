@@ -17,16 +17,15 @@
 
 <script>
 import router from "@/router.js";
+import p_f from "@/assets/bg/p_f.png";
+import p_m from "@/assets/bg/p_m.png";
+import p_n from "@/assets/bg/p_n.png";
 
 export default {
   name: "Top",
   data() {
     return {
-      layers: [
-        "img/topBackground/p_f.png",
-        "img/topBackground/p_m.png",
-        "img/topBackground/p_n.png"
-      ],
+      layers: [p_f, p_m, p_n],
       ww: window.innerWidth,
       wh: window.innerHeight,
       middleBlur: "blur(0px)",
