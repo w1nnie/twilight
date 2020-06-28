@@ -14,7 +14,7 @@ const router = new Router({
   mode: "history",
   routes: [
     {
-      path: "/",
+      path: "/twilight",
       component: Top
     },
     {

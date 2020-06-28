@@ -5,11 +5,11 @@
       img.middle.far(:src='layers[0]' :style="{filter: middleBlur,transform: middleZoom}")
       img.middle(:src='layers[1]' :style="{filter: middleBlur,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearBlur,transform: nearZoom}")
-    .links
+    .links(@neutralize="neutral")
       router-link.about(to="/about" @mouseover.native="showProfile" 
        @mouseout.native="neutral" @click.native="showProfile")
       router-link.works(to="/works/graphics" :style="{left:calcWorksLeft}" 
-       @mouseover.native="goToGallery" @mouseout.native="neutral" @click.native="go")
+       @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
     transition(name="fade")
       router-view
   
@@ -37,12 +37,12 @@ export default {
   },
   components: {},
   methods: {
-    goToGallery() {
+    goToGalleryHover() {
       this.nearBlur = "blur(3px)";
       this.nearZoom = "translate3D(0px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
     },
-    go() {
+    goToGallery() {
       this.middleZoom = "translate3D(100px,0,25px)";
       this.nearZoom = "translate3D(0,0,25px)";
       this.isClicked = true;
@@ -58,6 +58,11 @@ export default {
         this.nearBlur = "blur(0px)";
         this.middleZoom = "translate3D(0,0,0)";
         this.nearZoom = "translate3D(0,0,0)";
+      } else {
+        this.isClicked = false;
+        setTimeout(() => {
+          this.neutral();
+        }, 1000);
       }
     }
   },

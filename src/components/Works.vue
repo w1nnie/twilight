@@ -6,7 +6,7 @@
       .body
         .content
           router-view
-    router-link.collapse(:to="'/'") ×
+    router-link.collapse(:to="'/twilight'") ×
 </template>
 
 <script>
@@ -49,7 +49,7 @@ $color-border: #999285
     position: absolute
     width: 100vw
     height: 100vh
-    background-color: rgba($color-box,0.5)
+    background-color: rgba($color-box,0.1)
     border: 1px solid #999285
 
     .header
