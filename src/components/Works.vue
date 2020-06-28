@@ -4,10 +4,6 @@
     .modal
       .header works
       .body
-        .drawer
-          router-link.item(to="/works/graphics") Graphics
-          router-link.item(to="/works/games") Games
-          router-link.item(to="/works/music") Music
         .content
           router-view
     router-link.collapse(:to="'/'") ×
@@ -51,8 +47,8 @@ $color-border: #999285
 
   .modal
     position: absolute
-    width: 95vw
-    height: 95vh
+    width: 100vw
+    height: 100vh
     background-color: rgba($color-box,0.5)
     border: 1px solid #999285
 
@@ -97,8 +93,8 @@ $color-border: #999285
 
   .collapse
     position: absolute
-    top: 2.5vh
-    right: 2.5vw
+    top: 0vh
+    right: 0vw
     width: 4rem
     height: 4rem
     background-color: rgba(0,0,0,0.3)
