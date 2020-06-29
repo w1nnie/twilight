@@ -27,7 +27,12 @@ const router = new Router({
       children: [
         {
           path: "graphics",
-          component: Graphics
+          component: Graphics,
+          children: [
+            {
+              path: ":id"
+            }
+          ]
         },
         {
           path: "games",

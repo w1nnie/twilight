@@ -28,8 +28,10 @@ export default {
     justify-content: start
 
     .pictures
-      width: 10vw
-      height: 10vh
-      background-color: #aaa;
+      width: 16vw
+      height: 12vw
+      background-color: #aaa
+      border: 0.5vw solid #655e53
+      box-shadow: 0 1vw 3vw rgba(0,0,0,0.25)
       margin: 1rem
 </style>

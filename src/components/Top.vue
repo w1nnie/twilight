@@ -43,7 +43,7 @@ export default {
       this.middleZoom = "translate3D(0,0,5px)";
     },
     goToGallery() {
-      this.middleZoom = "translate3D(100px,0,25px)";
+      this.middleZoom = "translate3D(100px,0,18px)";
       this.nearZoom = "translate3D(0,0,25px)";
       this.isClicked = true;
     },
