@@ -14,33 +14,35 @@ const router = new Router({
   mode: "history",
   routes: [
     {
-      path: "/twilight",
-      component: Top
-    },
-    {
-      path: "/about",
-      component: About
-    },
-    {
-      path: "/works",
-      component: Works,
+      path: "/",
+      component: Top,
       children: [
         {
-          path: "graphics",
-          component: Graphics,
+          path: "/about",
+          component: About
+        },
+        {
+          path: "/works",
+          component: Works,
           children: [
             {
-              path: ":id"
+              path: "graphics",
+              component: Graphics,
+              children: [
+                {
+                  path: ":id"
+                }
+              ]
+            },
+            {
+              path: "games",
+              component: Games
+            },
+            {
+              path: "music",
+              component: Music
             }
           ]
-        },
-        {
-          path: "games",
-          component: Games
-        },
-        {
-          path: "music",
-          component: Music
         }
       ]
     }
