@@ -13,8 +13,7 @@ export default {
   name: "Graphics",
   data() {
     return {
-      graphicsData,
-      po: ["@/assets/Graphics/hina.png", "@/assets/Graphics/lize_24h@0.5x.png"]
+      graphicsData
     };
   },
   methods: {}
