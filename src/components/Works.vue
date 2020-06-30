@@ -4,13 +4,12 @@
     .modal
       .header works
       .body
-        .content
-          router-view
-    router-link.collapse(:to="'/twilight'") ×
+        works-item
+    router-link.collapse(:to="'/'") ×
 </template>
 
 <script>
-import Graphics from "@/components/works/Graphics.vue";
+import WorksItem from "@/components/works/WorksItem.vue";
 import p_g from "@/assets/bg/p_g.png";
 
 export default {
@@ -21,7 +20,7 @@ export default {
     };
   },
   components: {
-    Graphics
+    WorksItem
   }
 };
 </script>
@@ -66,30 +65,6 @@ $color-border: #999285
       display: flex
       align-items: center
       justify-coonten: space-around
-
-    .drawer
-      display: flex
-      flex-direction: column
-      align-items: start
-      width: 15%
-      height: 100%
-      //background-color: #88d
-
-      .item
-        width: 100%
-        height: 8%
-        font-size: 2.2rem
-        background-color: rgba(100,100,100,0.6)
-        color: $color-text
-        text-decoration: none
-        display: flex
-        align-items: center
-        justify-content: center
-        margin: 1rem 0 1rem 0
-
-    .content
-      width: 85%
-      height: 100%
 
   .collapse
     position: absolute

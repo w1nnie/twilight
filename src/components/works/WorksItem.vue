@@ -1,7 +1,7 @@
 <template lang="pug">
-.graphics-container
+.works-item-container
   .cambus()
-    router-link.item(v-for="item in graphicsData" :to="'/works/graphics/'+item.id")
+    router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
       img.item-img(:src="item.link")
     router-view
 </template>
@@ -10,7 +10,7 @@
 import graphicsData from "@/assets/graphicsData.json";
 
 export default {
-  name: "Graphics",
+  name: "WorksItem",
   data() {
     return {
       graphicsData
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.graphics-container
+.works-item-container
   width: 100%
   height: 100%
 

@@ -8,7 +8,7 @@
     .links(@neutralize="neutral")
       router-link.about(to="/about" @mouseover.native="showProfile" 
        @mouseout.native="neutral" @click.native="showProfile")
-      router-link.works(to="/works/graphics" :style="{left:calcWorksLeft}" 
+      router-link.works(to="/works" :style="{left:calcWorksLeft}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
     transition(name="fade")
       router-view
