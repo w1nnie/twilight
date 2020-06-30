@@ -1,14 +1,13 @@
 <template lang="pug">
   .content
-    //- img(v-for="layer in layers" :src="layer")
     #img-container
       img.middle.far(:src='layers[0]' :style="{filter: middleBlur,transform: middleZoom}")
       img.middle(:src='layers[1]' :style="{filter: middleBlur,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearBlur,transform: nearZoom}")
     .links(@neutralize="neutral")
-      router-link.about(to="/about" @mouseover.native="showProfile" 
+      router-link.about(to="about" @mouseover.native="showProfile" 
        @mouseout.native="neutral" @click.native="showProfile")
-      router-link.works(to="/works" :style="{left:calcWorksLeft}" 
+      router-link.works(to="works" :style="{left:calcWorksLeft}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
     transition(name="fade")
       router-view
