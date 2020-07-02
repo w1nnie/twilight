@@ -1,9 +1,8 @@
 <template lang="pug">
 .works-item-container
-  .cambus()
-    router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
-      img.item-img(:src="`/twilight/img/${item.filename}`")
-    router-view
+  router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
+    img.item-img(:style="{objectPosition: item.position}" :src="`/twilight/img/${item.filename}`")
+  router-view
 </template>
 
 <script>
@@ -24,22 +23,21 @@ export default {
 .works-item-container
   width: 100%
   height: 100%
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
 
-  .cambus
-    display: flex
-    justify-content: start
+  .item
+    width: 16vw
+    height: 16vw
+    background-color: rgb(213,210,172)
+    border: 0.5vw solid #5e5753
+    box-shadow: 0 1vw 2vw rgba(0,0,0,0.3)
+    margin: 1rem
 
-    .item
-      width: 16vw
-      height: 12vw
-      background-color: rgb(213,210,172)
-      border: 0.5vw solid #5e5753
-      box-shadow: 0 1vw 2vw rgba(0,0,0,0.3)
-      margin: 1rem
-
-      .item-img
-        width: 100%
-        height: 100%
-        object-fit: cover
-        filter: contrast(90%) opacity(95%)
+    .item-img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      filter: contrast(90%) opacity(95%)
 </style>
