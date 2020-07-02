@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "filename": "hina.png",
+        "filename": "hina.jpg",
         "title": "グランドエスケープ",
         "desc": "映画「天気の子」の天野陽菜さんの誕生日を記念して描いたイラスト",
         "date": "2019/08/22",
@@ -14,8 +14,8 @@
     },
     {
         "id": 2,
-        "filename": "lize_24h@0.5x.png",
-        "title": "lize24h",
+        "filename": "lize_luigi.jpg",
+        "title": "lize",
         "desc": "",
         "date": "",
         "position": "50% 45%",
@@ -27,7 +27,7 @@
     },
     {
         "id": 3,
-        "filename": "mikage_mw@0.5x.png",
+        "filename": "mikage_mw.jpg",
         "title": "少し特別な帰り道",
         "desc": "",
         "date": "",
@@ -40,7 +40,7 @@
     },
     {
         "id": 4,
-        "filename": "mikage_twl_s.png",
+        "filename": "mikage_twl.jpg",
         "title": "いつまで経っても諦めきれない",
         "desc": "",
         "date": "",
@@ -53,7 +53,7 @@
     },
     {
         "id": 5,
-        "filename": "shimarin2019.png",
+        "filename": "shimarin.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -66,7 +66,7 @@
     },
     {
         "id": 6,
-        "filename": "alley_evening.png",
+        "filename": "alley_e.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -79,7 +79,7 @@
     },
     {
         "id": 7,
-        "filename": "kokoro.png",
+        "filename": "kokoro.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -92,7 +92,7 @@
     },
     {
         "id": 8,
-        "filename": "lize_classroom.png",
+        "filename": "lize_classroom.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -105,7 +105,7 @@
     },
     {
         "id": 5,
-        "filename": "main_woofar_s.png",
+        "filename": "main_woofar.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -118,7 +118,7 @@
     },
     {
         "id": 5,
-        "filename": "meteor.png",
+        "filename": "meteor.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -131,7 +131,7 @@
     },
     {
         "id": 5,
-        "filename": "mikage_space_s.png",
+        "filename": "mikage_space.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -144,7 +144,7 @@
     },
     {
         "id": 5,
-        "filename": "msw_maid.png",
+        "filename": "msw_maid.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -157,7 +157,7 @@
     },
     {
         "id": 5,
-        "filename": "msw_yggdrasill.png",
+        "filename": "msw_ygg.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -170,7 +170,7 @@
     },
     {
         "id": 5,
-        "filename": "tgc2_1draw_whiteonion_2.png",
+        "filename": "milkey.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -183,7 +183,7 @@
     },
     {
         "id": 5,
-        "filename": "th_8.png",
+        "filename": "main_mikage.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -196,7 +196,7 @@
     },
     {
         "id": 5,
-        "filename": "toko_birthday.png",
+        "filename": "toko_twl.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",
@@ -209,7 +209,7 @@
     },
     {
         "id": 5,
-        "filename": "twi.png",
+        "filename": "twl.jpg",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": "",

@@ -1,10 +1,8 @@
 <template lang="pug">
-  .works-container
-    img.bg(:src='bgImg')
-    .modal
-      .header works
-      .body
-        works-item
+  .works-container(:style="{backgroundImage:'url(' + bgImg + ')'}")
+    .header works
+    .body
+      works-item
     router-link.collapse(:to="'/'") ×
 </template>
 
@@ -16,7 +14,8 @@ export default {
   name: "Works",
   data() {
     return {
-      bgImg: p_g
+      bgImg: p_g,
+      bg: "url(" + this.bgImg + ")"
     };
   },
   components: {
@@ -33,35 +32,33 @@ $color-border: #999285
 .works-container
   position: absolute
   width: 100vw
-  height: 100vh
+  height: auto
+  top: 0
+  left: 0
   background-color: rgba(0,0,0,0.6)
   display: flex
   justify-content: center
   align-items: center
+  flex-direction: column
   color: $color-text
+  overflow: scroll
 
-  .bg
+
+  .header
     width: 100%
-    height: 100%
+    height: 10%
+    top: 0
+    background-color: rgba(255,255,255,0.1)
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 4rem
 
-  .modal
-    position: absolute
-    width: 100vw
+  .body
+    width: 100%
     height: 100vh
-    background-color: rgba($color-box,0.1)
-    border: 1px solid #999285
+    overflow: scroll
 
-    .header
-      width: 100%
-      height: 10%
-      background-color: rgba(255,255,255,0.1)
-      display: flex
-      align-items: center
-      justify-content: center
-      font-size: 4rem
-
-    .body
-      height: 90%
 
   .collapse
     position: absolute

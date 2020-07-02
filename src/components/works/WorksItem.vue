@@ -1,7 +1,7 @@
 <template lang="pug">
 .works-item-container
   router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
-    img.item-img(:style="{objectPosition: item.position}" :src="`/twilight/img/${item.filename}`")
+    img.item-img(:style="{objectPosition: item.position}" :src="`/twilight/img/thumbnail/${item.filename}`")
   router-view
 </template>
 
@@ -40,5 +40,5 @@ export default {
       width: 100%
       height: 100%
       object-fit: cover
-      filter: contrast(90%) opacity(95%)
+      // filter: contrast(100%) opacity(100%)
 </style>
