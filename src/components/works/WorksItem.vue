@@ -22,16 +22,17 @@ export default {
 <style scoped lang="sass">
 .works-item-container
   width: 100%
-  height: 100%
   display: flex
   justify-content: space-around
   flex-wrap: wrap
+  overflow: scroll
 
   .item
-    width: 16vw
-    height: 16vw
+    width: 17vw
+    height: 17vw
     background-color: rgb(213,210,172)
-    border: 0.5vw solid #5e5753
+    border: 0.35vw solid #5e5753
+    box-sizing: border-box
     box-shadow: 0 1vw 2vw rgba(0,0,0,0.3)
     margin: 1rem
 

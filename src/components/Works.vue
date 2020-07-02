@@ -62,9 +62,6 @@ $color-border: #999285
 
     .body
       height: 90%
-      display: flex
-      align-items: center
-      justify-coonten: space-around
 
   .collapse
     position: absolute
