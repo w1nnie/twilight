@@ -2,7 +2,7 @@
 .works-item-container
   .cambus()
     router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
-      img.item-img(:src="`/img/${item.link}`")
+      img.item-img(:src="`/twilight/img/${item.filename}`")
     router-view
 </template>
 
