@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "link": "img/hina.png",
+        "link": "hina.png",
         "title": "グランドエスケープ",
         "desc": "映画「天気の子」の天野陽菜さんの誕生日を記念して描いたイラスト",
         "date": "2019/08/22",
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "link": "/img/lize_24h@0.5x.png",
+        "link": "lize_24h@0.5x.png",
         "title": "lize24h",
         "desc": "",
         "date": "",
@@ -25,7 +25,7 @@
     },
     {
         "id": 3,
-        "link": "/img/mikage_mw@0.5x.png",
+        "link": "mikage_mw@0.5x.png",
         "title": "少し特別な帰り道",
         "desc": "",
         "date": "",
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "link": "/img/mikage_twl_s.png",
+        "link": "img/mikage_twl_s.png",
         "title": "いつまで経っても諦めきれない",
         "desc": "",
         "date": "",
