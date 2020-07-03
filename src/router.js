@@ -4,7 +4,7 @@ import Router from "vue-router";
 import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
-// import Graphics from "@/components/works/Graphics.vue";
+import WorksItemModal from "@/components/works/WorksItemModal.vue";
 // import Games from "@/components/works/Games.vue";
 // import Music from "@/components/works/Music.vue";
 
@@ -27,7 +27,8 @@ const router = new Router({
       component: Works,
       children: [
         {
-          path: ":id"
+          path: ":id",
+          component: WorksItemModal
         }
       ]
     }

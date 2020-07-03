@@ -1,6 +1,6 @@
 <template lang="pug">
 .works-item-container
-  router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
+  router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id" @mouseover.native="focus" :style="{filter: filter}")
     img.item-img(:style="{objectPosition: item.position}" :src="`/twilight/img/thumbnail/${item.filename}`")
   router-view
 </template>
@@ -12,10 +12,15 @@ export default {
   name: "WorksItem",
   data() {
     return {
-      graphicsData
+      graphicsData,
+      filter: "none"
     };
   },
-  methods: {}
+  methods: {
+    focus() {
+      this.filter = "blightness(120%)";
+    }
+  }
 };
 </script>
 
@@ -33,7 +38,7 @@ export default {
     background-color: rgb(213,210,172)
     border: 0.35vw solid #5e5753
     box-sizing: border-box
-    box-shadow: 0 1vw 2vw rgba(0,0,0,0.3)
+    box-shadow: 0 1vw 1vw rgba(0,0,0,0.3)
     margin: 1rem
 
     .item-img

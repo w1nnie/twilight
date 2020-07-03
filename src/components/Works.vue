@@ -56,7 +56,7 @@ $color-border: #999285
 
   .body
     width: 100%
-    height: 100vh
+    height: 90vh
     overflow: scroll
 
 
