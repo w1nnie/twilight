@@ -1,6 +1,6 @@
 <template lang="pug">
 .works-item-container
-  router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id" @mouseover.native="focus" :style="{filter: filter}")
+  router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
     img.item-img(:style="{objectPosition: item.position}" :src="`/twilight/img/thumbnail/${item.filename}`")
   router-view
 </template>
@@ -12,15 +12,10 @@ export default {
   name: "WorksItem",
   data() {
     return {
-      graphicsData,
-      filter: "none"
+      graphicsData
     };
   },
-  methods: {
-    focus() {
-      this.filter = "blightness(120%)";
-    }
-  }
+  methods: {}
 };
 </script>
 
