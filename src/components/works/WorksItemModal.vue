@@ -15,11 +15,7 @@ export default {
       graphicsData
     };
   },
-  methods: {
-    po() {
-      console.log($route.params.id);
-    }
-  }
+  methods: {}
 };
 </script>
 
