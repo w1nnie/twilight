@@ -14,6 +14,20 @@
   
 </template>
 
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=UA-171648104-1"
+></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+
+gtag("config", "UA-171648104-1");
+</script>
+
 <script>
 import router from "@/router.js";
 import p_f from "@/assets/bg/p_f.png";

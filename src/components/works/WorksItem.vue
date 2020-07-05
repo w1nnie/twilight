@@ -1,7 +1,7 @@
 <template lang="pug">
 .works-item-container
   router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
-    img.item-img(:style="{objectPosition: item.position}" :src="`/twilight/img/thumbnail/${item.filename}`")
+    img.item-img(:style="{objectPosition: item.position}" :src="'/twilight/img/thumbnail/'+item.filename+'.jpg'")
   router-view
 </template>
 

@@ -1,7 +1,7 @@
 <template lang="pug">
 router-link.modal-container(to="/works") {{$route.params.id}}
   .modal-content
-    //- img(:src="graphicsData[$route.params.id]")
+    img.modal-content-img(:src="'/twilight/img/raw/'+graphicsData[$route.params.id-1].filename+'.png'")
     
 </template>
 
@@ -14,6 +14,11 @@ export default {
     return {
       graphicsData
     };
+  },
+  methods: {
+    po() {
+      console.log($route.params.id);
+    }
   }
 };
 </script>
@@ -34,4 +39,9 @@ export default {
     width: 80%
     height: 80%
     background-color: #fff
+
+    .modal-content-img
+      object-fit: contain
+      width: 100%
+      height: 100%
 </style>

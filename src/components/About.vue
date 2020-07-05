@@ -1,13 +1,14 @@
 <template lang="pug">
   .about-container
-    .modal
+    about-svg
       .text
         about-text
       router-link.collapse(:to="'/'") ×
 </template>
 
 <script>
-import AboutText from "@/components/AboutText.vue";
+import AboutText from "@/components/about/AboutText.vue";
+import AboutSvg from "@/components/about/AboutSvg.vue";
 import p_a from "@/assets/bg/p_n.png";
 
 export default {
@@ -18,7 +19,8 @@ export default {
     };
   },
   components: {
-    AboutText
+    AboutText,
+    AboutSvg
   }
 };
 </script>
@@ -32,27 +34,16 @@ $color-border: #999285
   position: absolute
   width: 100vw
   height: 100vh
-  background-color: rgba(0,0,0,0.1)
+  background-color: rgba(0,0,0,0.7)
   display: flex
   justify-content: center
   align-items: center
   color: $color-text
 
-  .modal
-    position: absolute
-    width: 70vw
-    height: 70vh
-
-    background-color: rgba($color-box,0.5)
-    display: flex
-    align-items: center
-    justify-content: space-around
-
-
-    .text
-      width: 60%
-      height: 85%
-      background-color: (0,0,0,0.1)
+  .text
+    width: 100%
+    height: 100%
+    background-color: (0,0,0,0.5)
 
   .collapse
     position: absolute
