@@ -1,7 +1,7 @@
 <template lang="pug">
   .about-svg-container
     svg(xmlns="http://www.w3.org/2000/svg" :view-box.camel="'0 0 '+w+' '+h")
-      path(:d="`M 0 0 L ${w*0.8} 0 L 0 0 L 0 ${h*0.93} z`" fill="black")
+      path(:d="`M 0 0 L ${w*0.8} 0 L 0 0 L 0 ${h*0.93} z`" fill="white")
         animate(attributeName="d"
                 begin="0s"
                 dur="1s"
@@ -10,7 +10,7 @@
                 keyTimes="0;1"
                 keySplines="0.25 0.1 0.25 1.0"
                 :to="`M 0 0 L ${w*0.8} 0 L ${w*0.65} ${h*0.3} L 0 ${h*0.93} z`")
-      path(:d="`M ${w*0.07} ${h} L ${w} ${h} L ${w} ${h*0.37} L ${w} ${h} z`" fill="black")
+      path(:d="`M ${w*0.07} ${h} L ${w} ${h} L ${w} ${h*0.37} L ${w} ${h} z`" fill="white")
               animate(attributeName="d"
                 begin="0s"
                 dur="1s"
@@ -19,7 +19,7 @@
                 keyTimes="0;1"
                 keySplines="0.25 0.1 0.25 1.0"
                 :to="`M ${w*0.07} ${h} L ${w*0.72} ${h*0.37} L ${w} ${h*0.37} L ${w} ${h} z`")
-      router-link(:to="'/'" tag="path" :d="`M ${w*0.89} 0 L ${w} 0 L ${w} ${h*0.27} L ${w} 0 z`" fill="black")
+      router-link(:to="'/'" tag="path" :d="`M ${w*0.89} 0 L ${w} 0 L ${w} ${h*0.27} L ${w} 0 z`" fill="white")
               animate(attributeName="d"
                 begin="0s"
                 dur="1s"

@@ -17,7 +17,7 @@
       .description 1997/05/30
 
     .bullet
-      .matters Affiliation
+      .matters Education
       .description Tokyo Institute of Technology
 
     .bullet
