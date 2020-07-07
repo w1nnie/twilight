@@ -1,7 +1,7 @@
 <template lang="pug">
 router-link.modal-container(to="/works") {{$route.params.id}}
   .modal-content
-    img.modal-content-img(:src="'/twilight/img/raw/'+graphicsData[$route.params.id-1].filename+'.png'")
+    img.modal-content-img(:src="'/twilight/img/raw/'+graphicsData[$route.params.id-1].filename+graphicsData[$route.params.id-1].raw_ext")
     
 </template>
 

@@ -2,6 +2,7 @@
     {
         "id": 1,
         "filename": "hina",
+        "raw_ext": ".png",
         "title": "グランドエスケープ",
         "desc": "映画「天気の子」の天野陽菜さんの誕生日を記念して描いたイラスト",
         "date": 20190822,
@@ -16,6 +17,7 @@
     {
         "id": 2,
         "filename": "lize_luigi",
+        "raw_ext": ".png",
         "title": "lize",
         "desc": "",
         "date": "",
@@ -30,6 +32,7 @@
     {
         "id": 3,
         "filename": "mikage_mw",
+        "raw_ext": ".png",
         "title": "少し特別な帰り道",
         "desc": "",
         "date": 20191225,
@@ -44,6 +47,7 @@
     {
         "id": 4,
         "filename": "mikage_twl",
+        "raw_ext": ".png",
         "title": "いつまで経っても諦めきれない",
         "desc": "",
         "date": 20191127,
@@ -58,6 +62,7 @@
     {
         "id": 5,
         "filename": "shimarin",
+        "raw_ext": ".png",
         "title": "志摩リン生誕祭2019",
         "desc": "",
         "date": 20191003,
@@ -72,6 +77,7 @@
     {
         "id": 6,
         "filename": "alley_e",
+        "raw_ext": ".png",
         "title": "路地(夕方)",
         "desc": "",
         "date": 20190621,
@@ -86,6 +92,7 @@
     {
         "id": 7,
         "filename": "kokoro",
+        "raw_ext": ".png",
         "title": "天宮こころ",
         "desc": "",
         "date": "2020/06/17",
@@ -100,6 +107,7 @@
     {
         "id": 8,
         "filename": "lize_classroom",
+        "raw_ext": ".png",
         "title": "新衣装リゼ皇女",
         "desc": "",
         "date": "2020/04/22",
@@ -114,6 +122,7 @@
     {
         "id": 9,
         "filename": "main_woofar",
+        "raw_ext": ".png",
         "title": "ウーファ",
         "desc": "",
         "date": "",
@@ -128,6 +137,7 @@
     {
         "id": 10,
         "filename": "meteor",
+        "raw_ext": ".png",
         "title": "星呼びリサイタル",
         "desc": "",
         "date": "2020/05/05",
@@ -142,6 +152,7 @@
     {
         "id": 11,
         "filename": "mikage_space",
+        "raw_ext": ".png",
         "title": "将来の夢は宇宙飛行士",
         "desc": "",
         "date": 20191003,
@@ -156,6 +167,7 @@
     {
         "id": 12,
         "filename": "msw_maid",
+        "raw_ext": ".png",
         "title": "うちのこメイド",
         "desc": "",
         "date": "",
@@ -170,6 +182,7 @@
     {
         "id": 13,
         "filename": "msw_ygg",
+        "raw_ext": ".png",
         "title": "旅路",
         "desc": "",
         "date": "",
@@ -184,6 +197,7 @@
     {
         "id": 14,
         "filename": "milkey",
+        "raw_ext": ".png",
         "title": "天の川",
         "desc": "",
         "date": 20190320,
@@ -198,6 +212,7 @@
     {
         "id": 15,
         "filename": "main_mikage",
+        "raw_ext": ".png",
         "title": "みかげ",
         "desc": "",
         "date": 20190823,
@@ -212,6 +227,7 @@
     {
         "id": 16,
         "filename": "toko_twl",
+        "raw_ext": ".png",
         "title": "戌亥とこ",
         "desc": "",
         "date": 20190909,
@@ -226,6 +242,7 @@
     {
         "id": 17,
         "filename": "twl",
+        "raw_ext": ".png",
         "title": "夕方の帰り道",
         "desc": "",
         "date": 20200413,
@@ -240,6 +257,7 @@
     {
         "id": 18,
         "filename": "msw_train",
+        "raw_ext": ".png",
         "title": "帰りの電車",
         "desc": "",
         "date": "",
@@ -249,6 +267,81 @@
             "illust",
             "girl",
             "first"
+        ]
+    },
+    {
+        "id": 19,
+        "filename": "woofar",
+        "raw_ext": ".png",
+        "title": "ウーファ",
+        "desc": "",
+        "date": 20200413,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "pixelart",
+            "girl",
+            "first"
+        ]
+    },
+    {
+        "id": 20,
+        "filename": "sanbaka",
+        "raw_ext": ".gif",
+        "title": "さんばか",
+        "desc": "",
+        "date": 20200413,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "pixelart",
+            "girl",
+            "second"
+        ]
+    },
+    {
+        "id": 21,
+        "filename": "amamya",
+        "raw_ext": ".gif",
+        "title": "あまみゃ",
+        "desc": "",
+        "date": 20200413,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "pixelart",
+            "girl",
+            "second"
+        ]
+    },
+    {
+        "id": 22,
+        "filename": "serval_run",
+        "raw_ext": ".gif",
+        "title": "サーバル",
+        "desc": "",
+        "date": 20200413,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "pixelart",
+            "girl",
+            "second"
+        ]
+    },
+    {
+        "id": 23,
+        "filename": "toko_fish",
+        "raw_ext": ".gif",
+        "title": "釣りとこ",
+        "desc": "",
+        "date": 20200413,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "pixelart",
+            "girl",
+            "second"
         ]
     }
 ]
