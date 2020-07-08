@@ -34,10 +34,14 @@ export default {
   .modal-content
     width: 90%
     height: 90%
-    transition: 1s all
+    animation: fadeIn 1s
 
     .modal-content-img
       object-fit: contain
       width: 100%
       height: 100%
+
+@keyframes fadeIn
+  0% {opacity: 0}
+  100% {opacity: 1}
 </style>

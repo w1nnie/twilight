@@ -143,11 +143,13 @@ export default {
   width: 35vh
   height: 75%
   background-color: rgba(255,255,255,0)
+
+
 .works
   @extend .button
-  top: 20%
+  top: 0%
   width: 43vh
-  height: 50%
+  height: 70%
   background-color: rgba(255,255,255,0)
 
 .fade-enter-active, .fade-leave-active
