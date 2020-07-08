@@ -1,9 +1,7 @@
 <template lang="pug">
   .about-container
     about-svg
-      .text
-        about-text
-      router-link.collapse(:to="'/'") ×
+    about-text
 </template>
 
 <script>
@@ -39,11 +37,6 @@ $color-border: #999285
   justify-content: center
   align-items: center
   color: $color-text
-
-  .text
-    width: 100%
-    height: 100%
-    background-color: (0,0,0,0.5)
 
   .collapse
     position: absolute
