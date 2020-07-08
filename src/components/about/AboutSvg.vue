@@ -38,7 +38,7 @@ export default {
     return {
       w: window.innerWidth,
       h: window.innerHeight,
-      color: "rgb(240,230,230"
+      color: "rgb(240,238,230)"
     };
   },
   components: {}

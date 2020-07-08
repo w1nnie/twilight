@@ -1,5 +1,5 @@
 <template lang="pug">
-router-link.modal-container(to="/works") {{$route.params.id}}
+router-link.modal-container(to="/works/graphics") {{$route.params.id}}
   .modal-content
     img.modal-content-img(:src="'/twilight/img/raw/'+graphicsData[$route.params.id-1].filename+graphicsData[$route.params.id-1].raw_ext")
     
@@ -9,7 +9,7 @@ router-link.modal-container(to="/works") {{$route.params.id}}
 import graphicsData from "@/assets/graphicsData.json";
 
 export default {
-  name: "WorksItemModal",
+  name: "GraphicsModal",
   data() {
     return {
       graphicsData
@@ -34,7 +34,7 @@ export default {
   .modal-content
     width: 90%
     height: 90%
-    // background-color: #fff
+    transition: 1s all
 
     .modal-content-img
       object-fit: contain

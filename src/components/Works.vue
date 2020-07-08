@@ -36,20 +36,15 @@ $color-border: #999285
 .works-container
   position: absolute
   width: 100vw
-  height: auto
+  height: 100vh
   top: 0
   left: 0
   background-color: rgba(0,0,0,0.6)
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
   color: $color-text
-
 
   .header
     width: 100%
-    height: 10%
+    height: 4rem
     top: 0
     background-color: rgba(255,255,255,0.1)
     display: flex
@@ -59,22 +54,26 @@ $color-border: #999285
 
   .genre-tab
     width: 100%
-    height: 10%
-    top: 10%
-    position: fixed
+    height: 5%
     display: flex
     align-items: center
     justify-content: center
     // background-color: blue
 
     .works-links
-      margin: 5%
+      width: 5rem
+      height: 70%
+      margin: 1.5%
+      display: flex
+      align-items: center
+      justify-content: center
+      text-decoration: none
+      color: $color-text
+      background-color: rgba(0,0,0,0.6)
 
   .body
     width: 100%
-    height: 80%
-    top: 20%
-    position: fixed
+    height: 85%
     overflow: scroll
     // background-color: black
 
