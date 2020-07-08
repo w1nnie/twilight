@@ -5,8 +5,9 @@ import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
 import WorksItemModal from "@/components/works/WorksItemModal.vue";
-// import Games from "@/components/works/Games.vue";
-// import Music from "@/components/works/Music.vue";
+import Graphics from "@/components/works/Graphics.vue";
+import Tools from "@/components/works/Tools.vue";
+import Games from "@/components/works/Games.vue";
 
 Vue.use(Router);
 
@@ -27,8 +28,22 @@ const router = new Router({
       component: Works,
       children: [
         {
-          path: ":id",
-          component: WorksItemModal
+          path: "graphics",
+          component: Graphics,
+          children: [
+            {
+              path: ":id",
+              component: WorksItemModal
+            }
+          ]
+        },
+        {
+          path: "tools",
+          component: Tools
+        },
+        {
+          path: "games",
+          component: Games
         }
       ]
     }

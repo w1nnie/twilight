@@ -1,5 +1,5 @@
 <template lang="pug">
-.works-item-container
+.graphics-container
   router-link.item(v-for="item in graphicsData" :to="'/works/'+item.id")
     img.item-img(:style="{objectPosition: item.position}" :src="'/twilight/img/thumbnail/'+item.filename+'.jpg'")
   router-view
@@ -9,7 +9,7 @@
 import graphicsData from "@/assets/graphicsData.json";
 
 export default {
-  name: "WorksItem",
+  name: "Graphics",
   data() {
     return {
       graphicsData
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.works-item-container
+.graphics-container
   width: 100%
   display: flex
   justify-content: space-around

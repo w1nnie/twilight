@@ -260,7 +260,7 @@
         "raw_ext": ".png",
         "title": "帰りの電車",
         "desc": "",
-        "date": "",
+        "date": 20191103,
         "position": "50% 50%",
         "conf": "",
         "tags": [
@@ -275,7 +275,7 @@
         "raw_ext": ".png",
         "title": "ウーファ",
         "desc": "",
-        "date": 20200413,
+        "date": 20190704,
         "position": "50% 50%",
         "conf": "",
         "tags": [
@@ -290,7 +290,7 @@
         "raw_ext": ".gif",
         "title": "さんばか",
         "desc": "",
-        "date": 20200413,
+        "date": 20200914,
         "position": "50% 50%",
         "conf": "",
         "tags": [
@@ -305,7 +305,7 @@
         "raw_ext": ".gif",
         "title": "あまみゃ",
         "desc": "",
-        "date": 20200413,
+        "date": 20200625,
         "position": "50% 50%",
         "conf": "",
         "tags": [
@@ -316,26 +316,11 @@
     },
     {
         "id": 22,
-        "filename": "serval_run",
-        "raw_ext": ".gif",
-        "title": "サーバル",
-        "desc": "",
-        "date": 20200413,
-        "position": "50% 50%",
-        "conf": "",
-        "tags": [
-            "pixelart",
-            "girl",
-            "second"
-        ]
-    },
-    {
-        "id": 23,
         "filename": "toko_fish",
         "raw_ext": ".gif",
         "title": "釣りとこ",
         "desc": "",
-        "date": 20200413,
+        "date": 20200526,
         "position": "50% 50%",
         "conf": "",
         "tags": [

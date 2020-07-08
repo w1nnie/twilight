@@ -32,9 +32,9 @@ export default {
   cursor: initial
 
   .modal-content
-    width: 80%
-    height: 80%
-    background-color: #fff
+    width: 90%
+    height: 90%
+    // background-color: #fff
 
     .modal-content-img
       object-fit: contain
