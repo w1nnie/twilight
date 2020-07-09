@@ -2,11 +2,10 @@
 .graphics-container
   .graphics-tags
     .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)") {{tag}}
-  .graphics-item-container
-    router-link.item(v-for="item in filteredData" :to="'/works/graphics/'+item.id")
+  transition-group.graphics-item-container(name="filter")
+    router-link.item(v-for="item in filteredData" :to="'/works/graphics/'+item.id" :key="item.id")
       img.item-img(:style="{objectPosition: item.position}" :src="'/twilight/img/thumbnail/'+item.filename+'.jpg'")
-    transition(name="fade")
-      router-view
+  router-view
 </template>
 
 <script>
@@ -34,7 +33,6 @@ export default {
           return isIncludeTag;
         });
       }
-      console.log(data);
       return data;
     },
     sortedData() {
@@ -43,7 +41,11 @@ export default {
   },
   methods: {
     enableTag(index) {
-      this.activeTagIndex = index;
+      if (this.activeTagIndex == index) {
+        this.activeTagIndex = -1;
+      } else {
+        this.activeTagIndex = index;
+      }
     }
   }
 };
@@ -74,7 +76,7 @@ export default {
 
   .graphics-item-container
     width: 100%
-    display: flex
+    display: inline-flex
     justify-content: space-around
     flex-wrap: wrap
     overflow: scroll
@@ -92,5 +94,13 @@ export default {
         width: 100%
         height: 100%
         object-fit: cover
-        // filter: contrast(100%) opacity(100%)
+
+  .filter-enter-active, .filter-leave-active, .filter-move
+    transition: opacity 2s, transform 1s
+
+  .filter-leave-active
+    position: absolute
+
+  .filter-enter, .filter-leave-to
+    opacity: 0
 </style>
