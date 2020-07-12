@@ -64,9 +64,6 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.active
-  background: black
-
 .graphics-container
   width: 100%
   height: 100%

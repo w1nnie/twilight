@@ -7,7 +7,7 @@
     .links(@neutralize="neutral")
       router-link.about(to="about" @mouseover.native="showProfile" 
        @mouseout.native="neutral" @click.native="showProfile")
-      router-link.works(to="works/graphics" :style="{left:calcWorksLeft}" 
+      router-link.works(to="works/graphics" :style="{left:`${windowSize.x * 0.62 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
     transition(name="fade")
       router-view
@@ -39,8 +39,10 @@ export default {
   data() {
     return {
       layers: [p_f, p_m, p_n],
-      ww: window.innerWidth,
-      wh: window.innerHeight,
+      windowSize: {
+        x: window.innerWidth,
+        y: window.innerHeight
+      },
       middleBlur: "blur(0px)",
       nearBlur: "blur(0px)",
       middleZoom: "translate3D(0,0,0)",
@@ -77,11 +79,20 @@ export default {
           this.neutral();
         }, 1000);
       }
+    },
+    onResize() {
+      this.windowSize = { x: window.innerWidth, y: window.innerHeight };
     }
+  },
+  mounted() {
+    window.addEventListener("resize", this.onResize);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
   },
   computed: {
     calcWorksLeft() {
-      let left = this.ww * 0.62 - this.wh * 0.5;
+      let left = this.windowSize.x * 0.62 - this.windowSize.y * 0.5;
       return left + "px";
     }
   }
@@ -135,6 +146,7 @@ export default {
 
 .button
   position: inherit
+  background-color: rgba(255,255,255,0)
 
 .about
   @extend .button
@@ -142,15 +154,12 @@ export default {
   left: 60%
   width: 35vh
   height: 75%
-  background-color: rgba(255,255,255,0)
-
 
 .works
   @extend .button
   top: 0%
   width: 43vh
   height: 70%
-  background-color: rgba(255,255,255,0)
 
 .fade-enter-active, .fade-leave-active
   transition: all 0.6s ease
