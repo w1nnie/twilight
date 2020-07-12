@@ -1,7 +1,7 @@
 <template lang="pug">
 .graphics-container
   .graphics-tags
-    .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)") {{tag}}
+    .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{tag}}
   transition-group.graphics-item-container(name="filter")
     router-link.item(v-for="item in filteredData" :to="'/works/graphics/'+item.id" :key="item.id")
       img.item-img(:style="{objectPosition: item.position}" :src="'/twilight/img/thumbnail/'+item.filename+'.jpg'")
@@ -16,9 +16,18 @@ export default {
   data() {
     return {
       graphicsData,
-      tagList: ["ドット絵", "イラスト", "オリジナル", "二次創作"],
-      activeTagFlags: [false, false, false, false],
-      activeTagIndex: -1
+      tagList: [
+        "ドット絵",
+        "イラスト",
+        "オリジナル",
+        "二次創作",
+        "ファンタジー",
+        "星空"
+      ],
+      activeTagFlags: [false, false, false, false, false, false],
+      activeTagIndex: -1,
+      activeClass: "graphics-tags-item-active",
+      inactiveClass: "graphics-tags-item"
     };
   },
   computed: {
@@ -43,8 +52,11 @@ export default {
     enableTag(index) {
       if (this.activeTagIndex == index) {
         this.activeTagIndex = -1;
+        this.activeTagFlags.fill(false);
       } else {
         this.activeTagIndex = index;
+        this.activeTagFlags.fill(false);
+        this.activeTagFlags[index] = true;
       }
     }
   }
@@ -52,6 +64,9 @@ export default {
 </script>
 
 <style scoped lang="sass">
+.active
+  background: black
+
 .graphics-container
   width: 100%
   height: 100%
@@ -59,20 +74,24 @@ export default {
   .graphics-tags
     width: 100%
     height: 5%
-    background-color: blue
+    background-color: rgba(0,0,0,0.1)
     display: flex
     align-items: center
 
     .graphics-tags-item
-      margin: 2rem
-      width: 5rem
+      margin: 1rem
+      width: 6rem
       height: 80%
-      background: white
+      background-color: rgba(255,255,255,0.9)
       color: black
       display: flex
       align-items: center
       justify-content: center
       cursor: pointer
+
+    .graphics-tags-item-active
+      @extend .graphics-tags-item
+      background-color: black
 
   .graphics-item-container
     width: 100%
@@ -82,8 +101,8 @@ export default {
     overflow: scroll
 
     .item
-      width: 35vh
-      height: 35vh
+      width: 30vh
+      height: 30vh
       background-color: rgb(213,210,172)
       border: 0.35vw solid #5e5753
       box-sizing: border-box
@@ -96,7 +115,7 @@ export default {
         object-fit: cover
 
   .filter-enter-active, .filter-leave-active, .filter-move
-    transition: opacity 2s, transform 1s
+    transition: opacity .3s, transform 1s
 
   .filter-leave-active
     position: absolute
