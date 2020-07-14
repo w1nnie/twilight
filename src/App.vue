@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <top/>
+    <Loading v-show="l" />
+    <Top v-show="!l" />
   </div>
 </template>
 
 <script>
+import Loading from "@/components/Loading.vue";
 import Top from "@/components/Top.vue";
 
 export default {
   name: "app",
+  data() {
+    return {
+      l: true
+    };
+  },
   components: {
-    Top
+    Top,
+    Loading
+  },
+  mounted() {
+    setTimeout(() => {
+      this.l = false;
+    }, 1000);
   }
 };
 </script>
