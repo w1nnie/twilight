@@ -4,7 +4,7 @@
     .genre-tab
       router-link.works-links(:to="'/works/graphics'") graphics
       router-link.works-links(:to="'/works/tools'") tools
-      router-link.works-links(:to="'/works/games'") games
+      //- router-link.works-links(:to="'/works/games'") games
     .body
       router-view
     router-link.collapse(:to="'/'") ×

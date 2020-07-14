@@ -34,7 +34,7 @@ export default {
   .modal-content
     width: 100%
     height: 100%
-    animation: fadeIn 1s
+    animation: fadeIn .4s
     background-color: rgba(0,0,0,0.75)
 
     .modal-content-img
