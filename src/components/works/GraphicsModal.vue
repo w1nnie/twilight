@@ -1,5 +1,5 @@
 <template lang="pug">
-router-link.modal-container(to="/works/graphics") {{$route.params.id}}
+router-link.modal-container(to="/works/graphics")
   .modal-content
     img.modal-content-img(:src="'/twilight/img/raw/'+graphicsData[$route.params.id-1].filename+graphicsData[$route.params.id-1].raw_ext")
     
@@ -32,9 +32,10 @@ export default {
   cursor: initial
 
   .modal-content
-    width: 90%
-    height: 90%
+    width: 100%
+    height: 100%
     animation: fadeIn 1s
+    background-color: rgba(0,0,0,0.75)
 
     .modal-content-img
       object-fit: contain

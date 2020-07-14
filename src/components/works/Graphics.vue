@@ -79,7 +79,7 @@ export default {
       margin: 1rem
       width: 6rem
       height: 80%
-      background-color: rgba(255,255,255,0.9)
+      background-color: rgba(255,255,255,0.75)
       color: black
       display: flex
       align-items: center
@@ -88,7 +88,7 @@ export default {
 
     .graphics-tags-item-active
       @extend .graphics-tags-item
-      background-color: black
+      background-color: rgba(255,255,255,0.2)
 
   .graphics-item-container
     width: 100%
