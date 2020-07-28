@@ -1,9 +1,9 @@
 <template lang="pug">
   .content
     #img-container
-      img.middle.far(:src='layers[0]' :style="{filter: middleBlur,transform: middleZoom}")
-      img.middle(:src='layers[1]' :style="{filter: middleBlur,transform: middleZoom}")
-      img.near(:src='layers[2]' :style="{filter: nearBlur,transform: nearZoom}")
+      img.middle.far(:src='layers[0]' :style="{filter: farFilter,transform: middleZoom}")
+      img.middle(:src='layers[1]' :style="{filter: middleFilter,transform: middleZoom}")
+      img.near(:src='layers[2]' :style="{filter: nearFilter,transform: nearZoom}")
     .links(@neutralize="neutral")
       router-link.about(to="about" @mouseover.native="showProfile" 
        @mouseout.native="neutral" @click.native="showProfile")
@@ -46,8 +46,9 @@ export default {
         x: window.innerWidth,
         y: window.innerHeight
       },
-      middleBlur: "blur(0px)",
-      nearBlur: "blur(0px)",
+      farFilter: "blur(0px)",
+      middleFilter: "blur(0px)",
+      nearFilter: "blur(0px)",
       middleZoom: "translate3D(0,0,0)",
       nearZoom: "translate3D(0,0,0)",
       isClicked: false,
@@ -58,7 +59,8 @@ export default {
   components: {},
   methods: {
     goToGalleryHover() {
-      this.nearBlur = "blur(3px)";
+      this.farFilter = "brightness(110%)";
+      this.nearFilter = "blur(3px)";
       this.nearZoom = "translate3D(0px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
       this.g = "1";
@@ -70,15 +72,18 @@ export default {
       this.g = "0";
     },
     showProfile() {
-      this.middleBlur = "blur(5px)";
+      this.farFilter = "blur(5px)";
+      this.middleFilter = "blur(5px)";
       this.middleZoom = "translate3D(0,0,2px)";
+      this.nearFilter = "brightness(130%)";
       this.nearZoom = "translate3D(0,0,5px)";
       this.o = "1";
     },
     neutral() {
       if (!this.isClicked) {
-        this.middleBlur = "blur(0px)";
-        this.nearBlur = "blur(0px)";
+        this.farFilter = "blur(0px)";
+        this.middleFilter = "blur(0px)";
+        this.nearFilter = "blur(0px)";
         this.middleZoom = "translate3D(0,0,0)";
         this.nearZoom = "translate3D(0,0,0)";
         this.o = "0";
@@ -173,18 +178,19 @@ export default {
 
 .text
   font-size: 4rem
+  font-family: fantasy
   color: white
   z-index: 100
 
   .a
     position: absolute
     transition: all .3s
-    left: 20%
+    left: 30%
     top: 30%
 
   .g
     position: absolute
-    transiton: all .3s
+    transition: all .3s
     right: 5%
     top: 30%
 
