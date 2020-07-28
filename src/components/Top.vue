@@ -67,6 +67,7 @@ export default {
       this.middleZoom = "translate3D(100px,0,18px)";
       this.nearZoom = "translate3D(0,0,25px)";
       this.isClicked = true;
+      this.g = "0";
     },
     showProfile() {
       this.middleBlur = "blur(5px)";
