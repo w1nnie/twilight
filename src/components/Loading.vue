@@ -17,6 +17,11 @@ import { VueLoading } from "vue-loading-template";
 
 export default {
   name: "Loading",
+  data() {
+    return {
+      loading: true
+    };
+  },
   components: {
     VueLoading
   }

@@ -27,7 +27,8 @@ export default {
       activeTagFlags: [false, false, false, false, false, false],
       activeTagIndex: -1,
       activeClass: "graphics-tags-item-active",
-      inactiveClass: "graphics-tags-item"
+      inactiveClass: "graphics-tags-item",
+      hoverZoom: "translate3D(0,0,0)"
     };
   },
   computed: {
@@ -105,6 +106,7 @@ export default {
       box-sizing: border-box
       box-shadow: 0 1vw 1vw rgba(0,0,0,0.3)
       margin: 1rem
+      transition: translate3d(0,0,0)
 
       .item-img
         width: 100%

@@ -9,6 +9,9 @@
        @mouseout.native="neutral" @click.native="showProfile")
       router-link.works(to="works/graphics" :style="{left:`${windowSize.x * 0.62 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
+    .text
+      .a(:style="{opacity: o}") about me ! →
+      .g(:style="{opacity: g}") ← go to gallery !
     transition(name="fade")
       router-view
   
@@ -47,7 +50,9 @@ export default {
       nearBlur: "blur(0px)",
       middleZoom: "translate3D(0,0,0)",
       nearZoom: "translate3D(0,0,0)",
-      isClicked: false
+      isClicked: false,
+      o: "0",
+      g: "0"
     };
   },
   components: {},
@@ -56,6 +61,7 @@ export default {
       this.nearBlur = "blur(3px)";
       this.nearZoom = "translate3D(0px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
+      this.g = "1";
     },
     goToGallery() {
       this.middleZoom = "translate3D(100px,0,18px)";
@@ -66,6 +72,7 @@ export default {
       this.middleBlur = "blur(5px)";
       this.middleZoom = "translate3D(0,0,2px)";
       this.nearZoom = "translate3D(0,0,5px)";
+      this.o = "1";
     },
     neutral() {
       if (!this.isClicked) {
@@ -73,6 +80,8 @@ export default {
         this.nearBlur = "blur(0px)";
         this.middleZoom = "translate3D(0,0,0)";
         this.nearZoom = "translate3D(0,0,0)";
+        this.o = "0";
+        this.g = "0";
       } else {
         this.isClicked = false;
         setTimeout(() => {
@@ -160,6 +169,23 @@ export default {
   top: 0%
   width: 43vh
   height: 70%
+
+.text
+  font-size: 4rem
+  color: white
+  z-index: 100
+
+  .a
+    position: absolute
+    transition: all .3s
+    left: 20%
+    top: 30%
+
+  .g
+    position: absolute
+    transiton: all .3s
+    right: 5%
+    top: 30%
 
 .fade-enter-active, .fade-leave-active
   transition: all 0.6s ease
