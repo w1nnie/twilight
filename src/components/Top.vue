@@ -5,7 +5,7 @@
       img.middle(:src='layers[1]' :style="{filter: middleFilter,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearFilter,transform: nearZoom}")
     .links(@neutralize="neutral")
-      router-link.about(to="about" @mouseover.native="showProfile" 
+      router-link.about(to="about" @mouseover.native="showProfileHover" 
        @mouseout.native="neutral" @click.native="showProfile")
       router-link.works(to="works/graphics" :style="{left:`${windowSize.x * 0.62 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
@@ -71,13 +71,16 @@ export default {
       this.isClicked = true;
       this.g = "0";
     },
-    showProfile() {
+    showProfileHover() {
       this.farFilter = "blur(5px)";
       this.middleFilter = "blur(5px)";
       this.middleZoom = "translate3D(0,0,2px)";
       this.nearFilter = "brightness(130%)";
       this.nearZoom = "translate3D(0,0,5px)";
       this.o = "1";
+    },
+    showProfile() {
+      this.o = "0";
     },
     neutral() {
       if (!this.isClicked) {
@@ -181,6 +184,7 @@ export default {
   font-family: fantasy
   color: white
   z-index: 100
+  pointer-events: none
 
   .a
     position: absolute
