@@ -1,5 +1,5 @@
 <template lang="pug">
-  .works-container(:style="{backgroundImage:'url(' + bgImg + ')'}")
+  .works-container
     .header works
     .genre-tab
       router-link.works-links(:to="'/works/graphics'") graphics
@@ -39,7 +39,7 @@ $color-border: #999285
   height: 100vh
   top: 0
   left: 0
-  background-color: rgba(0,0,0,0.6)
+  background-color: hsl(51,47%,81%)
   color: $color-text
 
   .header
