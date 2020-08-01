@@ -46,12 +46,12 @@ export default {
   },
   computed: {
     filteredData() {
-      let data = this.graphicsData;
+      let data = this.graphicsData.slice();
       let t = this.tagList;
       let ati = this.activeTagIndex;
       if (this.activeTagIndex == -1) {
       } else {
-        data = this.graphicsData.filter(function(item, index) {
+        data = data.filter(function(item, index) {
           let isIncludeTag = item.tags.some(a => a == t[ati]);
           return isIncludeTag;
         });
@@ -59,7 +59,7 @@ export default {
       return data;
     },
     sortedData() {
-      let data = this.filteredData;
+      let data = this.filteredData.slice();
       data = data.sort(function(a, b) {
         return b.date - a.date;
       });
@@ -140,7 +140,7 @@ export default {
       box-sizing: border-box
       box-shadow: 0 0.5vw 0.5vw rgba(0,0,0,0.3)
       margin: 1vh
-      transition: all .1s
+      transition: all .2s
       translate-origin: left top
 
       .item-img

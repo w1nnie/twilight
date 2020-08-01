@@ -1,8 +1,7 @@
 <template lang="pug">
 router-link.modal-container(to="/works/graphics")
   .modal-content
-    img.modal-content-img(:src="'/twilight/img/raw/'+graphicsData[$route.params.id-1].filename+graphicsData[$route.params.id-1].raw_ext")
-    
+    img.modal-content-img(:src="'/twilight/img/raw/'+idData[$route.params.id-1].filename+idData[$route.params.id-1].raw_ext")
 </template>
 
 <script>
@@ -15,7 +14,16 @@ export default {
       graphicsData
     };
   },
-  methods: {}
+  methods: {},
+  computed: {
+    idData() {
+      let d = this.graphicsData;
+      d = d.sort(function(a, b) {
+        return a.id - b.id;
+      });
+      return d;
+    }
+  }
 };
 </script>
 
@@ -29,6 +37,7 @@ export default {
   position: fixed
   top: 0
   left: 0
+  z-index: 10000
   cursor: initial
 
   .modal-content
