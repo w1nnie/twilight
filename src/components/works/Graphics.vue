@@ -130,7 +130,7 @@ export default {
       box-sizing: border-box
       box-shadow: 0 0.5vw 0.5vw rgba(0,0,0,0.3)
       margin: 1vh
-      transition: all .2s
+      transition: all .3s
       translate-origin: left top
 
       .item-img
