@@ -3,7 +3,7 @@
   .graphics-tags
     .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{tag}}
   transition-group.graphics-item-container(name="filter")
-    router-link.item(v-for="item in filteredData" 
+    router-link.item(v-for="item in sortedData" 
      :to="'/works/graphics/'+item.id" 
      :key="item.id" 
      @mouseover.native="zoomIn(item.id)"
@@ -46,12 +46,12 @@ export default {
   },
   computed: {
     filteredData() {
-      let data = graphicsData;
+      let data = this.graphicsData;
       let t = this.tagList;
       let ati = this.activeTagIndex;
       if (this.activeTagIndex == -1) {
       } else {
-        data = graphicsData.filter(function(item, index) {
+        data = this.graphicsData.filter(function(item, index) {
           let isIncludeTag = item.tags.some(a => a == t[ati]);
           return isIncludeTag;
         });
@@ -59,7 +59,11 @@ export default {
       return data;
     },
     sortedData() {
-      return null;
+      let data = this.filteredData;
+      data = data.sort(function(a, b) {
+        return b.date - a.date;
+      });
+      return data;
     }
   },
   methods: {
@@ -80,7 +84,6 @@ export default {
       this.focus = 1000;
     },
     isEqual(a, b) {
-      console.log(a == b);
       return a == b;
     }
   }
@@ -91,18 +94,22 @@ export default {
 .graphics-container
   width: 100%
   height: 100%
+  display: flex
+  flex-direction: row
 
   .graphics-tags
-    width: 100%
-    height: 5%
+    width: 10%
+    height: 100%
     background-color: rgba(0,0,0,0.1)
     display: flex
+    flex-direction: column
     align-items: center
+    position: fixed
 
     .graphics-tags-item
       margin: 1rem
-      width: 6rem
-      height: 80%
+      width: 3rem
+      height: 3rem
       background-color: rgba(255,255,255,0.75)
       color: black
       display: flex
@@ -115,7 +122,10 @@ export default {
       background-color: rgba(255,255,255,0.2)
 
   .graphics-item-container
-    width: 100%
+    width: 90%
+    height: 87%
+    position: absolute
+    right: 0
     display: inline-flex
     justify-content: space-around
     flex-wrap: wrap
@@ -130,7 +140,7 @@ export default {
       box-sizing: border-box
       box-shadow: 0 0.5vw 0.5vw rgba(0,0,0,0.3)
       margin: 1vh
-      transition: all .3s
+      transition: all .1s
       translate-origin: left top
 
       .item-img

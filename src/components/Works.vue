@@ -44,7 +44,7 @@ $color-border: #999285
 
   .header
     width: 100%
-    height: 4rem
+    height: 8vh
     top: 0
     background-color: rgba(255,255,255,0.1)
     display: flex
@@ -54,7 +54,7 @@ $color-border: #999285
 
   .genre-tab
     width: 100%
-    height: 5%
+    height: 5vh
     display: flex
     align-items: center
     justify-content: center
@@ -73,7 +73,7 @@ $color-border: #999285
 
   .body
     width: 100%
-    height: 85%
+    height: 87vh
     overflow: scroll
     // background-color: black
 
@@ -82,8 +82,8 @@ $color-border: #999285
     position: absolute
     top: 0vh
     right: 0vw
-    width: 4rem
-    height: 4rem
+    width: 8vh
+    height: 8vh
     background-color: rgba(0,0,0,0.3)
     z-index: 1000
     font-size: 3rem
