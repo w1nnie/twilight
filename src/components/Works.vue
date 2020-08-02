@@ -65,6 +65,7 @@ $color-bg: #bce1d5
     display: flex
     align-items: center
     justify-content: center
+    box-shadow: none
 
     .works-links
       @extend .morph
