@@ -29,9 +29,15 @@ export default {
 </script>
 
 <style scoped lang="sass">
-$color-text: #fff9e8
-$color-box: #1d1d1d
+$color-text: #011f40
 $color-border: #999285
+$color-bg: #bce1d5
+
+.morph
+  background-color: $color-bg
+  color: $color-text
+  box-shadow: 10px 10px 50px #a0bfb5, -10px -10px 50px #d8fff5
+  border-radius: 10px
 
 .works-container
   position: absolute
@@ -39,28 +45,29 @@ $color-border: #999285
   height: 100vh
   top: 0
   left: 0
-  background-color: hsl(51,47%,81%)
+  background-color: $color-bg
   color: $color-text
 
   .header
+    @extend .morph
     width: 100%
     height: 8vh
     top: 0
-    background-color: rgba(255,255,255,0.1)
     display: flex
     align-items: center
     justify-content: center
     font-size: 4rem
 
   .genre-tab
+    @extend .morph
     width: 100%
     height: 5vh
     display: flex
     align-items: center
     justify-content: center
-    // background-color: blue
 
     .works-links
+      @extend .morph
       width: 5rem
       height: 70%
       margin: 1.5%
@@ -68,8 +75,9 @@ $color-border: #999285
       align-items: center
       justify-content: center
       text-decoration: none
-      color: $color-text
-      background-color: rgba(0,0,0,0.6)
+      box-shadow: 5px 5px 10px #a0bfb5, -5px -5px 10px #d8fff5
+      overflow: hidden
+
 
   .body
     width: 100%

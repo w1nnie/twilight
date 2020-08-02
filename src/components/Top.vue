@@ -1,7 +1,7 @@
 <template lang="pug">
   .content
     #img-container
-      img.middle.far(:src='layers[0]' :style="{filter: farFilter,transform: middleZoom}")
+      img.middle.far(:src='layers[0]' :style="{filter: farFilter,transform: middleZoom, opacity: farOpacity}")
       img.middle(:src='layers[1]' :style="{filter: middleFilter,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearFilter,transform: nearZoom}")
     .links(@neutralize="neutral")
@@ -52,6 +52,7 @@ export default {
       middleZoom: "translate3D(0,0,0)",
       nearZoom: "translate3D(0,0,0)",
       isClicked: false,
+      farOpacity: 1,
       o: "0",
       g: "0"
     };
@@ -66,6 +67,7 @@ export default {
       this.g = "1";
     },
     goToGallery() {
+      this.farOpacity = 0;
       this.middleZoom = "translate3D(100px,0,18px)";
       this.nearZoom = "translate3D(0,0,25px)";
       this.isClicked = true;
@@ -85,6 +87,7 @@ export default {
     neutral() {
       if (!this.isClicked) {
         this.farFilter = "blur(0px)";
+        this.farOpacity = 1;
         this.middleFilter = "blur(0px)";
         this.nearFilter = "blur(0px)";
         this.middleZoom = "translate3D(0,0,0)";

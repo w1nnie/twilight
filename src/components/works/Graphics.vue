@@ -1,7 +1,7 @@
 <template lang="pug">
 .graphics-container
   .graphics-tags
-    .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{tag}}
+    .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
   transition-group.graphics-item-container(name="filter")
     router-link.item(v-for="item in sortedData" 
      :to="'/works/graphics/'+item.id" 
@@ -29,17 +29,16 @@ export default {
         "ファンタジー",
         "星空"
       ],
+      displayTagList: ["ド", "イ", "オ", "二", "フ", "星"],
       activeTagFlags: [false, false, false, false, false, false],
       activeTagIndex: -1,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
       zoom: {
-        transform: "scale(1.05,1.05)",
-        boxShadow: "0 0 0.5vw rgba(0,0,0,0.3)"
+        transform: "scale(1.05,1.05)"
       },
       neutral: {
-        transform: "scale(1,1)",
-        boxShadow: "0 0.5vw 0.5vw rgba(0,0,0,0.3)"
+        transform: "scale(1,1)"
       },
       focus: -1
     };
@@ -91,6 +90,17 @@ export default {
 </script>
 
 <style scoped lang="sass">
+
+$color-text: #011f40
+$color-border: #999285
+$color-bg: #bce1d5
+
+.morph
+  background-color: $color-bg
+  color: $color-text
+  box-shadow: 10px 10px 25px #a0bfb5, -10px -10px 25px #d8fff5
+  border-radius: 10px
+
 .graphics-container
   width: 100%
   height: 100%
@@ -98,19 +108,20 @@ export default {
   flex-direction: row
 
   .graphics-tags
-    width: 10%
+    @extend .morph
+    width: 5%
     height: 100%
-    background-color: rgba(0,0,0,0.1)
     display: flex
     flex-direction: column
     align-items: center
     position: fixed
+    overflow: hidden
 
     .graphics-tags-item
+      @extend .morph
       margin: 1rem
       width: 3rem
       height: 3rem
-      background-color: rgba(255,255,255,0.75)
       color: black
       display: flex
       align-items: center
@@ -119,29 +130,31 @@ export default {
 
     .graphics-tags-item-active
       @extend .graphics-tags-item
-      background-color: rgba(255,255,255,0.2)
+      background-color: #b6d7cc
+      box-shadow: -10px -10px 20px #a0bfb5, 10px 10px 20px #d8fff5
 
   .graphics-item-container
-    width: 90%
-    height: 87%
+    width: 95%
+    height: 81%
     position: absolute
     right: 0
     display: inline-flex
     justify-content: space-around
     flex-wrap: wrap
     overflow: scroll
+    padding-top: 3vh
+    padding-bottom: 3vh
 
     .item
-      width: 32vh
-      height: 32vh
-      background-color: rgb(213,210,172)
-      border: 5px solid rgb(74,67,63)
-      border-top: 5px solid rgb(140,120,90)
+      @extend .morph
+      width: 33vh
+      height: 33vh
+      border: 5px solid $color-bg
       box-sizing: border-box
-      box-shadow: 0 0.5vw 0.5vw rgba(0,0,0,0.3)
-      margin: 1vh
+      margin: 4vh
       transition: all .2s
       translate-origin: left top
+      box-shadow: 15px 15px 25px #a0bfb5, -15px -15px 25px #d8fff5
 
       .item-img
         width: 100%
