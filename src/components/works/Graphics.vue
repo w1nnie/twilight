@@ -24,12 +24,12 @@ export default {
       tagList: [
         "ドット絵",
         "イラスト",
+        "デザイン",
         "オリジナル",
         "二次創作",
-        "ファンタジー",
         "星空"
       ],
-      displayTagList: ["ド", "イ", "オ", "二", "フ", "星"],
+      displayTagList: ["ド", "イ", "デ", "オ", "二", "星"],
       activeTagFlags: [false, false, false, false, false, false],
       activeTagIndex: -1,
       activeClass: "graphics-tags-item-active",

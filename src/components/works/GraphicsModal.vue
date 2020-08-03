@@ -45,11 +45,14 @@ export default {
     height: 100%
     animation: fadeIn .4s
     background-color: rgba(0,0,0,0.75)
+    display: flex
+    justify-content: center
+    align-items: center
 
     .modal-content-img
       object-fit: contain
-      width: 100%
-      height: 100%
+      width: 90%
+      height: 90%
 
 @keyframes fadeIn
   0% {opacity: 0}

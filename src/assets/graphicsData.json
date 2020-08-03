@@ -91,7 +91,7 @@
         "raw_ext": ".png",
         "title": "天宮こころ",
         "desc": "",
-        "date": 20200617,
+        "date": 20200517,
         "position": "50% 50%",
         "conf": "",
         "tags": [
@@ -124,8 +124,7 @@
         "conf": "",
         "tags": [
             "イラスト",
-            "オリジナル",
-            "ファンタジー"
+            "オリジナル"
         ]
     },
     {
@@ -183,8 +182,7 @@
         "conf": "",
         "tags": [
             "イラスト",
-            "オリジナル",
-            "ファンタジー"
+            "オリジナル"
         ]
     },
     {
@@ -226,8 +224,7 @@
         "position": "50% 50%",
         "conf": "",
         "tags": [
-            "イラスト",
-            "オリジナル"
+            "イラスト"
         ]
     },
     {
@@ -312,6 +309,89 @@
         "tags": [
             "ドット絵",
             "二次創作"
+        ]
+    },
+    {
+        "id": 23,
+        "filename": "twl_train",
+        "raw_ext": ".jpg",
+        "title": "黄昏線",
+        "desc": "",
+        "date": 20190506,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "イラスト",
+            "オリジナル",
+            "デザイン"
+        ]
+    },
+    {
+        "id": 24,
+        "filename": "ammy_natsu",
+        "raw_ext": ".png",
+        "title": "なつやすみゃ",
+        "desc": "",
+        "date": 20200731,
+        "position": "45% 50%",
+        "conf": "",
+        "tags": [
+            "イラスト",
+            "二次創作"
+        ]
+    },
+    {
+        "id": 25,
+        "filename": "traP5th",
+        "raw_ext": ".png",
+        "title": "traP5th記念イラスト",
+        "desc": "",
+        "date": 20200321,
+        "position": "40% 50%",
+        "conf": "",
+        "tags": [
+            "イラスト",
+            "二次創作"
+        ]
+    },
+    {
+        "id": 26,
+        "filename": "card",
+        "raw_ext": ".png",
+        "title": "名刺",
+        "desc": "",
+        "date": 20190813,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "デザイン"
+        ]
+    },
+    {
+        "id": 27,
+        "filename": "main_steria",
+        "raw_ext": ".png",
+        "title": "うちのこステリア",
+        "desc": "",
+        "date": 20191006,
+        "position": "50% 30%",
+        "conf": "",
+        "tags": [
+            "イラスト",
+            "オリジナル"
+        ]
+    },
+    {
+        "id": 28,
+        "filename": "nero",
+        "raw_ext": ".png",
+        "title": "はやく寝たらどうですか？",
+        "desc": "",
+        "date": 20200422,
+        "position": "50% 50%",
+        "conf": "",
+        "tags": [
+            "デザイン"
         ]
     }
 ]

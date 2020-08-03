@@ -12,15 +12,11 @@
 
 <script>
 import Graphics from "@/components/works/Graphics.vue";
-import p_g from "@/assets/bg/p_g.png";
 
 export default {
   name: "Works",
   data() {
-    return {
-      bgImg: p_g,
-      bg: "url(" + this.bgImg + ")"
-    };
+    return {};
   },
   components: {
     Graphics
