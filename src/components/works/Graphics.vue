@@ -35,7 +35,7 @@ export default {
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
       zoom: {
-        transform: "scale(1.05,1.05)"
+        transform: "scale(1.02,1.02)"
       },
       neutral: {
         transform: "scale(1,1)"
@@ -126,6 +126,7 @@ export default {
       justify-content: center
       cursor: pointer
       box-shadow: -10px -10px 20px $color-light, 10px 10px 20px $color-dark
+      transition: all .1s
 
     .graphics-tags-item-active
       @extend .graphics-tags-item
@@ -154,6 +155,9 @@ export default {
       transition: all .2s
       translate-origin: left top
       box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
+
+      &:hover
+        box-shadow: none
 
       .item-img
         width: 100%

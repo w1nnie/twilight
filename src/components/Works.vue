@@ -95,6 +95,7 @@ export default {
     color: $color-text
     overflow: hidden
     box-shadow: 5px 5px 10px $color-dark, -5px -5px 10px $color-light
+    transition: all .1s
 
     &:active
       background-color: $color-active
