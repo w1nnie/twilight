@@ -91,14 +91,12 @@ export default {
 
 <style scoped lang="sass">
 
-$color-text: #011f40
-$color-border: #999285
-$color-bg: #bce1d5
+@import "@/assets/colors.sass"
 
 .morph
   background-color: $color-bg
   color: $color-text
-  box-shadow: 10px 10px 25px #a0bfb5, -10px -10px 25px #d8fff5
+  box-shadow: $color-shadow
   border-radius: 10px
 
 .graphics-container
@@ -127,11 +125,12 @@ $color-bg: #bce1d5
       align-items: center
       justify-content: center
       cursor: pointer
+      box-shadow: -10px -10px 20px $color-light, 10px 10px 20px $color-dark
 
     .graphics-tags-item-active
       @extend .graphics-tags-item
       background-color: #b6d7cc
-      box-shadow: -10px -10px 20px #a0bfb5, 10px 10px 20px #d8fff5
+      box-shadow: -10px -10px 20px $color-dark, 10px 10px 20px $color-light
 
   .graphics-item-container
     width: 95%
@@ -154,7 +153,7 @@ $color-bg: #bce1d5
       margin: 4vh
       transition: all .2s
       translate-origin: left top
-      box-shadow: 15px 15px 25px #a0bfb5, -15px -15px 25px #d8fff5
+      box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
 
       .item-img
         width: 100%

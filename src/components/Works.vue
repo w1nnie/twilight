@@ -29,14 +29,13 @@ export default {
 </script>
 
 <style scoped lang="sass">
-$color-text: #011f40
-$color-border: #999285
-$color-bg: #bce1d5
+
+@import "@/assets/colors.sass"
 
 .morph
   background-color: $color-bg
   color: $color-text
-  box-shadow: 10px 10px 50px #a0bfb5, -10px -10px 50px #d8fff5
+  box-shadow: $color-shadow
   border-radius: 10px
 
 .works-container
@@ -76,7 +75,7 @@ $color-bg: #bce1d5
       align-items: center
       justify-content: center
       text-decoration: none
-      box-shadow: 5px 5px 10px #a0bfb5, -5px -5px 10px #d8fff5
+      box-shadow: 5px 5px 10px $color-dark, -5px -5px 10px $color-light
       overflow: hidden
 
 
@@ -84,19 +83,24 @@ $color-bg: #bce1d5
     width: 100%
     height: 87vh
     overflow: scroll
-    // background-color: black
 
 
   .collapse
+    @extend .morph
     position: absolute
     top: 0vh
     right: 0vw
     width: 8vh
     height: 8vh
-    background-color: rgba(0,0,0,0.3)
     z-index: 1000
-    font-size: 3rem
+    font-size: 6vh
     text-align: center
     text-decoration: none
     color: $color-text
+    overflow: hidden
+    box-shadow: 5px 5px 10px $color-dark, -5px -5px 10px $color-light
+
+    &:active
+      background-color: $color-active
+      box-shadow: 5px 5px 10px $color-light, -5px -5px 10px $color-dark
 </style>
