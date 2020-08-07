@@ -10,6 +10,7 @@
       router-link.works(to="works/graphics" :style="{left:`${windowSize.x * 0.62 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
     .text
+      lottie(:options="lottieGallery")
       .a(:style="{opacity: o}") about me ! →
       .g(:style="{opacity: g}") ← go to gallery !
     transition(name="fade")
@@ -32,6 +33,9 @@ gtag("config", "UA-171648104-1");
 </script>
 
 <script>
+import Lottie from "@/components/lottie.vue";
+import * as svgGallery from "@/assets/svgGallery.json";
+
 import router from "@/router.js";
 import p_f from "@/assets/bg/p_f.png";
 import p_m from "@/assets/bg/p_m.png";
@@ -57,7 +61,7 @@ export default {
       g: "0"
     };
   },
-  components: {},
+  components: { Lottie },
   methods: {
     goToGalleryHover() {
       this.farFilter = "brightness(110%)";
@@ -115,6 +119,9 @@ export default {
     calcWorksLeft() {
       let left = this.windowSize.x * 0.62 - this.windowSize.y * 0.5;
       return left + "px";
+    },
+    lottieGallery() {
+      return { animationData: svgGallery };
     }
   }
 };
