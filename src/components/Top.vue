@@ -4,15 +4,16 @@
       img.middle.far(:src='layers[0]' :style="{filter: farFilter,transform: middleZoom, opacity: farOpacity}")
       img.middle(:src='layers[1]' :style="{filter: middleFilter,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearFilter,transform: nearZoom}")
+    .text
+      lottie.g-svg(:options="lottieGallery" :width="500" v-on:animCreated="handleAnimation")
+      .a(:style="{opacity: o}")
+      .g(:style="{opacity: g}")
     .links(@neutralize="neutral")
       router-link.about(to="about" @mouseover.native="showProfileHover" 
        @mouseout.native="neutral" @click.native="showProfile")
       router-link.works(to="works/graphics" :style="{left:`${windowSize.x * 0.62 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
-    .text
-      lottie(:options="lottieGallery")
-      .a(:style="{opacity: o}") about me ! →
-      .g(:style="{opacity: g}") ← go to gallery !
+
     transition(name="fade")
       router-view
   
@@ -33,7 +34,7 @@ gtag("config", "UA-171648104-1");
 </script>
 
 <script>
-import Lottie from "@/components/lottie.vue";
+import Lottie from "@/components/Lottie.vue";
 import * as svgGallery from "@/assets/svgGallery.json";
 
 import router from "@/router.js";
@@ -64,13 +65,16 @@ export default {
   components: { Lottie },
   methods: {
     goToGalleryHover() {
+      this.play();
       this.farFilter = "brightness(110%)";
-      this.nearFilter = "blur(3px)";
+      this.middleFilter = "brightness(70%)";
+      this.nearFilter = "blur(3px) brightness(70%)";
       this.nearZoom = "translate3D(0px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
       this.g = "1";
     },
     goToGallery() {
+      this.stop();
       this.farOpacity = 0;
       this.middleZoom = "translate3D(100px,0,18px)";
       this.nearZoom = "translate3D(0,0,25px)";
@@ -78,8 +82,8 @@ export default {
       this.g = "0";
     },
     showProfileHover() {
-      this.farFilter = "blur(5px)";
-      this.middleFilter = "blur(5px)";
+      this.farFilter = "blur(5px) brightness(70%)";
+      this.middleFilter = "blur(5px) brightness(70%)";
       this.middleZoom = "translate3D(0,0,2px)";
       this.nearFilter = "brightness(130%)";
       this.nearZoom = "translate3D(0,0,5px)";
@@ -90,6 +94,7 @@ export default {
     },
     neutral() {
       if (!this.isClicked) {
+        this.stop();
         this.farFilter = "blur(0px)";
         this.farOpacity = 1;
         this.middleFilter = "blur(0px)";
@@ -107,6 +112,15 @@ export default {
     },
     onResize() {
       this.windowSize = { x: window.innerWidth, y: window.innerHeight };
+    },
+    handleAnimation(anim) {
+      this.anim = anim;
+    },
+    stop() {
+      this.anim.stop();
+    },
+    play() {
+      this.anim.play();
     }
   },
   mounted() {
@@ -121,7 +135,7 @@ export default {
       return left + "px";
     },
     lottieGallery() {
-      return { animationData: svgGallery };
+      return { animationData: svgGallery, loop: false };
     }
   }
 };
@@ -196,11 +210,17 @@ export default {
   z-index: 100
   pointer-events: none
 
+  .g-svg
+    position: absolute
+    pointer-events: none
+    right: 5%
+    top: 0%
+
   .a
     position: absolute
     transition: all .3s
-    left: 30%
-    top: 30%
+    left: -30%
+    top: -30%
 
   .g
     position: absolute

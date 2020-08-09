@@ -8,7 +8,7 @@
      :key="item.id" 
      @mouseover.native="zoomIn(item.id)"
      @mouseout.native="zoomOut()"
-     :style="[isEqual(focus, item.id) ? zoom : neutral]")
+     :class="[isEqual(focus, item.id) ? hover : neutral]")
       img.item-img(:style="{objectPosition: item.position}" :src="'/twilight/img/thumbnail/'+item.filename+'.jpg'")
   router-view
 </template>
@@ -34,12 +34,8 @@ export default {
       activeTagIndex: -1,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
-      zoom: {
-        transform: "scale(1.02,1.02)"
-      },
-      neutral: {
-        transform: "scale(1,1)"
-      },
+      hover: "item-hover",
+      neutral: "item-neutral",
       focus: -1
     };
   },
@@ -92,6 +88,12 @@ export default {
 <style scoped lang="sass">
 
 @import "@/assets/colors.sass"
+
+.item-hover
+  box-shadow: 15px 15px 5px $color-dark, -15px -15px 5px $color-light
+
+.item-neutral
+  box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
 
 .morph
   background-color: $color-bg
