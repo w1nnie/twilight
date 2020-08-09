@@ -150,7 +150,7 @@ export default {
       height: 33vh
       margin: 4vh
       transition: all .15s
-      box-shadow: 10px 10px 20px $color-dark, -10px -10px 20px $color-light
+      box-shadow: 15px 15px 20px $color-dark, -15px -15px 20px $color-light
 
       &:hover
         box-shadow: 2px 2px 2px $color-dark, -2px -2px 2px $color-light
