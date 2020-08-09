@@ -98,6 +98,5 @@ export default {
     transition: all .1s
 
     &:active
-      background-color: $color-active
-      box-shadow: 5px 5px 10px $color-light, -5px -5px 10px $color-dark
+      box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
 </style>

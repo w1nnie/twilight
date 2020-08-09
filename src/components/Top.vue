@@ -115,6 +115,7 @@ export default {
     },
     handleAnimation(anim) {
       this.anim = anim;
+      this.anim.setSpeed(2);
     },
     stop() {
       this.anim.stop();
@@ -135,7 +136,11 @@ export default {
       return left + "px";
     },
     lottieGallery() {
-      return { animationData: svgGallery, loop: false };
+      return {
+        animationData: svgGallery,
+        loop: false,
+        autoplay: false
+      };
     }
   }
 };
@@ -213,7 +218,7 @@ export default {
   .g-svg
     position: absolute
     pointer-events: none
-    right: 5%
+    right: 4%
     top: 0%
 
   .a

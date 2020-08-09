@@ -7,8 +7,7 @@
      :to="'/works/graphics/'+item.id" 
      :key="item.id" 
      @mouseover.native="zoomIn(item.id)"
-     @mouseout.native="zoomOut()"
-     :class="[isEqual(focus, item.id) ? hover : neutral]")
+     @mouseout.native="zoomOut()")
       img.item-img(:style="{objectPosition: item.position}" :src="'/twilight/img/thumbnail/'+item.filename+'.jpg'")
   router-view
 </template>
@@ -34,8 +33,6 @@ export default {
       activeTagIndex: -1,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
-      hover: "item-hover",
-      neutral: "item-neutral",
       focus: -1
     };
   },
@@ -89,11 +86,11 @@ export default {
 
 @import "@/assets/colors.sass"
 
-.item-hover
-  box-shadow: 15px 15px 5px $color-dark, -15px -15px 5px $color-light
+// .item-hover
+//   box-shadow: 10px 10px 15px $color-dark, -10px -10px 15px $color-light
 
-.item-neutral
-  box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
+// .item-neutral
+//   box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
 
 .morph
   background-color: $color-bg
@@ -132,8 +129,7 @@ export default {
 
     .graphics-tags-item-active
       @extend .graphics-tags-item
-      background-color: #b6d7cc
-      box-shadow: -10px -10px 20px $color-dark, 10px 10px 20px $color-light
+      box-shadow: inset -1px -1px 2px $color-light, inset 1px 1px 2px $color-dark
 
   .graphics-item-container
     width: 95%
@@ -149,22 +145,21 @@ export default {
 
     .item
       @extend .morph
+      border-radius: 20px
       width: 33vh
       height: 33vh
-      border: 5px solid $color-bg
-      box-sizing: border-box
       margin: 4vh
-      transition: all .2s
-      translate-origin: left top
-      box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
+      transition: all .15s
+      box-shadow: 10px 10px 20px $color-dark, -10px -10px 20px $color-light
 
       &:hover
-        box-shadow: none
+        box-shadow: 2px 2px 2px $color-dark, -2px -2px 2px $color-light
 
       .item-img
         width: 100%
         height: 100%
         object-fit: cover
+        border-radius: 20px
 
   .filter-enter-active, .filter-leave-active, .filter-move
     transition: opacity .3s, transform 1s
