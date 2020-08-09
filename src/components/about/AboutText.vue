@@ -38,9 +38,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
-$color-border: #999285
-$color-text: #fff9e8
-// $color-text: hsl(30,30%,40%)
+
+@import "@/assets/colors.sass"
 
 
 .about-text-container
@@ -57,7 +56,6 @@ $color-text: #fff9e8
     left: 10%
     width: 50%
     height: 90%
-    background: rgba(255,255,255,0.1)
 
     .bullet
       display: flex

@@ -24,19 +24,18 @@ export default {
 </script>
 
 <style scoped lang="sass">
-$color-text: #fff9e8
-$color-box: #1d1d1d
-$color-border: #999285
+
+@import "@/assets/colors.sass"
 
 .about-container
   position: absolute
   width: 100vw
   height: 100vh
-  background-color: rgba(0,0,0,0.7)
   display: flex
   justify-content: center
   align-items: center
   color: $color-text
+  background-color: $color-dark
 
   .collapse
     position: absolute

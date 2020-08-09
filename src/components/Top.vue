@@ -5,7 +5,8 @@
       img.middle(:src='layers[1]' :style="{filter: middleFilter,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearFilter,transform: nearZoom}")
     .text
-      lottie.g-svg(:options="lottieGallery" :width="500" v-on:animCreated="handleAnimation")
+      lottie.g-svg(:options="lottieGallery" :width="500" v-on:animCreated="handleAnimGallery")
+      lottie.a-svg(:options="lottieAbout" :width="500" v-on:animCreated="handleAnimAbout")
       .a(:style="{opacity: o}")
       .g(:style="{opacity: g}")
     .links(@neutralize="neutral")
@@ -36,6 +37,7 @@ gtag("config", "UA-171648104-1");
 <script>
 import Lottie from "@/components/Lottie.vue";
 import * as svgGallery from "@/assets/svgGallery.json";
+import * as svgAbout from "@/assets/svgAbout.json";
 
 import router from "@/router.js";
 import p_f from "@/assets/bg/p_f.png";
@@ -65,7 +67,7 @@ export default {
   components: { Lottie },
   methods: {
     goToGalleryHover() {
-      this.play();
+      this.play(this.ganim);
       this.farFilter = "brightness(110%)";
       this.middleFilter = "brightness(70%)";
       this.nearFilter = "blur(3px) brightness(70%)";
@@ -74,7 +76,7 @@ export default {
       this.g = "1";
     },
     goToGallery() {
-      this.stop();
+      this.stop(this.ganim);
       this.farOpacity = 0;
       this.middleZoom = "translate3D(100px,0,18px)";
       this.nearZoom = "translate3D(0,0,25px)";
@@ -82,6 +84,7 @@ export default {
       this.g = "0";
     },
     showProfileHover() {
+      this.play(this.aanim);
       this.farFilter = "blur(5px) brightness(70%)";
       this.middleFilter = "blur(5px) brightness(70%)";
       this.middleZoom = "translate3D(0,0,2px)";
@@ -90,11 +93,13 @@ export default {
       this.o = "1";
     },
     showProfile() {
+      this.stop(this.aanim);
       this.o = "0";
     },
     neutral() {
       if (!this.isClicked) {
-        this.stop();
+        this.stop(this.aanim);
+        this.stop(this.ganim);
         this.farFilter = "blur(0px)";
         this.farOpacity = 1;
         this.middleFilter = "blur(0px)";
@@ -113,15 +118,19 @@ export default {
     onResize() {
       this.windowSize = { x: window.innerWidth, y: window.innerHeight };
     },
-    handleAnimation(anim) {
-      this.anim = anim;
-      this.anim.setSpeed(2);
+    handleAnimGallery(anim) {
+      this.ganim = anim;
+      this.ganim.setSpeed(2);
     },
-    stop() {
-      this.anim.stop();
+    handleAnimAbout(anim) {
+      this.aanim = anim;
+      this.aanim.setSpeed(2);
     },
-    play() {
-      this.anim.play();
+    stop(anim) {
+      anim.stop();
+    },
+    play(anim) {
+      anim.play();
     }
   },
   mounted() {
@@ -141,12 +150,22 @@ export default {
         loop: false,
         autoplay: false
       };
+    },
+    lottieAbout() {
+      return {
+        animationData: svgAbout,
+        loop: false,
+        autoplay: false
+      };
     }
   }
 };
 </script>
 
 <style scoped lang="sass">
+
+@import "@/assets/colors.sass"
+
 .content
   width: 100vw
   height: 100vh
@@ -157,7 +176,7 @@ export default {
   flex-wrap: wrap
   justify-content: center
   align-items: center
-  background-color: #bbb
+  background-color: $color-bg
   overflow: hidden
 
   #img-container
@@ -221,17 +240,11 @@ export default {
     right: 4%
     top: 0%
 
-  .a
+  .a-svg
     position: absolute
-    transition: all .3s
-    left: -30%
-    top: -30%
-
-  .g
-    position: absolute
-    transition: all .3s
-    right: 5%
-    top: 30%
+    pointer-events: none
+    left: 20%
+    top: 0%
 
 .fade-enter-active, .fade-leave-active
   transition: all 0.6s ease

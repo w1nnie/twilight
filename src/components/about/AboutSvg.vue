@@ -19,7 +19,7 @@
                 keyTimes="0;1"
                 keySplines="0.25 0.1 0.25 1.0"
                 :to="`M ${w*0.07} ${h} L ${w*0.72} ${h*0.37} L ${w} ${h*0.37} L ${w} ${h} z`")
-      router-link(:to="'/'" tag="path" :d="`M ${w*0.89} 0 L ${w} 0 L ${w} ${h*0.27} L ${w} 0 z`" :fill="collapseColor")
+      router-link(:to="'/'" tag="path" :d="`M ${w*0.89} 0 L ${w} 0 L ${w} ${h*0.27} L ${w} 0 z`" :fill="color")
               animate(attributeName="d"
                 begin="0s"
                 dur="1s"
@@ -38,7 +38,7 @@ export default {
     return {
       w: window.innerWidth,
       h: window.innerHeight,
-      color: "hsl(110,5%,30%)",
+      color: "#f2d4ab",
       collapseColor: "hsl(110,5%,20%)"
     };
   },
@@ -70,6 +70,9 @@ export default {
 </script>
 
 <style scoped lang="sass">
+
+@import "@/assets/colors.sass"
+
 .about-svg-container
   width: 100%
   height: 100%
