@@ -92,6 +92,7 @@ export default {
 // .item-neutral
 //   box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
 
+
 .morph
   background-color: $color-bg
   color: $color-text
@@ -102,40 +103,39 @@ export default {
   width: 100%
   height: 100%
   display: flex
-  flex-direction: row
+  flex-direction: row-reverse
 
   .graphics-tags
     @extend .morph
+    box-shadow: none
     width: 5%
     height: 100%
     display: flex
     flex-direction: column
     align-items: center
     position: fixed
-    overflow: hidden
 
     .graphics-tags-item
       @extend .morph
       margin: 1rem
       width: 3rem
       height: 3rem
-      color: black
       display: flex
       align-items: center
       justify-content: center
       cursor: pointer
-      box-shadow: -10px -10px 20px $color-light, 10px 10px 20px $color-dark
+      box-shadow: -10px -10px 15px $color-light, 10px 10px 15px $color-dark
       transition: all .1s
 
     .graphics-tags-item-active
       @extend .graphics-tags-item
-      box-shadow: inset -1px -1px 2px $color-light, inset 1px 1px 2px $color-dark
+      box-shadow: inset -2px -2px 2px $color-light, inset 2px 2px 2px $color-dark
 
   .graphics-item-container
     width: 95%
     height: 81%
     position: absolute
-    right: 0
+    left: 0
     display: inline-flex
     justify-content: space-around
     flex-wrap: wrap
@@ -145,12 +145,14 @@ export default {
 
     .item
       @extend .morph
-      border-radius: 20px
+      border-radius: 30px
       width: 33vh
       height: 33vh
       margin: 4vh
-      transition: all .15s
-      box-shadow: 15px 15px 20px $color-dark, -15px -15px 20px $color-light
+      // border: solid 5px $color-bg
+      // box-sizing: border-box
+      transition: box-shadow .03s, transform .7s, opacity .1s
+      box-shadow: 12px 12px 15px $color-dark, -12px -12px 15px $color-light
 
       &:hover
         box-shadow: 2px 2px 2px $color-dark, -2px -2px 2px $color-light
@@ -159,10 +161,9 @@ export default {
         width: 100%
         height: 100%
         object-fit: cover
-        border-radius: 20px
+        border-radius: 30px
 
   .filter-enter-active, .filter-leave-active, .filter-move
-    transition: opacity .3s, transform 1s
 
   .filter-leave-active
     position: absolute
