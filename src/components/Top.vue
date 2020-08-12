@@ -5,10 +5,8 @@
       img.middle(:src='layers[1]' :style="{filter: middleFilter,transform: middleZoom}")
       img.near(:src='layers[2]' :style="{filter: nearFilter,transform: nearZoom}")
     .text
-      lottie.g-svg(:options="lottieGallery" :width="500" v-on:animCreated="handleAnimGallery")
-      lottie.a-svg(:options="lottieAbout" :width="500" v-on:animCreated="handleAnimAbout")
-      .a(:style="{opacity: o}")
-      .g(:style="{opacity: g}")
+      lottie.g-svg(:options="lottieGallery" :width="logoWidth" v-on:animCreated="handleAnimGallery")
+      lottie.a-svg(:options="lottieAbout" :width="logoWidth" v-on:animCreated="handleAnimAbout")
     .links(@neutralize="neutral")
       router-link.about(to="about" @mouseover.native="showProfileHover" 
        @mouseout.native="neutral" @click.native="showProfile")
@@ -59,9 +57,7 @@ export default {
       middleZoom: "translate3D(0,0,0)",
       nearZoom: "translate3D(0,0,0)",
       isClicked: false,
-      farOpacity: 1,
-      o: "0",
-      g: "0"
+      farOpacity: 1
     };
   },
   components: { Lottie },
@@ -157,6 +153,9 @@ export default {
         loop: false,
         autoplay: false
       };
+    },
+    logoWidth() {
+      return this.windowSize.x / 3;
     }
   }
 };

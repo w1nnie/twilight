@@ -86,11 +86,6 @@ export default {
 
 @import "@/assets/colors.sass"
 
-// .item-hover
-//   box-shadow: 10px 10px 15px $color-dark, -10px -10px 15px $color-light
-
-// .item-neutral
-//   box-shadow: 15px 15px 25px $color-dark, -15px -15px 25px $color-light
 
 
 .morph
@@ -124,7 +119,7 @@ export default {
       align-items: center
       justify-content: center
       cursor: pointer
-      box-shadow: -10px -10px 15px $color-light, 10px 10px 15px $color-dark
+      box-shadow: -5px -5px 15px $color-light, 5px 5px 15px $color-dark
       transition: all .1s
 
     .graphics-tags-item-active
