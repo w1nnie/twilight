@@ -1,9 +1,12 @@
 <template lang="pug">
   .content
     #img-container
-      img.middle.far(:src='layers[0]' :style="{filter: farFilter,transform: middleZoom, opacity: farOpacity}")
-      img.middle(:src='layers[1]' :style="{filter: middleFilter,transform: middleZoom}")
-      img.near(:src='layers[2]' :style="{filter: nearFilter,transform: nearZoom}")
+      img.middle.far(:src='layers[0]' :style="{filter: farFilter, transform: middleZoom, opacity: farOpacity}")
+      img.middle.far(:src='layers[1]' :style="{filter: farFilter, transform: middleZoom, opacity: blurOpacities[0]}")
+      img.middle(:src='layers[2]' :style="{filter: middleFilter,transform: middleZoom}")
+      img.middle(:src='layers[3]' :style="{filter: middleFilter,transform: middleZoom, opacity: blurOpacities[1]}")
+      img.near(:src='layers[4]' :style="{filter: nearFilter,transform: nearZoom}")
+      img.near(:src='layers[5]' :style="{filter: nearFilter,transform: nearZoom, opacity: blurOpacities[2]}")
     .text
       lottie.g-svg(:options="lottieGallery" :width="logoWidth" v-on:animCreated="handleAnimGallery")
       lottie.a-svg(:options="lottieAbout" :width="logoWidth" v-on:animCreated="handleAnimAbout")
@@ -41,23 +44,27 @@ import router from "@/router.js";
 import p_f from "@/assets/bg/p_f.png";
 import p_m from "@/assets/bg/p_m.png";
 import p_n from "@/assets/bg/p_n.png";
+import p_f_b from "@/assets/bg/p_f_b.png";
+import p_m_b from "@/assets/bg/p_m_b.png";
+import p_n_b from "@/assets/bg/p_n_b.png";
 
 export default {
   name: "Top",
   data() {
     return {
-      layers: [p_f, p_m, p_n],
+      layers: [p_f, p_f_b, p_m, p_m_b, p_n, p_n_b],
       windowSize: {
         x: window.innerWidth,
         y: window.innerHeight
       },
-      farFilter: "blur(0px)",
-      middleFilter: "blur(0px)",
-      nearFilter: "blur(0px)",
+      farFilter: "none",
+      middleFilter: "none",
+      nearFilter: "none",
       middleZoom: "translate3D(0,0,0)",
       nearZoom: "translate3D(0,0,0)",
       isClicked: false,
-      farOpacity: 1
+      farOpacity: 1,
+      blurOpacities: [0, 0, 0]
     };
   },
   components: { Lottie },
@@ -66,10 +73,10 @@ export default {
       this.play(this.ganim);
       this.farFilter = "brightness(110%)";
       this.middleFilter = "brightness(70%)";
-      this.nearFilter = "blur(3px) brightness(70%)";
+      this.nearFilter = "brightness(70%)";
       this.nearZoom = "translate3D(10px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
-      this.g = "1";
+      this.blurOpacities = [0, 1, 1];
     },
     goToGallery() {
       this.stop(this.ganim);
@@ -77,33 +84,31 @@ export default {
       this.middleZoom = "translate3D(130px,0,15px)";
       this.nearZoom = "translate3D(500px,0,25px)";
       this.isClicked = true;
-      this.g = "0";
+      this.blurOpacities = [0, 0, 0];
     },
     showProfileHover() {
       this.play(this.aanim);
-      this.farFilter = "blur(5px) brightness(70%)";
-      this.middleFilter = "blur(5px) brightness(70%)";
+      this.farFilter = "brightness(70%)";
+      this.middleFilter = "brightness(70%)";
       this.middleZoom = "translate3D(0,0,2px)";
       this.nearFilter = "brightness(130%)";
       this.nearZoom = "translate3D(0,0,5px)";
-      this.o = "1";
+      this.blurOpacities = [1, 1, 0];
     },
     showProfile() {
       this.stop(this.aanim);
-      this.o = "0";
     },
     neutral() {
       if (!this.isClicked) {
         this.stop(this.aanim);
         this.stop(this.ganim);
-        this.farFilter = "blur(0px)";
+        this.farFilter = "none";
         this.farOpacity = 1;
-        this.middleFilter = "blur(0px)";
-        this.nearFilter = "blur(0px)";
+        this.middleFilter = "none";
+        this.nearFilter = "none";
         this.middleZoom = "translate3D(0,0,0)";
         this.nearZoom = "translate3D(0,0,0)";
-        this.o = "0";
-        this.g = "0";
+        this.blurOpacities = [0, 0, 0];
       } else {
         this.isClicked = false;
         setTimeout(() => {
