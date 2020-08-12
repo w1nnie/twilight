@@ -10,7 +10,7 @@
     .links(@neutralize="neutral")
       router-link.about(to="about" @mouseover.native="showProfileHover" 
        @mouseout.native="neutral" @click.native="showProfile")
-      router-link.works(to="works/graphics" :style="{left:`${windowSize.x * 0.62 - windowSize.y * 0.5}px`}" 
+      router-link.works(to="works/graphics" :style="{left:`${windowSize.x * 0.53 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
 
     transition(name="fade")
@@ -67,15 +67,15 @@ export default {
       this.farFilter = "brightness(110%)";
       this.middleFilter = "brightness(70%)";
       this.nearFilter = "blur(3px) brightness(70%)";
-      this.nearZoom = "translate3D(0px,0,8px)";
+      this.nearZoom = "translate3D(10px,0,8px)";
       this.middleZoom = "translate3D(0,0,5px)";
       this.g = "1";
     },
     goToGallery() {
       this.stop(this.ganim);
       this.farOpacity = 0;
-      this.middleZoom = "translate3D(100px,0,18px)";
-      this.nearZoom = "translate3D(0,0,25px)";
+      this.middleZoom = "translate3D(130px,0,15px)";
+      this.nearZoom = "translate3D(500px,0,25px)";
       this.isClicked = true;
       this.g = "0";
     },
@@ -215,15 +215,15 @@ export default {
 
 .about
   @extend .button
-  top: 25%
+  top: 20%
   left: 60%
   width: 35vh
-  height: 75%
+  height: 80%
 
 .works
   @extend .button
   top: 0%
-  width: 43vh
+  width: 60vh
   height: 70%
 
 .text
