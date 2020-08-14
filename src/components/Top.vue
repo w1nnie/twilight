@@ -251,7 +251,7 @@ export default {
     top: 0%
 
 .fade-enter-active, .fade-leave-active
-  transition: all 0.6s ease
+  transition: all 0.9s ease
 
 .fade-enter, .fade-leave-to
   opacity: 0

@@ -43,25 +43,17 @@ export default {
 
 
 .about-text-container
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  pointer-events: none
-
   .textbox
-    position: absolute
-    top: 5%
-    left: 10%
-    width: 50%
-    height: 90%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
 
     .bullet
       display: flex
-      font-size: 1.5rem
+      font-size: 1.2rem
       justify-content: space-around
-      margin: 1.5rem 0 1.5rem 0
+      margin: 1rem 0 1rem 0
       color: $color-text
 
       .matters

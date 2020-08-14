@@ -2,12 +2,12 @@
   .about-container
     about-svg
     .shutter
-    about-text
+    about-card.card
 </template>
 
 <script>
-import AboutText from "@/components/about/AboutText.vue";
 import AboutSvg from "@/components/about/AboutSvg.vue";
+import AboutCard from "@/components/about/AboutCard.vue";
 import p_a from "@/assets/bg/p_n.png";
 
 export default {
@@ -18,8 +18,8 @@ export default {
     };
   },
   components: {
-    AboutText,
-    AboutSvg
+    AboutSvg,
+    AboutCard
   }
 };
 </script>
@@ -47,6 +47,10 @@ export default {
     animation-timing-function: ease-in-out
     pointer-events: none
 
+  .card
+    animation: cardAnim 2.5s forwards
+    opacity: 0
+
   .collapse
     position: absolute
     top: 0
@@ -65,4 +69,10 @@ export default {
     top: -100vh
   100%
     top: 0
+
+@keyframes cardAnim
+  75%
+    opacity: 0
+  100%
+    opacity: 1
 </style>

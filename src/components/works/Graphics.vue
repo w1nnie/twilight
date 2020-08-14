@@ -146,7 +146,7 @@ export default {
       margin: 4vh
       // border: solid 5px $color-bg
       // box-sizing: border-box
-      transition: box-shadow .03s, transform .7s, opacity .1s
+      transition: box-shadow .1s, transform .7s, opacity .1s
       box-shadow: 12px 12px 15px $color-dark, -12px -12px 15px $color-light
 
       &:hover
