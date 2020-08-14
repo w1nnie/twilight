@@ -1,6 +1,7 @@
 <template lang="pug">
   .about-container
     about-svg
+    .shutter
     about-text
 </template>
 
@@ -35,7 +36,16 @@ export default {
   justify-content: center
   align-items: center
   color: $color-text
-  background-color: $color-dark
+
+  .shutter
+    position: absolute
+    width: 100vw
+    height: 100vh
+    top: -100vh
+    background-color: $color-bg
+    animation: shutterAnim 1.5s forwards
+    animation-timing-function: ease-in-out
+    pointer-events: none
 
   .collapse
     position: absolute
@@ -49,4 +59,10 @@ export default {
     text-align: center
     text-decoration: none
     color: $color-text
+
+@keyframes shutterAnim
+  70%
+    top: -100vh
+  100%
+    top: 0
 </style>

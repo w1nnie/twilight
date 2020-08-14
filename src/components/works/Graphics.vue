@@ -8,7 +8,7 @@
      :key="item.id" 
      @mouseover.native="zoomIn(item.id)"
      @mouseout.native="zoomOut()")
-      img.item-img(:style="{objectPosition: item.position}" :src="'/twilight/img/thumbnail/'+item.filename+'.jpg'")
+      img.item-img(:style="{objectPosition: item.position}" v-lazy="'/twilight/img/thumbnail/'+item.filename+item.thm_ext")
   router-view
 </template>
 

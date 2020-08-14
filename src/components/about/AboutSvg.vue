@@ -38,7 +38,7 @@ export default {
     return {
       w: window.innerWidth,
       h: window.innerHeight,
-      color: "#f2d4ab",
+      color: "#c2fbff",
       collapseColor: "hsl(110,5%,20%)"
     };
   },
@@ -76,7 +76,7 @@ export default {
 .about-svg-container
   width: 100%
   height: 100%
-  transition: transform 0.5s
+  transition: transform 0.2s
 
   svg
     width: 100%
