@@ -21,20 +21,6 @@
   
 </template>
 
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=UA-171648104-1"
-></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag("js", new Date());
-
-gtag("config", "UA-171648104-1");
-</script>
-
 <script>
 import Lottie from "@/components/Lottie.vue";
 import * as svgGallery from "@/assets/svgGallery.json";
