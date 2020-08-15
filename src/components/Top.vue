@@ -92,7 +92,7 @@ export default {
       this.middleFilter = "brightness(70%)";
       this.middleZoom = "translate3D(0,0,2px)";
       this.nearFilter = "brightness(130%)";
-      this.nearZoom = "translate3D(0,0,5px)";
+      this.nearZoom = "translate3D(-20px,0,5px)";
       this.blurOpacities = [1, 1, 0];
     },
     showProfile() {
