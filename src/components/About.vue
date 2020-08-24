@@ -2,6 +2,7 @@
   .about-container
     about-svg
     .shutter
+    router-link.collapse(:to="'/'") ×
     about-card.card
 </template>
 
@@ -45,7 +46,6 @@ export default {
     background-color: $color-bg
     animation: shutterAnim 1.5s forwards
     animation-timing-function: ease-in-out
-    pointer-events: none
 
   .card
     animation: cardAnim 2.5s forwards
@@ -53,16 +53,23 @@ export default {
 
   .collapse
     position: absolute
-    top: 0
-    right: 0
-    width: 4rem
-    height: 4rem
-    background-color: rgba(0,0,0,0.3)
+    top: 0vh
+    right: 0vw
+    width: 8vh
+    height: 8vh
     z-index: 1000
-    font-size: 3rem
+    font-size: 6vh
     text-align: center
     text-decoration: none
     color: $color-text
+    overflow: hidden
+    box-shadow: 5px 5px 10px $color-dark, -5px -5px 10px $color-light
+    transition: all .1s
+    animation: cardAnim 2.5s forwards
+    opacity: 0
+
+    &:active
+      box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
 
 @keyframes shutterAnim
   70%

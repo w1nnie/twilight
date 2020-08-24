@@ -8,6 +8,8 @@
 <script>
 import Loading from "@/components/Loading.vue";
 import Top from "@/components/Top.vue";
+import About from "@/components/About.vue";
+import Works from "@/components/Works.vue";
 
 export default {
   name: "app",
@@ -23,7 +25,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.l = false;
-    }, 1000);
+    }, 3000);
   }
 };
 </script>
