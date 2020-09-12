@@ -44,7 +44,7 @@ export default {
     height: 100vh
     top: -100vh
     background-color: $color-bg
-    animation: shutterAnim 1.5s forwards
+    animation: shutterAnim 2s forwards
     animation-timing-function: ease-in-out
 
   .card
@@ -72,7 +72,7 @@ export default {
       box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
 
 @keyframes shutterAnim
-  70%
+  80%
     top: -100vh
   100%
     top: 0

@@ -6,7 +6,7 @@ import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
 import GraphicsModal from "@/components/works/GraphicsModal.vue";
 import Graphics from "@/components/works/Graphics.vue";
-import Tools from "@/components/works/Tools.vue";
+import Products from "@/components/works/Products.vue";
 import Games from "@/components/works/Games.vue";
 
 Vue.use(Router);
@@ -38,8 +38,8 @@ const router = new Router({
           ]
         },
         {
-          path: "tools",
-          component: Tools
+          path: "products",
+          component: Products
         },
         {
           path: "games",

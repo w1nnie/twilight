@@ -3,7 +3,7 @@
     <div class="fullview">
       <div class="loading-spacer"></div>
       <vue-loading
-        type="spiningDubbles"
+        type="balls"
         color="#aaa"
         :size="{ width: '100px', height: '100px' }"
       >

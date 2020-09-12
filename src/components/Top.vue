@@ -67,8 +67,8 @@ export default {
     goToGallery() {
       this.stop(this.ganim);
       this.farOpacity = 0;
-      this.middleZoom = "translate3D(130px,0,15px)";
-      this.nearZoom = "translate3D(500px,0,25px)";
+      this.middleZoom = "translate3D(110px,0,15px)";
+      this.nearZoom = "translate3D(400px,0,20px)";
       this.isClicked = true;
       this.blurOpacities = [0, 0, 0];
     },

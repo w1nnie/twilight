@@ -1,11 +1,10 @@
 <template lang="pug">
   .works-container
-    .header works
+    .header 
       router-link.collapse(:to="'/'") ×
     .genre-tab
-      router-link.works-links(:to="'/works/graphics'") graphics
-      router-link.works-links(:to="'/works/tools'") tools
-      //- router-link.works-links(:to="'/works/games'") games
+      router-link.works-links(:to="'/works/graphics'" @click.native="clickGraphics" :class="[activeFlags[0] ? activeClass : '', inactiveClass]") graphics
+      router-link.works-links(:to="'/works/products'" @click.native="clickProducts" :class="[activeFlags[1] ? activeClass : '', inactiveClass]") products
     .body
       router-view
 </template>
@@ -16,10 +15,24 @@ import Graphics from "@/components/works/Graphics.vue";
 export default {
   name: "Works",
   data() {
-    return {};
+    return {
+      activeFlags: [true, false],
+      activeClass: "active-tag",
+      inactiveClass: "inactive-tag"
+    };
   },
   components: {
     Graphics
+  },
+  methods: {
+    clickGraphics() {
+      this.activeFlags = [true, false];
+      console.log(this.activeFlags);
+    },
+    clickProducts() {
+      this.activeFlags = [false, true];
+      console.log(this.activeFlags);
+    }
   }
 };
 </script>
@@ -73,6 +86,11 @@ export default {
       text-decoration: none
       box-shadow: 5px 5px 10px $color-dark, -5px -5px 10px $color-light
       overflow: hidden
+
+    .active-tag
+      box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
+
+    .inactive-tag
 
 
   .body

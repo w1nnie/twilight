@@ -9,7 +9,7 @@
 import graphicsData from "@/assets/graphicsData.json";
 
 export default {
-  name: "Tools",
+  name: "Products",
   data() {
     return {
       graphicsData
