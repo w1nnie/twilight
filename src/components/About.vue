@@ -1,6 +1,6 @@
 <template lang="pug">
   .about-container
-    about-svg
+    about-svg.about-svg
     .shutter
     router-link.collapse(:to="'/'") ×
     about-card.card
@@ -37,8 +37,10 @@ export default {
   justify-content: center
   align-items: center
   color: $color-text
-  animation: acAnim 4s forwards
-  animation-timing-function: ease-in-out
+
+  .about-svg
+    animation: asAnim 4s forwards
+    animation-timing-function: ease-in-out
 
   .shutter
     position: absolute
@@ -63,7 +65,7 @@ export default {
     font-size: 6vh
     text-align: center
     text-decoration: none
-    color: $color-text
+    color: $color-bg
     overflow: hidden
     box-shadow: 5px 5px 10px $color-dark, -5px -5px 10px $color-light
     transition: all .1s
@@ -73,11 +75,11 @@ export default {
     &:active
       box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
 
-@keyframes acAnim
+@keyframes asAnim
   50%
     opacity: 1
   100%
-    opacity: 0.95
+    opacity: 0.75
 
 @keyframes shutterAnim
   40%
@@ -85,9 +87,11 @@ export default {
   50%
     top: 0
     opacity: 1
+    background-color: $color-bg
   100%
     top: 0
-    opacity: 0.95
+    opacity: 0.8
+    background-color: #33312f
 
 @keyframes cardAnim
   75%
