@@ -86,8 +86,6 @@ export default {
 
 @import "@/assets/colors.sass"
 
-
-
 .morph
   background-color: $color-bg
   color: $color-text
@@ -165,4 +163,7 @@ export default {
 
   .filter-enter, .filter-leave-to
     opacity: 0
+
+::-webkit-scrollbar-thumb
+  background: #000
 </style>

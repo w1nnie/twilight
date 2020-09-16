@@ -1,12 +1,13 @@
 <template lang="pug">
   .works-container
-    .header 
+    .header Gallery
       router-link.collapse(:to="'/'") ×
     .genre-tab
       router-link.works-links(:to="'/works/graphics'" @click.native="clickGraphics" :class="[activeFlags[0] ? activeClass : '', inactiveClass]") graphics
       router-link.works-links(:to="'/works/products'" @click.native="clickProducts" :class="[activeFlags[1] ? activeClass : '', inactiveClass]") products
     .body
-      router-view
+      transition(name="slide-fade")
+        router-view
 </template>
 
 <script>
@@ -64,7 +65,7 @@ export default {
     display: flex
     align-items: center
     justify-content: center
-    font-size: 4rem
+    font-size: 3rem
 
   .genre-tab
     @extend .morph
@@ -117,4 +118,11 @@ export default {
 
     &:active
       box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
+
+.slide-fade-enter-active, .slide-fade-leave-active
+  transition: all .4s
+
+.slide-fade-enter, .slide-fade-leave-to
+  transform: translateX(-50px)
+  opacity: 0
 </style>

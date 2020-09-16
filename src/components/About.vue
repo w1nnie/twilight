@@ -37,6 +37,8 @@ export default {
   justify-content: center
   align-items: center
   color: $color-text
+  animation: acAnim 4s forwards
+  animation-timing-function: ease-in-out
 
   .shutter
     position: absolute
@@ -44,7 +46,7 @@ export default {
     height: 100vh
     top: -100vh
     background-color: $color-bg
-    animation: shutterAnim 2s forwards
+    animation: shutterAnim 4s forwards
     animation-timing-function: ease-in-out
 
   .card
@@ -71,11 +73,21 @@ export default {
     &:active
       box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
 
+@keyframes acAnim
+  50%
+    opacity: 1
+  100%
+    opacity: 0.95
+
 @keyframes shutterAnim
-  80%
+  40%
     top: -100vh
+  50%
+    top: 0
+    opacity: 1
   100%
     top: 0
+    opacity: 0.95
 
 @keyframes cardAnim
   75%
