@@ -39,7 +39,7 @@ export default {
   color: $color-text
 
   .about-svg
-    animation: asAnim 4s forwards
+    animation: asAnim 3s forwards
     animation-timing-function: ease-in-out
 
   .shutter
@@ -48,7 +48,7 @@ export default {
     height: 100vh
     top: -100vh
     background-color: $color-bg
-    animation: shutterAnim 4s forwards
+    animation: shutterAnim 3s forwards
     animation-timing-function: ease-in-out
 
   .card
@@ -76,23 +76,22 @@ export default {
       box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
 
 @keyframes asAnim
-  50%
+  70%
     opacity: 1
   100%
     opacity: 0.75
 
 @keyframes shutterAnim
-  40%
-    top: -100vh
   50%
+    top: -100vh
+  70%
     top: 0
     opacity: 1
     background-color: $color-bg
   100%
     top: 0
-    opacity: 0.8
+    opacity: 0.95
     background-color: #33312f
-
 @keyframes cardAnim
   75%
     opacity: 0
