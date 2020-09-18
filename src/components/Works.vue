@@ -2,9 +2,9 @@
   .works-container
     .header Gallery
       router-link.collapse(:to="'/'") ×
-    .genre-tab
-      router-link.works-links(:to="'/works/graphics'" @click.native="clickGraphics" :class="[activeFlags[0] ? activeClass : '', inactiveClass]") graphics
-      router-link.works-links(:to="'/works/products'" @click.native="clickProducts" :class="[activeFlags[1] ? activeClass : '', inactiveClass]") products
+    //- .genre-tab
+    //-   router-link.works-links(:to="'/works/graphics'" @click.native="clickGraphics" :class="[activeFlags[0] ? activeClass : '', inactiveClass]") graphics
+    //-   router-link.works-links(:to="'/works/products'" @click.native="clickProducts" :class="[activeFlags[1] ? activeClass : '', inactiveClass]") products
     .body
       transition(name="slide-fade")
         router-view
@@ -66,15 +66,17 @@ export default {
     align-items: center
     justify-content: center
     font-size: 3rem
+    box-shadow: 5px 5px 10px $color-dark
 
   .genre-tab
     @extend .morph
     width: 100%
-    height: 5vh
+    height: 0vh
     display: flex
     align-items: center
     justify-content: center
     box-shadow: none
+    display: none
 
     .works-links
       @extend .morph
@@ -96,7 +98,7 @@ export default {
 
   .body
     width: 100%
-    height: 87vh
+    height: 92vh
     overflow: scroll
 
 

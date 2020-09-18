@@ -20,16 +20,9 @@ export default {
   data() {
     return {
       graphicsData,
-      tagList: [
-        "ドット絵",
-        "イラスト",
-        "デザイン",
-        "オリジナル",
-        "二次創作",
-        "星空"
-      ],
-      displayTagList: ["ド", "イ", "デ", "オ", "二", "星"],
-      activeTagFlags: [false, false, false, false, false, false],
+      tagList: ["ドット絵", "イラスト", "デザイン", "アプリ", "ゲーム"],
+      displayTagList: ["pixelart", "illust", "design", "app", "g"],
+      activeTagFlags: [false, false, false, false, false],
       activeTagIndex: -1,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
@@ -96,23 +89,23 @@ export default {
   width: 100%
   height: 100%
   display: flex
-  flex-direction: row-reverse
+  flex-direction: column
 
   .graphics-tags
     @extend .morph
     box-shadow: none
-    width: 5%
-    height: 100%
+    width: 100%
+    height: 8%
     display: flex
-    flex-direction: column
-    align-items: center
+    justify-content: center
     position: fixed
 
     .graphics-tags-item
       @extend .morph
+      background-color: $color-base
       margin: 1rem
-      width: 3rem
-      height: 3rem
+      height: 2rem
+      padding: 0 1rem 0 1rem
       display: flex
       align-items: center
       justify-content: center
@@ -125,27 +118,29 @@ export default {
       box-shadow: inset -2px -2px 2px $color-light, inset 2px 2px 2px $color-dark
 
   .graphics-item-container
-    width: 95%
-    height: 81%
+    width: 100%
+    height: 80%
     position: absolute
     left: 0
+    bottom: 0
     display: inline-flex
     justify-content: space-around
     flex-wrap: wrap
     overflow: scroll
-    padding-top: 3vh
+    padding-top: 1vh
     padding-bottom: 3vh
 
     .item
       @extend .morph
+      background-color: $color-base
       border-radius: 30px
-      width: 33vh
+      width: 37vh
       height: 33vh
-      margin: 4vh
-      // border: solid 5px $color-bg
-      // box-sizing: border-box
+      margin: 2vh
+      border: solid 10px $color-base
+      box-sizing: border-box
       transition: box-shadow .1s, transform .7s, opacity .1s
-      box-shadow: 12px 12px 15px $color-dark, -12px -12px 15px $color-light
+      box-shadow: 12px 12px 15px $color-dark
 
       &:hover
         box-shadow: 2px 2px 2px $color-dark, -2px -2px 2px $color-light

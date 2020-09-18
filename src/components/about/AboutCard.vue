@@ -1,6 +1,6 @@
 <template lang="pug">
   .about-card-container
-    .about-card-item(v-for="(card, index) in cardList")
+    .about-card-item(v-for="(card, index) in cardList") {{card}}
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
   name: "AboutCard",
   data() {
     return {
-      cardList: ["po"]
+      cardList: ["po", "mi", "a", "pro", "pi", "en"]
     };
   },
   components: { AboutText }
@@ -22,7 +22,21 @@ export default {
 @import "@/assets/colors.sass"
 
 .about-card-container
-  // width: 100%
-  // height: 100%
-  // display: flex
+  position: absolute
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: space-around
+  align-items: center
+  align-content: center
+  flex-wrap: wrap
+
+.about-card-item
+  width: 30%
+  height: 30%
+  background-color: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 3vh
 </style>
