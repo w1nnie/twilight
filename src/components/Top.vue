@@ -99,7 +99,7 @@ export default {
         this.isClicked = false;
         setTimeout(() => {
           this.neutral();
-        }, 1000);
+        }, 1500);
       }
     },
     onResize() {
@@ -187,13 +187,13 @@ export default {
 
   .middle
     transform: translate3d(0,0,0)
-    transition: all .4s
-    transition-timing-function: ease-in
+    transition: all .5s
+    transition-timing-function: ease
 
   .near
     transform: translate3d(0,0,0)
-    transition: all .4s
-    transition-timing-function: ease-in
+    transition: all .5s
+    transition-timing-function: ease
 
 
 .links
@@ -244,4 +244,5 @@ export default {
 
 .fade-enter, .fade-leave-to
   opacity: 0
+  transition-delay: 0s
 </style>
