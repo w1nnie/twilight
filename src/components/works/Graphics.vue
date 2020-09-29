@@ -139,7 +139,6 @@ export default {
       margin: 2vh
       border: solid 10px $color-base
       box-sizing: border-box
-      transition: box-shadow .1s, transform .7s, opacity .1s
       box-shadow: 12px 12px 15px $color-dark
 
       &:hover
@@ -152,12 +151,18 @@ export default {
         border-radius: 30px
 
   .filter-enter-active, .filter-leave-active, .filter-move
+    transition: box-shadow .3s ease 0s, transform 1s ease 0s, opacity .3s ease 0s
 
   .filter-leave-active
     position: absolute
 
-  .filter-enter, .filter-leave-to
+  .filter-enter
     opacity: 0
+    transform: translateY(-300px)
+
+  .filter-leave-to
+    opacity: 0
+    transform: translateY(2000px)
 
 ::-webkit-scrollbar-thumb
   background: #000

@@ -38,7 +38,7 @@ export default {
     return {
       w: window.innerWidth,
       h: window.innerHeight,
-      color: "#efdbc2",
+      color: "#d3e2f8",
       collapseColor: "hsl(110,5%,20%)"
     };
   },

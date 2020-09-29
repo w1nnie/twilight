@@ -187,11 +187,13 @@ export default {
 
   .middle
     transform: translate3d(0,0,0)
-    transition: all .3s
+    transition: all .4s
+    transition-timing-function: ease-in
 
   .near
     transform: translate3d(0,0,0)
-    transition: all .3s
+    transition: all .4s
+    transition-timing-function: ease-in
 
 
 .links
@@ -238,6 +240,7 @@ export default {
 
 .fade-enter-active, .fade-leave-active
   transition: all 0.9s ease
+  transition-delay: 0.5s
 
 .fade-enter, .fade-leave-to
   opacity: 0

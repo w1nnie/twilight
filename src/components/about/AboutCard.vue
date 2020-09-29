@@ -1,6 +1,9 @@
 <template lang="pug">
   .about-card-container
-    .about-card-item(v-for="(card, index) in cardList") {{card}}
+    .selected-item-container
+      .selected-item
+    .card-item-container
+      .card-item(v-for="(card, index) in cardList") {{card}}
 </template>
 
 <script>
@@ -26,17 +29,27 @@ export default {
   width: 100%
   height: 100%
   display: flex
-  justify-content: space-around
-  align-items: center
-  align-content: center
-  flex-wrap: wrap
+  flex-direction: column
 
-.about-card-item
-  width: 30%
-  height: 30%
-  background-color: #fff
-  display: flex
-  justify-content: center
-  align-items: center
-  margin: 3vh
+  .selected-item-container
+    width: 100%
+    height: 75%
+
+  .card-item-container
+    width: 100%
+    height: 20%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    background-color: rgba(255,255,255,0.1)
+
+    .card-item
+      width: 10%
+      height: 40%
+      background-color: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 1%
 </style>
