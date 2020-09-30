@@ -143,6 +143,7 @@ export default {
 
       &:hover
         box-shadow: 2px 2px 2px $color-dark, -2px -2px 2px $color-light
+        transition: box-shadow .25s
 
       .item-img
         width: 100%
