@@ -4,6 +4,7 @@
       .selected-item
     .card-item-container
       .card-item(v-for="(card, index) in cardList") {{card}}
+    link(href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet")
 </template>
 
 <script>
@@ -13,7 +14,7 @@ export default {
   name: "AboutCard",
   data() {
     return {
-      cardList: ["profile", "skill", "study", "contacts"]
+      cardList: ["プロフィール", "スキル", "研究", "コンタクト"]
     };
   },
   components: { AboutText }
@@ -42,17 +43,22 @@ export default {
     flex-wrap: wrap
     justify-content: center
     align-items: center
-    background-color: rgba(255,255,255,0.1)
+    background-color: rgba(255,255,255,0.01)
 
     .card-item
       width: 10%
       height: 70%
-      background-color: rgba(255,255,255,0.1)
+      background-color: rgba(255,255,255,0.05)
       display: flex
       justify-content: center
       align-items: center
       margin: 0 2% 0 2%
-      color: #fff
-      font-size: 2rem
-      font-family: 'Scheherazade', serif;
+      color: #57eaff
+      font-size: 1.5rem
+      font-family: "Sawarabi Mincho";
+      user-select: none
+
+      &:hover
+        text-shadow: 0 0 15px #18a3d6
+        transition: all .3s
 </style>

@@ -20,10 +20,10 @@ export default {
   data() {
     return {
       graphicsData,
-      tagList: ["ドット絵", "イラスト", "デザイン", "アプリ"],
-      displayTagList: ["pixelart", "illust", "design", "product"],
+      tagList: ["イラスト", "ドット絵", "デザイン", "プロダクト"],
+      displayTagList: ["illust", "pixelart", "design", "product"],
       activeTagFlags: [true, false, false, false],
-      activeTagIndex: -1,
+      activeTagIndex: 0,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
       focus: -1
@@ -112,6 +112,7 @@ export default {
       cursor: pointer
       box-shadow: -5px -5px 15px $color-light, 5px 5px 15px $color-dark
       transition: all .1s
+      user-select: none
 
     .graphics-tags-item-active
       @extend .graphics-tags-item

@@ -58,17 +58,9 @@ export default {
       width: 100%
       height: 100%
       opacity: 0
-      background: linear-gradient(-135deg, #365684, #131348)
-      animation: fadeIn 3s forwards
-
-    .bg2
-      position: absolute
-      width: 100%
-      height: 100%
-      opacity: 0
-      mix-blend-mode: screen
-      background: radial-gradient(#111, #000)
-      animation: fadeIn 3s forwards
+      background: linear-gradient(-135deg, #b5ae5c, #131348)
+      background-size: 1000% 1000%
+      animation: fadeIn 3s forwards, vibrate 5s infinite
 
   .card
     animation: cardAnim 2.5s forwards
@@ -123,4 +115,12 @@ export default {
     opacity: 0
   100%
     opacity: 0.7
+
+@keyframes vibrate
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 50% 100%
+  100%
+    background-position: 0% 50%
 </style>
