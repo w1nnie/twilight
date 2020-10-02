@@ -52,4 +52,7 @@ export default {
       justify-content: center
       align-items: center
       margin: 0 2% 0 2%
+      color: #fff
+      font-size: 2rem
+      font-family: 'Scheherazade', serif;
 </style>

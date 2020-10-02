@@ -2,6 +2,8 @@
   .about-container
     about-svg.about-svg
     .shutter
+      .bg1
+      .bg2
     router-link.collapse(:to="'/'") ×
     about-card.card
 </template>
@@ -47,9 +49,26 @@ export default {
     width: 100%
     height: 100%
     top: -100%
-    background-color: $color-bg
+    background-color: rgba(0,0,0,0.8)
     animation: shutterAnim 3s forwards
-    animation-timing-function: ease-in-out
+    animation-timing-function: ease-in
+
+    .bg1
+      position: absolute
+      width: 100%
+      height: 100%
+      opacity: 0
+      background: linear-gradient(-135deg, #365684, #131348)
+      animation: fadeIn 3s forwards
+
+    .bg2
+      position: absolute
+      width: 100%
+      height: 100%
+      opacity: 0
+      mix-blend-mode: screen
+      background: radial-gradient(#111, #000)
+      animation: fadeIn 3s forwards
 
   .card
     animation: cardAnim 2.5s forwards
@@ -82,19 +101,26 @@ export default {
     opacity: 0.75
 
 @keyframes shutterAnim
-  50%
-    top: -100vh
+  40%
+    top: -200vh
   70%
     top: 0
     opacity: 1
-    background-color: $color-bg
+    background: rgba(10,10,20,0.9)
   100%
     top: 0
     opacity: 1
-    background-color: #2a294f
+    background: #131348
+
 @keyframes cardAnim
   75%
     opacity: 0
   100%
     opacity: 1
+
+@keyframes fadeIn
+  70%
+    opacity: 0
+  100%
+    opacity: 0.7
 </style>

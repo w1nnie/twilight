@@ -20,9 +20,9 @@ export default {
   data() {
     return {
       graphicsData,
-      tagList: ["ドット絵", "イラスト", "デザイン", "アプリ", "ゲーム"],
-      displayTagList: ["pixelart", "illust", "design", "app", "g"],
-      activeTagFlags: [false, false, false, false, false],
+      tagList: ["ドット絵", "イラスト", "デザイン", "アプリ"],
+      displayTagList: ["pixelart", "illust", "design", "product"],
+      activeTagFlags: [true, false, false, false],
       activeTagIndex: -1,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
