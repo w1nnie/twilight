@@ -21,7 +21,7 @@ export default {
     return {
       graphicsData,
       tagList: ["イラスト", "ドット絵", "デザイン", "プロダクト"],
-      displayTagList: ["illust", "pixelart", "design", "product"],
+      displayTagList: ["Illust", "Pixelart", "Design", "Product"],
       activeTagFlags: [true, false, false, false],
       activeTagIndex: 0,
       activeClass: "graphics-tags-item-active",
@@ -98,14 +98,15 @@ export default {
     height: 8%
     display: flex
     justify-content: center
+    align-items: center
     position: fixed
 
     .graphics-tags-item
       @extend .morph
       background-color: $color-base
-      margin: 1rem
+      margin: 0 1vw 0 1vw
       height: 2rem
-      padding: 0 1rem 0 1rem
+      padding: 0 2vw 0 2vw
       display: flex
       align-items: center
       justify-content: center
@@ -165,7 +166,4 @@ export default {
   .filter-leave-to
     opacity: 0
     transform: translateY(2000px)
-
-::-webkit-scrollbar-thumb
-  background: #000
 </style>

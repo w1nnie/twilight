@@ -58,8 +58,8 @@ export default {
       width: 100%
       height: 100%
       opacity: 0
-      background: linear-gradient(-135deg, #b5ae5c, #131348)
-      background-size: 1000% 1000%
+      background: linear-gradient(-135deg, #a59e4c, #131348)
+      background-size: 750% 750%
       animation: fadeIn 3s forwards, vibrate 5s infinite
 
   .card
