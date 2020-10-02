@@ -44,9 +44,9 @@ export default {
 
   .shutter
     position: absolute
-    width: 100vw
-    height: 100vh
-    top: -100vh
+    width: 100%
+    height: 100%
+    top: -100%
     background-color: $color-bg
     animation: shutterAnim 3s forwards
     animation-timing-function: ease-in-out
@@ -90,8 +90,8 @@ export default {
     background-color: $color-bg
   100%
     top: 0
-    opacity: 0.95
-    background-color: #33312f
+    opacity: 1
+    background-color: #2a294f
 @keyframes cardAnim
   75%
     opacity: 0

@@ -13,7 +13,7 @@ export default {
   name: "AboutCard",
   data() {
     return {
-      cardList: ["po", "mi", "a", "pro", "pi", "en"]
+      cardList: ["profile", "skill", "study", "contacts"]
     };
   },
   components: { AboutText }
@@ -46,10 +46,10 @@ export default {
 
     .card-item
       width: 10%
-      height: 40%
-      background-color: #fff
+      height: 70%
+      background-color: rgba(255,255,255,0.1)
       display: flex
       justify-content: center
       align-items: center
-      margin: 1%
+      margin: 0 2% 0 2%
 </style>
