@@ -1,7 +1,8 @@
 <template lang="pug">
   .about-card-container
     .item-container
-      .item
+      .item-box
+        about-profile
     .card-item-container
       .card-item(v-for="(card, index) in cardList")
         .card-item-icon ○
@@ -11,15 +12,16 @@
 
 <script>
 import AboutText from "@/components/about/AboutText.vue";
+import AboutProfile from "@/components/about/AboutProfile.vue";
 
 export default {
   name: "AboutCard",
   data() {
     return {
-      cardList: ["プロフィール", "スキル", "研究", "コンタクト"]
+      cardList: ["Profile", "Skill", "Study", "Contact"]
     };
   },
-  components: { AboutText }
+  components: { AboutText, AboutProfile }
 };
 </script>
 
@@ -37,6 +39,15 @@ export default {
   .item-container
     width: 100%
     height: 75%
+    display: flex
+    flex-direction: normals
+    justify-content: center
+    align-items: flex-end
+
+    .item-box
+      height: 90%
+      width: 90%
+      background-color: rgba(255,255,255,0.01)
 
   .card-item-container
     width: 100%
