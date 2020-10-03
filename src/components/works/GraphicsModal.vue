@@ -1,5 +1,5 @@
 <template lang="pug">
-router-link.modal-container(to="/works/graphics")
+router-link.modal-container(to="/gallery/")
   .modal-content
     img.modal-content-img(:src="'/twilight/img/raw/'+idData[$route.params.id-1].filename+idData[$route.params.id-1].raw_ext")
 </template>

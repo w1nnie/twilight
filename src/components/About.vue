@@ -3,7 +3,6 @@
     about-svg.about-svg
     .shutter
       .bg1
-      .bg2
     router-link.collapse(:to="'/'") ×
     about-card.card
 </template>

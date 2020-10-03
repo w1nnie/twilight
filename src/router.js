@@ -6,8 +6,10 @@ import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
 import GraphicsModal from "@/components/works/GraphicsModal.vue";
 import Graphics from "@/components/works/Graphics.vue";
-import Products from "@/components/works/Products.vue";
-import Games from "@/components/works/Games.vue";
+import Profile from "@/components/about/Profile.vue";
+import Skill from "@/components/about/Skill.vue";
+import Study from "@/components/about/Study.vue";
+import Contact from "@/components/about/Contact.vue";
 
 Vue.use(Router);
 
@@ -21,29 +23,33 @@ const router = new Router({
     },
     {
       path: "/about",
-      component: About
+      component: About,
+      children: [
+        {
+          path: "profile",
+          component: Profile
+        },
+        {
+          path: "skill",
+          component: Skill
+        },
+        {
+          path: "study",
+          component: Study
+        },
+        {
+          path: "contact",
+          component: Contact
+        }
+      ]
     },
     {
-      path: "/works",
+      path: "/gallery",
       component: Works,
       children: [
         {
-          path: "graphics",
-          component: Graphics,
-          children: [
-            {
-              path: ":id",
-              component: GraphicsModal
-            }
-          ]
-        },
-        {
-          path: "products",
-          component: Products
-        },
-        {
-          path: "games",
-          component: Games
+          path: ":id",
+          component: GraphicsModal
         }
       ]
     }

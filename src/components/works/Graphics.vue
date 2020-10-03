@@ -4,7 +4,7 @@
     .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
   transition-group.graphics-item-container(name="filter")
     router-link.item(v-for="item in sortedData" 
-     :to="'/works/graphics/'+item.id" 
+     :to="'/gallery/'+item.id" 
      :key="item.id" 
      @mouseover.native="zoomIn(item.id)"
      @mouseout.native="zoomOut()")

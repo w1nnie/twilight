@@ -2,9 +2,9 @@
   .about-card-container
     .item-container
       .item-box
-        about-profile
+        profile
     .card-item-container
-      .card-item(v-for="(card, index) in cardList")
+      router-link.card-item(v-for="(card, index) in cardList" :to="'/'")
         .card-item-icon ○
         .card-item-text {{card}}
     link(href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet")
@@ -12,7 +12,7 @@
 
 <script>
 import AboutText from "@/components/about/AboutText.vue";
-import AboutProfile from "@/components/about/AboutProfile.vue";
+import Profile from "@/components/about/Profile.vue";
 
 export default {
   name: "AboutCard",
@@ -21,7 +21,7 @@ export default {
       cardList: ["Profile", "Skill", "Study", "Contact"]
     };
   },
-  components: { AboutText, AboutProfile }
+  components: { AboutText, Profile }
 };
 </script>
 
@@ -71,6 +71,7 @@ export default {
       font-size: 2.5vw
       font-family: "Sawarabi Mincho";
       user-select: none
+      text-decoration: none
 
       &:hover
         text-shadow: 0 0 15px #18a3d6

@@ -2,12 +2,9 @@
   .works-container
     .header Gallery
       router-link.collapse(:to="'/'") ×
-    //- .genre-tab
-    //-   router-link.works-links(:to="'/works/graphics'" @click.native="clickGraphics" :class="[activeFlags[0] ? activeClass : '', inactiveClass]") graphics
-    //-   router-link.works-links(:to="'/works/products'" @click.native="clickProducts" :class="[activeFlags[1] ? activeClass : '', inactiveClass]") products
     .body
       transition(name="slide-fade")
-        router-view
+        Graphics
 </template>
 
 <script>

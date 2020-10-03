@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "AboutProfile",
+  name: "Study",
   data() {
     return {
       size: window.innerWidth / 10,
@@ -51,8 +51,6 @@ export default {
 @keyframes circle
   0%
     stroke-dasharray: 0 10000
-  50%
-    stroke-dasharray: var(--dashArray) 10000
   100%
-    stroke-dasharray: 0 10000
+    stroke-dasharray: var(--dashArray) 10000
 </style>
