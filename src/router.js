@@ -43,7 +43,7 @@ const router = new Router({
       ]
     },
     {
-      path: "/",
+      path: "/gallery",
       component: Works,
       children: [
         {

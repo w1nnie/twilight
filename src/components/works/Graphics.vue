@@ -3,7 +3,8 @@
   .graphics-tags
     .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
   transition-group.graphics-item-container(name="filter")
-    router-link.item(v-for="item in sortedData" 
+    router-link.item(v-for="item in sortedData"
+     :style="styles"
      :to="'/gallery/'+item.id" 
      :key="item.id" 
      @mouseover.native="zoomIn(item.id)"
@@ -24,6 +25,7 @@ export default {
       displayTagList: ["Illust", "Pixelart", "Design", "Product"],
       activeTagFlags: [true, false, false, false],
       activeTagIndex: 0,
+      oldActiveTagIndex: 0,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
       focus: -1
@@ -49,10 +51,19 @@ export default {
         return b.date - a.date;
       });
       return data;
+    },
+    styles() {
+      return {
+        "--xmove":
+          this.activeTagIndex == -1
+            ? 0
+            : this.oldActiveTagIndex - this.activeTagIndex
+      };
     }
   },
   methods: {
     enableTag(index) {
+      this.oldActiveTagIndex = this.activeTagIndex;
       if (this.activeTagIndex == index) {
         this.activeTagIndex = -1;
         this.activeTagFlags.fill(false);
@@ -61,6 +72,7 @@ export default {
         this.activeTagFlags.fill(false);
         this.activeTagFlags[index] = true;
       }
+      console.log(this.oldActiveTagIndex, this.activeTagIndex);
     },
     zoomIn(i) {
       this.focus = i;
@@ -153,17 +165,19 @@ export default {
         object-fit: cover
         border-radius: 30px
 
-  .filter-enter-active, .filter-leave-active, .filter-move
-    transition: box-shadow .3s ease 0s, transform 1s ease 0s, opacity .3s ease 0s
+  .filter-enter-active, .filter-move
+    transition: box-shadow .3s ease .2s, transform 1s ease .2s, opacity .3s ease .2s
 
   .filter-leave-active
     position: absolute
+    transition: box-shadow .3s ease 0s, transform 1s ease 0s, opacity .1s ease 0s
 
   .filter-enter
+    --xmove: 0
+
     opacity: 0
-    transform: translateY(-300px)
+    transform: translateX(calc(-300px * var(--xmove)))
 
   .filter-leave-to
     opacity: 0
-    transform: translateY(2000px)
 </style>
