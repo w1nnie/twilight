@@ -72,7 +72,6 @@ export default {
         this.activeTagFlags.fill(false);
         this.activeTagFlags[index] = true;
       }
-      console.log(this.oldActiveTagIndex, this.activeTagIndex);
     },
     zoomIn(i) {
       this.focus = i;
@@ -166,11 +165,11 @@ export default {
         border-radius: 30px
 
   .filter-enter-active, .filter-move
-    transition: box-shadow .3s ease .2s, transform 1s ease .2s, opacity .3s ease .2s
+    transition: transform 1s ease .2s, opacity .3s ease .2s
 
   .filter-leave-active
     position: absolute
-    transition: box-shadow .3s ease 0s, transform 1s ease 0s, opacity .1s ease 0s
+    transition: transform 1s ease 0s, opacity .15s ease 0s
 
   .filter-enter
     --xmove: 0
@@ -180,4 +179,5 @@ export default {
 
   .filter-leave-to
     opacity: 0
+    transform: translateY(50vh)
 </style>
