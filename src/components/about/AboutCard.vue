@@ -2,9 +2,9 @@
   .about-card-container
     .item-container
       .item-box
-        profile
+        router-view
     .card-item-container
-      router-link.card-item(v-for="(card, index) in cardList" :to="'/'")
+      router-link.card-item(v-for="(card, index) in cardList" :to="links[index]")
         .card-item-icon ○
         .card-item-text {{card}}
     link(href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet")
@@ -18,7 +18,8 @@ export default {
   name: "AboutCard",
   data() {
     return {
-      cardList: ["Profile", "Skill", "Study", "Contact"]
+      cardList: ["Profile", "Skill", "Study", "Contact"],
+      links: ["/about/profile", "skill", "study", "contact"]
     };
   },
   components: { AboutText, Profile }
@@ -79,5 +80,4 @@ export default {
 
       &:nth-child(1)
         background: linear-gradient(0deg, #57eaff ,#18a3d6 5%, rgba(24,163,214,0.01) 20%)
-        mix-blend-mode: multiply
 </style>

@@ -46,7 +46,7 @@ export default {
       stroke: #ffffff
       stroke-width: var(--strokeWidth)
       stroke-linecap: round
-      animation: circle 2s ease infinite
+      animation: circle 2s ease forwards
 
 @keyframes circle
   0%

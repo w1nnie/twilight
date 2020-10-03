@@ -5,7 +5,6 @@ import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
 import GraphicsModal from "@/components/works/GraphicsModal.vue";
-import Graphics from "@/components/works/Graphics.vue";
 import Profile from "@/components/about/Profile.vue";
 import Skill from "@/components/about/Skill.vue";
 import Study from "@/components/about/Study.vue";
@@ -44,7 +43,7 @@ const router = new Router({
       ]
     },
     {
-      path: "/gallery",
+      path: "/",
       component: Works,
       children: [
         {
