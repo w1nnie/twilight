@@ -60,8 +60,8 @@ export default {
       this.farFilter = "brightness(110%)";
       this.middleFilter = "brightness(70%)";
       this.nearFilter = "brightness(70%)";
-      this.nearZoom = "translate3D(10px,0,8px)";
-      this.middleZoom = "translate3D(0,0,5px)";
+      this.nearZoom = "translate3D(10px,60px,8px)";
+      this.middleZoom = "translate3D(0,60px,5px)";
       this.blurOpacities = [0, 1, 1];
     },
     goToGallery() {

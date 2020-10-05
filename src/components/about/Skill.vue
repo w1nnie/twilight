@@ -62,6 +62,7 @@ export default {
     justify-content: space-around
     align-items: center
     flex-wrap: wrap
+    overflow: scroll
 
 
     .item
