@@ -13,7 +13,7 @@ Vue.use(VueLazyload, {
 });
 
 Vue.use(VueAnalytics, {
-  id: "171648104",
+  id: "UA-171648104-1",
   router
 });
 
