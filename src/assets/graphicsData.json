@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "filename": "hina",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -8,14 +7,13 @@
         "desc": "映画「天気の子」の登場キャラ、天野陽菜の誕生日を記念して描いたイラスト。",
         "date": 20190822,
         "position": "75% 50%",
-        "conf": "7",
+        "links": "7",
         "tags": [
             "イラスト",
             "二次創作"
         ]
     },
     {
-        "id": 3,
         "filename": "mikage_mw",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -23,7 +21,7 @@
         "desc": "こんな帰り道があったらいいなと思って描いたイラスト。",
         "date": 20191225,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル",
@@ -31,38 +29,6 @@
         ]
     },
     {
-        "id": 4,
-        "filename": "mikage_twl",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "いつまで経っても諦めきれない",
-        "desc": "",
-        "date": 20191127,
-        "position": "50% 55%",
-        "conf": "",
-        "tags": [
-            "イラスト",
-            "オリジナル",
-            "星空"
-        ]
-    },
-    {
-        "id": 5,
-        "filename": "shimarin",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "志摩リン生誕祭2019",
-        "desc": "",
-        "date": 20191003,
-        "position": "50% 50%",
-        "conf": "",
-        "tags": [
-            "イラスト",
-            "二次創作"
-        ]
-    },
-    {
-        "id": 6,
         "filename": "alley_e",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -70,14 +36,13 @@
         "desc": "大学サークルのチームで制作したゲーム「Intuition」の背景として描いたイラスト。",
         "date": 20190621,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル"
         ]
     },
     {
-        "id": 7,
         "filename": "kokoro",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -85,14 +50,13 @@
         "desc": "推しVTuber、「天宮こころ」のファンアート。ドット絵アニメーション「あまみゃHBD」の元となっている。",
         "date": 20200517,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "二次創作"
         ]
     },
     {
-        "id": 8,
         "filename": "lize_classroom",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -100,37 +64,35 @@
         "desc": "推しVTuber「リゼ・ヘルエスタ」のファンアート。",
         "date": 20200422,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "二次創作"
         ]
     },
     {
-        "id": 9,
         "filename": "main_woofar",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "ウーファ",
         "desc": "自身初のオリジナルキャラクター。自然を司る妖精。",
-        "date": 20191127,
+        "date": 20191120,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル"
         ]
     },
     {
-        "id": 10,
         "filename": "meteor",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "星呼びリサイタル",
-        "desc": "少女の弾くバイオリンの音が星を動かす、というコンセプトを元に制作したイラスト。",
+        "desc": "少女の弾く綺麗なバイオリンの音が星を動かす、というコンセプトを元に制作したイラスト。",
         "date": 20200505,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル",
@@ -138,23 +100,6 @@
         ]
     },
     {
-        "id": 11,
-        "filename": "mikage_space",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "将来の夢は宇宙飛行士",
-        "desc": "",
-        "date": 20191003,
-        "position": "50% 50%",
-        "conf": "",
-        "tags": [
-            "イラスト",
-            "オリジナル",
-            "星空"
-        ]
-    },
-    {
-        "id": 12,
         "filename": "msw_maid",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -162,29 +107,13 @@
         "desc": "",
         "date": 20191103,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル"
         ]
     },
     {
-        "id": 13,
-        "filename": "msw_ygg",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "旅路",
-        "desc": "",
-        "date": 20191109,
-        "position": "50% 50%",
-        "conf": "",
-        "tags": [
-            "イラスト",
-            "オリジナル"
-        ]
-    },
-    {
-        "id": 14,
         "filename": "milkey",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -192,7 +121,7 @@
         "desc": "天の川の習作。",
         "date": 20190320,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル",
@@ -200,7 +129,6 @@
         ]
     },
     {
-        "id": 15,
         "filename": "main_mikage",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -208,43 +136,13 @@
         "desc": "",
         "date": 20190823,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル"
         ]
     },
     {
-        "id": 16,
-        "filename": "toko_twl",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "戌亥とこ",
-        "desc": "",
-        "date": 20190909,
-        "position": "50% 50%",
-        "conf": "",
-        "tags": [
-            "イラスト"
-        ]
-    },
-    {
-        "id": 17,
-        "filename": "twl",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "夕方の帰り道",
-        "desc": "",
-        "date": 20200413,
-        "position": "50% 50%",
-        "conf": "",
-        "tags": [
-            "イラスト",
-            "オリジナル"
-        ]
-    },
-    {
-        "id": 18,
         "filename": "msw_train",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -252,14 +150,13 @@
         "desc": "",
         "date": 20191103,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル"
         ]
     },
     {
-        "id": 19,
         "filename": "woofar",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -267,14 +164,13 @@
         "desc": "",
         "date": 20190704,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "ドット絵",
             "オリジナル"
         ]
     },
     {
-        "id": 20,
         "filename": "sanbaka",
         "raw_ext": ".gif",
         "thm_ext": ".gif",
@@ -282,14 +178,13 @@
         "desc": "推しVTuberの三人組「さんばか」のファンアート。",
         "date": 20190914,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "ドット絵",
             "二次創作"
         ]
     },
     {
-        "id": 21,
         "filename": "amamya",
         "raw_ext": ".gif",
         "thm_ext": ".gif",
@@ -297,14 +192,13 @@
         "desc": "推しVTuber「天宮こころ」の誕生日を記念して制作したドット絵アニメーション。イラスト「AM3:50」を元に制作した。",
         "date": 20200625,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "ドット絵",
             "二次創作"
         ]
     },
     {
-        "id": 22,
         "filename": "toko_fish",
         "raw_ext": ".gif",
         "thm_ext": ".gif",
@@ -312,14 +206,13 @@
         "desc": "推しVTuber「戌亥とこ」のファンアート。フレームレート小さめで緻密な動きを表現するための習作。",
         "date": 20200526,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "ドット絵",
             "二次創作"
         ]
     },
     {
-        "id": 23,
         "filename": "twl_train",
         "raw_ext": ".jpg",
         "thm_ext": ".jpg",
@@ -327,7 +220,7 @@
         "desc": "架空の作品のキービジュアルのようなものを作ろうとしてできたもの。",
         "date": 20190506,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル",
@@ -335,37 +228,34 @@
         ]
     },
     {
-        "id": 24,
         "filename": "ammy_natsu",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "なつやすみゃ",
-        "desc": "",
+        "desc": "推しVTuber「天宮こころ」のファンアート。配信のサムネイルに使っていただいた。",
         "date": 20200731,
         "position": "45% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "二次創作"
         ]
     },
     {
-        "id": 25,
         "filename": "traP5th",
-        "raw_ext": ".png",
+        "raw_ext": ".jpg",
         "thm_ext": ".jpg",
         "title": "traP5th記念イラスト",
-        "desc": "大学サークルの創設5周年を祝して描いたイラスト。探索RPGのゲーム画面を模した。デザインはunipota。",
+        "desc": "大学サークルの創立5周年を祝して描いたイラスト。探索RPGのゲーム画面を模した。デザインはunipotaが担当。",
         "date": 20200321,
         "position": "40% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "二次創作"
         ]
     },
     {
-        "id": 26,
         "filename": "card",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -373,13 +263,12 @@
         "desc": "即売会に出るためにデザインした名刺。",
         "date": 20190813,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "デザイン"
         ]
     },
     {
-        "id": 27,
         "filename": "main_steria",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
@@ -387,24 +276,89 @@
         "desc": "",
         "date": 20191006,
         "position": "50% 30%",
-        "conf": "",
+        "links": "",
         "tags": [
             "イラスト",
             "オリジナル"
         ]
     },
     {
-        "id": 28,
         "filename": "nero",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "そろそろ寝たらどうですか？",
-        "desc": "淡い配色のkawaii系ロゴの習作。",
-        "date": 20200422,
+        "desc": "淡い配色を使ったkawaii系ロゴの習作。",
+        "date": 20200522,
         "position": "50% 50%",
-        "conf": "",
+        "links": "",
         "tags": [
             "デザイン"
+        ]
+    },
+    {
+        "filename": "cpcc",
+        "raw_ext": ".png",
+        "thm_ext": ".png",
+        "title": "ColorPicker with ColorCircle",
+        "desc": "カラーサークル上でのピクセル値の位置が見えるカラーピッカーのchrome拡張機能。自分がイラストを制作する上で、参考にするイラストがどんな色を使っているのか、よく使うソフトウェアに馴染みの深いフォーマットで、かつweb上で簡単に調べられたら便利だと思ったので制作した。",
+        "date": 20200422,
+        "position": "0% 50%",
+        "links": "",
+        "tags": [
+            "プロダクト"
+        ]
+    },
+    {
+        "filename": "portfolio",
+        "raw_ext": ".png",
+        "thm_ext": ".png",
+        "title": "Twilight",
+        "desc": "このポートフォリオサイト。統一感を犠牲にして、やりたい表現や面白そうな表現を手当たり次第に実装し、型破りなサイトにした。イラストのフィルター操作やCSSアニメーション、lottieを使ったSVGアニメーションなどを用いて動きの表現の幅を追求した。",
+        "date": 20201101,
+        "position": "50% 50%",
+        "links": "",
+        "tags": [
+            "プロダクト"
+        ]
+    },
+    {
+        "filename": "ponar",
+        "raw_ext": ".png",
+        "thm_ext": ".png",
+        "title": "Ponar",
+        "desc": "予めvuforiaでイラストをマーカーとして登録し、同じ座標にドット絵のアニメーションをオーバーレイすることで、あたかも絵が動き出したように見せるというもの。同人誌即売会で頒布する本にARの要素を付加したら面白いのではないかと考え制作した。ドット絵でなくLive2Dでも試してみたいと考えている。",
+        "date": 20191221,
+        "position": "50% 50%",
+        "links": "",
+        "tags": [
+            "プロダクト"
+        ]
+    },
+    {
+        "filename": "common_dreamer",
+        "raw_ext": ".jpg",
+        "thm_ext": ".jpg",
+        "title": "Common Dreamer",
+        "desc": "コミティア130に出展するために製本した16ページの画集。種族も住む世界も全く異なる三人が、夢の中でのみ生活を共にすることができるというファンタジーな世界観を元にしたイラストを描き、本にまとめた。",
+        "date": 20191124,
+        "position": "50% 50%",
+        "links": "",
+        "tags": [
+            "イラスト",
+            "デザイン"
+        ]
+    },
+    {
+        "filename": "ninja_flicker",
+        "raw_ext": ".png",
+        "thm_ext": ".png",
+        "title": "Ninja Flicker",
+        "desc": "大学サークルのチームで制作した、スマートフォン向けプラットフォーマーアクションゲーム。背景をフリックして動かす感覚で、主人公の忍者を動かしてゴールを目指すという独特な操作方法で城の頂上を目指す。2018年の第1回Google Play | Indie Games Festivalにてトップ10に入賞し、大学のニュースに掲載された。主にマップチップと敵mobのアニメーションの多くと一部のギミックのグラフィックを担当した。",
+        "date": 20171226,
+        "position": "50% 50%",
+        "links": "",
+        "tags": [
+            "ドット絵"
         ]
     }
 ]

@@ -5,9 +5,7 @@
   transition-group.graphics-item-container(name="filter")
     .item(v-for="(item, index) in sortedData"
      :style="styles"
-     :key="item.id"
-     @mouseover="zoomIn(item.id)"
-     @mouseout="zoomOut()"
+     :key="item.filename"
      @click="showModal(index)")
       img.item-img(:style="{objectPosition: item.position}" v-lazy="'/twilight/img/thumbnail/'+item.filename+item.thm_ext")
   graphics-modal(v-if="isShow" :data="sortedData" :index="showIndex" @close="emitEvent")
@@ -29,7 +27,6 @@ export default {
       oldActiveTagIndex: 0,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
-      focus: -1,
       isShow: false,
       showIndex: 0,
       show: true
@@ -83,12 +80,6 @@ export default {
         this.activeTagFlags.fill(false);
         this.activeTagFlags[index] = true;
       }
-    },
-    zoomIn(i) {
-      this.focus = i;
-    },
-    zoomOut() {
-      this.focus = 1000;
     },
     isEqual(a, b) {
       return a == b;

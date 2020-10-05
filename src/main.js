@@ -8,7 +8,8 @@ Vue.config.productionTip = false;
 
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  attempt: 1
+  attempt: 2,
+  observer: true
 });
 
 Vue.use(VueAnalytics, {

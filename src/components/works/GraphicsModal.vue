@@ -1,10 +1,11 @@
 <template lang="pug">
-.modal-container(@click="closeModal")
-  .modal-content 
+.modal-container(@click.self="closeModal")
+  .modal-content
     img.modal-content-img(:src="'/twilight/img/raw/'+data[index].filename+data[index].raw_ext")
-    .text 
+    .text
       .title {{data[index].title}}
       .description {{data[index].desc}}
+    .m-collapse(@click="closeModal") ×
 </template>
 
 <script>
@@ -43,33 +44,50 @@ export default {
 
   .modal-content
     width: 100%
-    max-width: 1000px
+    max-width: 900px
     height: 100%
     animation: fadeIn .4s
     display: flex
     justify-content: center
     align-items: center
     flex-direction: column
+    background-color: rgba(0,0,0,0.5)
 
     .modal-content-img
       object-fit: contain
-      max-width: 100%
-      max-height: 600px
+      max-width: 90%
+      max-height: 550px
+
+      @media (min-width:500px)
+        max-width: 80%
 
     .text
       width: 100%
-      height: 20vh
       // background: rgba(255,255,255,0.5)
       text-align: left
       color: #ffffff
+      pointer-events: none
 
       .title
         font-size: 1.5rem
-        padding: 10px 20px 10px 20px
+        padding: 20px 20px 10px 20px
 
       .description
         font-size: 1rem
         padding: 0 20px 0 20px
+
+    .m-collapse
+      position: fixed
+      top: 10px
+      right: 10px
+      font-size: 35px
+      color: #fff
+      text-shadow: #000 0 0 10px
+      cursor: pointer
+
+      @media (min-width:800px)
+        display: none
+
 
 @keyframes fadeIn
   0% {opacity: 0}
