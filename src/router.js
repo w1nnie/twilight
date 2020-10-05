@@ -44,13 +44,7 @@ const router = new Router({
     },
     {
       path: "/gallery",
-      component: Works,
-      children: [
-        {
-          path: ":id",
-          component: GraphicsModal
-        }
-      ]
+      component: Works
     }
   ]
 });

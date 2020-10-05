@@ -3,18 +3,19 @@
   .graphics-tags
     .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
   transition-group.graphics-item-container(name="filter")
-    router-link.item(v-for="item in sortedData"
+    .item(v-for="(item, index) in sortedData"
      :style="styles"
-     :to="'/gallery/'+item.id" 
-     :key="item.id" 
-     @mouseover.native="zoomIn(item.id)"
-     @mouseout.native="zoomOut()")
+     :key="item.id"
+     @mouseover="zoomIn(item.id)"
+     @mouseout="zoomOut()"
+     @click="showModal(index)")
       img.item-img(:style="{objectPosition: item.position}" v-lazy="'/twilight/img/thumbnail/'+item.filename+item.thm_ext")
-  router-view
+  graphics-modal(v-if="isShow" :data="sortedData" :index="showIndex" @close="emitEvent")
 </template>
 
 <script>
 import graphicsData from "@/assets/graphicsData.json";
+import GraphicsModal from "@/components/works/GraphicsModal.vue";
 
 export default {
   name: "Graphics",
@@ -28,7 +29,10 @@ export default {
       oldActiveTagIndex: 0,
       activeClass: "graphics-tags-item-active",
       inactiveClass: "graphics-tags-item",
-      focus: -1
+      focus: -1,
+      isShow: false,
+      showIndex: 0,
+      show: true
     };
   },
   computed: {
@@ -62,6 +66,13 @@ export default {
     }
   },
   methods: {
+    emitEvent(show) {
+      this.isShow = show;
+    },
+    showModal(index) {
+      this.isShow = true;
+      this.showIndex = index;
+    },
     enableTag(index) {
       this.oldActiveTagIndex = this.activeTagIndex;
       if (this.activeTagIndex == index) {
@@ -82,6 +93,9 @@ export default {
     isEqual(a, b) {
       return a == b;
     }
+  },
+  components: {
+    GraphicsModal
   }
 };
 </script>

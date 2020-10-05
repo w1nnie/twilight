@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Loading v-show="l" />
-    <Top v-show="!l" />
+    <loading v-show="l" />
+    <top v-show="!l" />
   </div>
 </template>
 

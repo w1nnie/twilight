@@ -1,10 +1,10 @@
 <template lang="pug">
-router-link.modal-container(to="/gallery/")
-  .modal-content
-    img.modal-content-img(:src="'/twilight/img/raw/'+idData[$route.params.id-1].filename+idData[$route.params.id-1].raw_ext")
+.modal-container(@click="closeModal")
+  .modal-content 
+    img.modal-content-img(:src="'/twilight/img/raw/'+data[index].filename+data[index].raw_ext")
     .text 
-      .title {{idData[$route.params.id-1].title}}
-      .description {{idData[$route.params.id-1].desc}}
+      .title {{data[index].title}}
+      .description {{data[index].desc}}
 </template>
 
 <script>
@@ -14,19 +14,15 @@ export default {
   name: "GraphicsModal",
   data() {
     return {
-      graphicsData
+      show: true
     };
   },
-  methods: {},
-  computed: {
-    idData() {
-      let d = this.graphicsData;
-      d = d.sort(function(a, b) {
-        return a.id - b.id;
-      });
-      return d;
+  methods: {
+    closeModal() {
+      this.$emit("close", (this.show = false));
     }
-  }
+  },
+  props: ["data", "index"]
 };
 </script>
 
@@ -43,6 +39,7 @@ export default {
   z-index: 10000
   cursor: initial
   background-color: rgba(0,0,0,0.75)
+  text-decoration: none
 
   .modal-content
     width: 100%
@@ -66,13 +63,12 @@ export default {
       text-align: left
       color: #ffffff
 
-
       .title
-        font-size: 30px
+        font-size: 1.5rem
         padding: 10px 20px 10px 20px
 
       .description
-        font-size: 20px
+        font-size: 1rem
         padding: 0 20px 0 20px
 
 @keyframes fadeIn
