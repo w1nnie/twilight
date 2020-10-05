@@ -2,7 +2,9 @@
 router-link.modal-container(to="/gallery/")
   .modal-content
     img.modal-content-img(:src="'/twilight/img/raw/'+idData[$route.params.id-1].filename+idData[$route.params.id-1].raw_ext")
-    .description aaaaaaaaaaaaaa
+    .text 
+      .title {{idData[$route.params.id-1].title}}
+      .description {{idData[$route.params.id-1].desc}}
 </template>
 
 <script>
@@ -47,7 +49,6 @@ export default {
     max-width: 1000px
     height: 100%
     animation: fadeIn .4s
-    background-color: blue
     display: flex
     justify-content: center
     align-items: center
@@ -55,14 +56,24 @@ export default {
 
     .modal-content-img
       object-fit: contain
-      // height: 80%
       max-width: 100%
       max-height: 600px
 
-    .description
+    .text
       width: 100%
       height: 20vh
-      background: white
+      // background: rgba(255,255,255,0.5)
+      text-align: left
+      color: #ffffff
+
+
+      .title
+        font-size: 30px
+        padding: 10px 20px 10px 20px
+
+      .description
+        font-size: 20px
+        padding: 0 20px 0 20px
 
 @keyframes fadeIn
   0% {opacity: 0}
