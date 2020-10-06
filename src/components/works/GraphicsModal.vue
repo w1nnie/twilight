@@ -45,6 +45,8 @@ export default {
 
   .modal-content
     width: 100%
+    height: 100%
+    overflow: scroll
     max-width: 900px
     animation: fadeIn .4s
     display: flex

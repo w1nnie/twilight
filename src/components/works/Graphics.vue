@@ -180,7 +180,7 @@ export default {
     --xmove: 0
 
     opacity: 0
-    transform: translateX(calc(-300px * var(--xmove)))
+    transform: translateX(calc(-200px * var(--xmove)))
 
   .filter-leave-to
     opacity: 0
