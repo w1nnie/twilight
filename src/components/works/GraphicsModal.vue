@@ -5,6 +5,7 @@
     .text
       .title {{data[index].title}}
       .description {{data[index].desc}}
+      a.links(v-for="(link, i) in data[index].links" :href="data[index].links[i]") {{data[index].linkText[i]}}
     .m-collapse(@click="closeModal") ×
 </template>
 
@@ -32,8 +33,8 @@ export default {
   display: flex
   justify-content: center
   align-items: center
-  width: 100vw
-  height: 100vh
+  width: 100%
+  height: 100%
   position: fixed
   top: 0
   left: 0
@@ -45,7 +46,6 @@ export default {
   .modal-content
     width: 100%
     max-width: 900px
-    height: 100%
     animation: fadeIn .4s
     display: flex
     justify-content: center
@@ -66,15 +66,19 @@ export default {
       // background: rgba(255,255,255,0.5)
       text-align: left
       color: #ffffff
-      pointer-events: none
 
       .title
         font-size: 1.5rem
         padding: 20px 20px 10px 20px
+        font-weight: bold
 
       .description
         font-size: 1rem
         padding: 0 20px 0 20px
+
+      .links
+        padding: 10px 20px 10px 20px
+        color: #8eb8ff
 
     .m-collapse
       position: fixed
