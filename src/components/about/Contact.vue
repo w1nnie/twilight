@@ -1,5 +1,6 @@
 <template lang="pug">
-  .ap-container
+  .ct-container
+    .icons
     svg(:width="size" :height="size")
       circle(:cx="size/2" :cy="size/2" :r="radius" :style="styles")
 </template>
