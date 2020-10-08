@@ -216,7 +216,7 @@ export default {
 .works
   @extend .button
   top: 0%
-  width: 60vh
+  width: 50vh
   height: 70%
 
 .text
