@@ -18,8 +18,8 @@ export default {
   name: "AboutCard",
   data() {
     return {
-      cardList: ["Profile", "Skills", "Study", "Contact"],
-      links: ["/about/profile", "skills", "study", "contact"]
+      cardList: ["Profile", "Skills", "Study"],
+      links: ["/about/profile", "skills", "study"]
     };
   },
   components: { AboutText, Profile }

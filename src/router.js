@@ -7,7 +7,6 @@ import Works from "@/components/Works.vue";
 import Profile from "@/components/about/Profile.vue";
 import Skills from "@/components/about/Skills.vue";
 import Study from "@/components/about/Study.vue";
-import Contact from "@/components/about/Contact.vue";
 
 Vue.use(Router);
 
@@ -34,10 +33,6 @@ const router = new Router({
         {
           path: "study",
           component: Study
-        },
-        {
-          path: "contact",
-          component: Contact
         }
       ]
     },

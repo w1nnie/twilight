@@ -4,6 +4,7 @@
       .item(v-for="(tool, index) in tools")
         .pic
           .icon
+            img(:src="'/twilight/img/skills/'+src[index]")
           svg(:width="size" :height="size")
             circle(:cx="size/2" :cy="size/2" :r="radius" :style="styles(index)")
         .label {{tool}}
@@ -15,7 +16,7 @@ export default {
   data() {
     return {
       width: window.innerWidth / 8.35,
-      pcts: [0.95, 0.85, 0.6, 0.4, 0.15, 0.9, 0.8, 0.4, 0.2, 0.8],
+      pcts: [0.95, 0.85, 0.6, 0.4, 0.15, 0.9, 0.8, 0.4, 0.5, 0.2, 0.8],
       tools: [
         "CLIP STUDIO PAINT",
         "Aseprite",
@@ -25,8 +26,22 @@ export default {
         "HTML5",
         "CSS3",
         "JavaScript",
+        "Vue.js",
         "Unity",
         "MATLAB"
+      ],
+      src: [
+        "",
+        "aseprite.png",
+        "",
+        "",
+        "",
+        "html5.png",
+        "css3.png",
+        "javascript.png",
+        "vuejs.png",
+        "unity.svg",
+        "matlab.png"
       ]
     };
   },
@@ -80,11 +95,12 @@ export default {
       margin: 1%
       width: 12vw
       height: 14vw
-      background-color: rgba(255,255,255,0.1)
+      background-color: rgba(0,0,0,0.2)
       color: #fff
       display: flex
       flex-direction: column
       justify-content: space-around
+      box-shadow: 8px 8px 10px rgba(0,0,0,0.2), -8px -8px 10px rgba(0,0,0,0.2)
 
       @media (max-width: $md)
         width: 24vw
@@ -98,7 +114,16 @@ export default {
         .icon
           width: 100%
           height: 100%
-          background: rgba(255,255,255,0.2)
+          // background: rgba(255,255,255,0.2)
+          display: flex
+          justify-content: center
+          align-items: center
+
+          img
+            width: 65%
+            height: auto
+
+
 
         svg
           transform: rotate(-90deg)
@@ -106,12 +131,13 @@ export default {
           top: 0
           left: 0
 
+
           circle
             --dashArray: 0
             --strokeWidth: 0
 
             fill: transparent
-            stroke: #ffffff
+            stroke: rgba(255,255,255,0.8)
             stroke-width: var(--strokeWidth)
             stroke-linecap: round
             animation: circle 2s ease forwards

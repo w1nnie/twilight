@@ -1,5 +1,5 @@
 <template lang="pug">
-  .ap-container
+  .ast-container
     svg(:width="size" :height="size")
       circle(:cx="size/2" :cy="size/2" :r="radius" :style="styles")
 </template>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.ap-container
+.ast-container
   width: 100%
   height: 100%
   display: flex
