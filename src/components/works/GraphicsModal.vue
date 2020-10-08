@@ -5,7 +5,8 @@
     .text
       .title {{data[index].title}}
       .description {{data[index].desc}}
-      a.links(v-for="(link, i) in data[index].links" :href="data[index].links[i]") {{data[index].linkText[i]}}
+      a.links(v-for="(link, i) in data[index].links" :href="data[index].links[i]") {{data[index].linkText[i]}} 
+        br
     .m-collapse(@click="closeModal") ×
 </template>
 
@@ -76,7 +77,7 @@ export default {
 
       .description
         font-size: 1rem
-        padding: 0 20px 0 20px
+        padding: 0 20px 10px 20px
 
       .links
         padding: 10px 20px 10px 20px

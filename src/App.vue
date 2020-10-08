@@ -2,6 +2,7 @@
   <div id="app">
     <loading v-show="l" />
     <top v-show="!l" />
+    <about v-show="false" />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ export default {
   },
   components: {
     Top,
+    About,
     Loading
   },
   mounted() {

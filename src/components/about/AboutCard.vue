@@ -29,6 +29,8 @@ export default {
 <style scoped lang="sass">
 
 @import "@/assets/colors.sass"
+@import "@/assets/media.sass"
+
 
 .about-card-container
   position: absolute
@@ -36,6 +38,12 @@ export default {
   height: 100%
   display: flex
   flex-direction: column
+  justify-content: center
+  align-items: center
+
+  @media (min-width: $md)
+    flex-direction: row-reverse
+
 
   .item-container
     width: 100%
@@ -44,6 +52,11 @@ export default {
     flex-direction: normals
     justify-content: center
     align-items: flex-end
+
+    @media (min-width: $md)
+      width: 70%
+      height: 90%
+      align-items: center
 
     .item-box
       height: 90%
@@ -55,9 +68,14 @@ export default {
     height: 20%
     display: flex
     flex-wrap: wrap
-    justify-content: center
+    justify-content: space-around
     align-items: center
     background-color: rgba(255,255,255,0.01)
+
+    @media (min-width: $md)
+      width: 20%
+      height: 90%
+      flex-direction: column
 
     .card-item
       width: 20%
@@ -73,6 +91,10 @@ export default {
       font-family: "Sawarabi Mincho";
       user-select: none
       text-decoration: none
+
+      @media (min-width: $md)
+        width: 70%
+        height: 15%
 
       &:hover
         text-shadow: 0 0 15px #18a3d6
