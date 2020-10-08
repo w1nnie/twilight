@@ -18,8 +18,8 @@ export default {
   name: "AboutCard",
   data() {
     return {
-      cardList: ["Profile", "Skill", "Study", "Contact"],
-      links: ["/about/profile", "skill", "study", "contact"]
+      cardList: ["Profile", "Skills", "Study", "Contact"],
+      links: ["/about/profile", "skills", "study", "contact"]
     };
   },
   components: { AboutText, Profile }
@@ -59,8 +59,8 @@ export default {
       align-items: center
 
     .item-box
-      height: 90%
-      width: 90%
+      height: 100%
+      width: 100%
       background-color: rgba(255,255,255,0.01)
 
   .card-item-container

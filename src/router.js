@@ -4,9 +4,8 @@ import Router from "vue-router";
 import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
-import GraphicsModal from "@/components/works/GraphicsModal.vue";
 import Profile from "@/components/about/Profile.vue";
-import Skill from "@/components/about/Skill.vue";
+import Skills from "@/components/about/Skills.vue";
 import Study from "@/components/about/Study.vue";
 import Contact from "@/components/about/Contact.vue";
 
@@ -29,8 +28,8 @@ const router = new Router({
           component: Profile
         },
         {
-          path: "skill",
-          component: Skill
+          path: "skills",
+          component: Skills
         },
         {
           path: "study",
