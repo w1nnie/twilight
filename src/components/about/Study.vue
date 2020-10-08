@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       size: window.innerWidth / 10,
-      pct: 0.75
+      pct: 1.2
     };
   },
   computed: {
@@ -43,14 +43,16 @@ export default {
       --strokeWidth: 0
 
       fill: transparent
-      stroke: #ffffff
+      stroke: rgba(255,255,255,0.5)
       stroke-width: var(--strokeWidth)
       stroke-linecap: round
-      animation: circle 2s ease forwards
+      animation: circle 2s ease-in-out infinite
 
 @keyframes circle
   0%
     stroke-dasharray: 0 10000
-  100%
+  50%
     stroke-dasharray: var(--dashArray) 10000
+  100%
+    stroke-dasharray: 0 10000
 </style>
