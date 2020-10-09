@@ -1,5 +1,5 @@
 <template lang="pug">
-  .as-container
+  .skills
     .content
       .item(v-for="(tool, index) in tools")
         .pic
@@ -40,7 +40,7 @@ export default {
         "css3.png",
         "javascript.png",
         "vuejs.png",
-        "unity.svg",
+        "unity.png",
         "matlab.png"
       ]
     };
@@ -74,7 +74,7 @@ export default {
 
 @import "@/assets/media.sass"
 
-.as-container
+.skills
   width: 100%
   height: 100%
   display: flex

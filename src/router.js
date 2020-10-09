@@ -20,21 +20,7 @@ const router = new Router({
     },
     {
       path: "/about",
-      component: About,
-      children: [
-        {
-          path: "profile",
-          component: Profile
-        },
-        {
-          path: "skills",
-          component: Skills
-        },
-        {
-          path: "study",
-          component: Study
-        }
-      ]
+      component: About
     },
     {
       path: "/gallery",

@@ -1,6 +1,5 @@
 <template lang="pug">
-  .ap-container 
-    h1 おふとんがいとしいな
+  .profile profile
 </template>
 
 <script>
@@ -10,10 +9,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.ap-container
+.profile
   width: 100%
   height: 100%
-
-  h1
-    color: #fff
+  color: white
 </style>

@@ -1,10 +1,10 @@
 <template lang="pug">
-  .study study
+  .catch catch
 </template>
 
 <script>
 export default {
-  name: "Study",
+  name: "Catch",
   data() {
     return {
       size: window.innerWidth / 10,
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.study
+.catch
   width: 100%
   height: 100%
   color: white

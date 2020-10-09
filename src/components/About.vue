@@ -2,14 +2,14 @@
   .about-container
     about-svg.about-svg
     .shutter
-      .bg1
+      .bg
     router-link.collapse(:to="'/'") ×
-    about-card.card
+    about-content.content
 </template>
 
 <script>
 import AboutSvg from "@/components/about/AboutSvg.vue";
-import AboutCard from "@/components/about/AboutCard.vue";
+import AboutContent from "@/components/about/AboutContent.vue";
 import p_a from "@/assets/bg/p_n.png";
 
 export default {
@@ -21,7 +21,7 @@ export default {
   },
   components: {
     AboutSvg,
-    AboutCard
+    AboutContent
   }
 };
 </script>
@@ -52,7 +52,7 @@ export default {
     animation: shutterAnim 3s forwards
     animation-timing-function: ease-in
 
-    .bg1
+    .bg
       position: absolute
       width: 100%
       height: 100%
@@ -61,7 +61,7 @@ export default {
       background-size: 750% 750%
       animation: fadeIn 3s forwards, vibrate 5s infinite
 
-  .card
+  .content
     animation: cardAnim 2.5s forwards
     opacity: 0
 

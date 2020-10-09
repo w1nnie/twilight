@@ -11,7 +11,7 @@
       lottie.g-svg(:options="lottieGallery" :width="logoWidth" v-on:animCreated="handleAnimGallery")
       lottie.a-svg(:options="lottieAbout" :width="logoWidth" v-on:animCreated="handleAnimAbout")
     .links(@neutralize="neutral")
-      router-link.about(to="/about/profile" @mouseover.native="showProfileHover" 
+      router-link.about(to="/about" @mouseover.native="showProfileHover" 
        @mouseout.native="neutral" @click.native="showProfile")
       router-link.works(to="/gallery" :style="{left:`${windowSize.x * 0.53 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
