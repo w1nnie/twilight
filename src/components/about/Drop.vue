@@ -1,6 +1,6 @@
 <template lang="pug">
   .drop
-    img(:src="fall")
+    img(:src="fall" @click="po()" :style="`transform: translateY(${scr*0.3}px)`")
 </template>
 
 <script>
@@ -13,7 +13,13 @@ export default {
       fall: fall
     };
   },
-  computed: {}
+  computed: {},
+  methods: {
+    po() {
+      console.log(scr);
+    }
+  },
+  props: ["scr"]
 };
 </script>
 

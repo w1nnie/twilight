@@ -1,7 +1,8 @@
 <template lang="pug">
   .about-content-wrapper(:style="height" @scroll="scroll()")
     img.bg(:src="bg" :style="`transform: translateY(${scrollY*0.8}px)`")
-    drop.section
+    img.negi(:src="negi" :style="`transform: translateY(${scrollY*0.9}px)`")
+    drop.section(:scr="scrollY")
     profile.section
     skills.section
     study.section
@@ -16,12 +17,14 @@ import Skills from "@/components/about/Skills.vue";
 import Study from "@/components/about/Study.vue";
 import Catch from "@/components/about/Catch.vue";
 import bg from "@/assets/fall/bg.png";
+import negi from "@/assets/fall/negi.png";
 
 export default {
   name: "AboutContent",
   data() {
     return {
       bg: bg,
+      negi: negi,
       scrollY: 0
     };
   },
@@ -62,7 +65,7 @@ export default {
   font-weight: 400;
   font-style: normal;
 
-  img
+  .bg
     position: absolute
     top: 0
     left: 0
@@ -70,6 +73,11 @@ export default {
     z-index: -10
     overflow: hidden
 
+  .negi
+    position: absolute
+    width: 50%
+    height: auto
+    top: 36%
 
   .section
     width: 100%
