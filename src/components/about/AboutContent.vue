@@ -1,7 +1,7 @@
 <template lang="pug">
   .about-content-wrapper(:style="height" @scroll="scroll()")
     img.bg(:src="bg" :style="`transform: translateY(${scrollY*0.8}px)`")
-    img.negi(:src="negi" :style="`transform: translateY(${scrollY*0.9}px)`")
+    img.negi(:src="negi" :style="`transform: translateY(${negiY}px)`")
     drop.section(:scr="scrollY")
     profile.section
     skills.section
@@ -33,6 +33,15 @@ export default {
       return {
         "--height": window.innerHeight + "px"
       };
+    },
+    negiY() {
+      let y;
+      if (this.scrollY < window.innerHeight * 2.5) {
+        y = this.scrollY * 1.2;
+      } else {
+        y = this.scrollY * 0.3 + window.innerHeight * 2.75;
+      }
+      return y;
     }
   },
   methods: {
@@ -78,6 +87,7 @@ export default {
     width: 50%
     height: auto
     top: 36%
+    z-index: -5
 
   .section
     width: 100%

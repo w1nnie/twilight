@@ -16,13 +16,12 @@ export default {
   data() {
     return {
       width: window.innerWidth / 8.35,
-      pcts: [0.95, 0.85, 0.6, 0.4, 0.15, 0.9, 0.8, 0.4, 0.5, 0.2, 0.8],
+      pcts: [0.95, 0.85, 0.6, 0.4, 0.9, 0.8, 0.4, 0.5, 0.2, 0.8],
       tools: [
         "CLIP STUDIO PAINT",
         "Aseprite",
         "Adobe Photoshop",
         "Adobe Illustrator",
-        "Adobe Effects",
         "HTML5",
         "CSS3",
         "JavaScript",
@@ -33,7 +32,6 @@ export default {
       src: [
         "",
         "aseprite.png",
-        "",
         "",
         "",
         "html5.png",
