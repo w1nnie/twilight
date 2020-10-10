@@ -60,7 +60,8 @@ export default {
     display: flex
     flex-direction: column
     background: rgba(0,0,0,0.6)
-    box-shadow: 8px 8px 10px rgba(0,0,0,0.2), -8px -8px 10px rgba(0,0,0,0.2)
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.6), -8px -8px 10px rgba(0,0,0,0.6)
+    border-round: 10px
     overflow: scroll
 
     @media (max-width: $md)
