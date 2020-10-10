@@ -1,5 +1,6 @@
 <template lang="pug">
   .about-content-wrapper(:style="height")
+    img.bg(:src="bg" v-prlx="{speed: 0.1}")
     drop.section
     profile.section
     skills.section
@@ -14,9 +15,15 @@ import Profile from "@/components/about/Profile.vue";
 import Skills from "@/components/about/Skills.vue";
 import Study from "@/components/about/Study.vue";
 import Catch from "@/components/about/Catch.vue";
+import bg from "@/assets/fall/bg.png";
 
 export default {
   name: "AboutContent",
+  data() {
+    return {
+      bg: bg
+    };
+  },
   computed: {
     height() {
       return {
@@ -24,6 +31,7 @@ export default {
       };
     }
   },
+  methods: {},
   components: { Drop, Profile, Skills, Study, Catch }
 };
 </script>
@@ -43,7 +51,17 @@ export default {
   width: 100vw
   height: var(--height)
   overflow: scroll
-  font-family: 'Noto Serif JP', serif;
+  // font-family: 'Noto Serif JP', serif;
+  font-family: a-otf-futo-min-a101-pr6n, serif
+  font-weight: 400;
+  font-style: normal;
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: -10
 
 
   .section

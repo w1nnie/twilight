@@ -1,29 +1,19 @@
 <template lang="pug">
-  .drop drop
-    svg(:width="size" :height="size")
-      circle(:cx="size/2" :cy="size/2" :r="radius" :style="styles")
+  .drop
+    img(:src="fall")
 </template>
 
 <script>
+import fall from "@/assets/fall/fall.png";
+
 export default {
   name: "Drop",
   data() {
     return {
-      size: window.innerWidth / 10,
-      pct: 1.2
+      fall: fall
     };
   },
-  computed: {
-    styles() {
-      return {
-        "--dashArray": this.radius * 2 * Math.PI * this.pct,
-        "--strokeWidth": this.size / 10
-      };
-    },
-    radius() {
-      return this.size / 2.3;
-    }
-  }
+  computed: {}
 };
 </script>
 
@@ -36,22 +26,7 @@ export default {
   align-items: center
   color: white
 
-  svg
-    transform: rotate(-90deg)
-
-    circle
-      --dashArray: 0
-      --strokeWidth: 0
-
-      fill: transparent
-      stroke: rgba(255,255,255,0.5)
-      stroke-width: var(--strokeWidth)
-      stroke-linecap: round
-      animation: circle 5s ease-in-out forwards
-
-@keyframes circle
-  0%
-    stroke-dasharray: 0 10000
-  100%
-    stroke-dasharray: var(--dashArray) 10000
+  img
+    width: 70%
+    height: auto
 </style>

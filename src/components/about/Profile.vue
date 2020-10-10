@@ -11,6 +11,9 @@
         .matter ♦︎ Education
         .description 東京工業大学 2016.4 - 2020/3<br>東京工業大学大学院 2020.4 -
       .item
+        .matter ♦︎ Major
+        .description 心理物理学
+      .item
         .matter ♦︎ Hobby
         .description お絵かき / ドット絵 / デザイン / 音楽鑑賞 / 散歩 / ゲーム / 写真
       .item
@@ -22,9 +25,9 @@
       .item
         .matter ♦︎ Links
         .link
-          a(href="https://twitter.com/_winnie_ill") Twitter<br>
-          a(href="https://www.pixiv.net/users/21090759") Pixiv<br>
-          a(href="https://github.com/w1nnie") Github
+          a(href="https://twitter.com/_winnie_ill" target="_blank" rel="noopener noreferrer") Twitter<br>
+          a(href="https://www.pixiv.net/users/21090759" target="_blank" rel="noopener noreferrer") Pixiv<br>
+          a(href="https://github.com/w1nnie" target="_blank" rel="noopener noreferrer") Github
 
 </template>
 
@@ -53,10 +56,10 @@ export default {
     width: 43%
     height: 70%
     top: 15%
-    left: 5%
+    left: 20%
     display: flex
     flex-direction: column
-    background: rgba(0,0,0,0.2)
+    background: rgba(0,0,0,0.6)
     box-shadow: 8px 8px 10px rgba(0,0,0,0.2), -8px -8px 10px rgba(0,0,0,0.2)
 
     @media (max-width: $md)
@@ -86,7 +89,6 @@ export default {
         text-align: left
 
       .link
-        height: 12vh
         text-align: left
 
         a

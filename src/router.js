@@ -1,12 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
-
 import Top from "@/components/Top.vue";
 import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
-import Profile from "@/components/about/Profile.vue";
-import Skills from "@/components/about/Skills.vue";
-import Study from "@/components/about/Study.vue";
 
 Vue.use(Router);
 

@@ -83,7 +83,7 @@ export default {
 
   .content
     width: 90%
-    height: 100%
+    height: 80%
     display: flex
     justify-content: space-around
     align-items: center
@@ -95,7 +95,7 @@ export default {
       margin: 1%
       width: 12vw
       height: 14vw
-      background-color: rgba(0,0,0,0.2)
+      background-color: rgba(0,0,0,0.4)
       color: #fff
       display: flex
       flex-direction: column
