@@ -61,6 +61,7 @@ export default {
     flex-direction: column
     background: rgba(0,0,0,0.6)
     box-shadow: 8px 8px 10px rgba(0,0,0,0.2), -8px -8px 10px rgba(0,0,0,0.2)
+    overflow: scroll
 
     @media (max-width: $md)
       width: 77%
