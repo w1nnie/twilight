@@ -123,8 +123,6 @@ export default {
             width: 65%
             height: auto
 
-
-
         svg
           transform: rotate(-90deg)
           position: absolute
@@ -151,7 +149,7 @@ export default {
         font-size: 1.2vw
 
         @media (max-width: $md)
-          height: 8vw
+          height: 6vw
 
 @keyframes circle
   0%

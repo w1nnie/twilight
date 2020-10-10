@@ -5,6 +5,7 @@
     skills.section
     study.section
     catch.section
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet")
 </template>
 
 <script>
@@ -42,6 +43,8 @@ export default {
   width: 100vw
   height: var(--height)
   overflow: scroll
+  font-family: 'Noto Serif JP', serif;
+
 
   .section
     width: 100%
