@@ -1,6 +1,6 @@
 <template lang="pug">
-  .about-content-wrapper(:style="height")
-    img.bg(:src="bg" v-prlx="{speed: 0.1}")
+  .about-content-wrapper(:style="height" @scroll="scroll()")
+    img.bg(:src="bg" :style="`transform: translateY(${scrollY*0.8}px)`")
     drop.section
     profile.section
     skills.section
@@ -21,7 +21,8 @@ export default {
   name: "AboutContent",
   data() {
     return {
-      bg: bg
+      bg: bg,
+      scrollY: 0
     };
   },
   computed: {
@@ -31,7 +32,12 @@ export default {
       };
     }
   },
-  methods: {},
+  methods: {
+    scroll() {
+      let acw = document.getElementsByClassName("about-content-wrapper")[0];
+      this.scrollY = acw.scrollTop;
+    }
+  },
   components: { Drop, Profile, Skills, Study, Catch }
 };
 </script>
@@ -62,6 +68,7 @@ export default {
     left: 0
     width: 100%
     z-index: -10
+    overflow: hidden
 
 
   .section
