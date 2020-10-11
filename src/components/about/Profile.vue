@@ -70,12 +70,13 @@ export default {
     display: flex
     flex-direction: column
     background: rgba(0,0,0,0.6)
-    box-shadow: 8px 8px 10px rgba(0,0,0,0.6), -8px -8px 10px rgba(0,0,0,0.6)
-    border-round: 10px
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6)
+    border-radius: 10px
     overflow: scroll
 
     @media (max-width: $md)
       width: 77%
+      left: 12.5%
 
     .item
       display: flex
@@ -111,7 +112,7 @@ export default {
     will-change: opacity, transform
     transition: all .5s
 
-  .fade-enter, .fade-leave-top
+  .fade-enter, .fade-leave-to
     opacity: 0
     transform: translateX(50px)
 </style>

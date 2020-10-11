@@ -103,8 +103,8 @@ export default {
       display: flex
       flex-direction: column
       justify-content: space-around
-      box-shadow: 8px 8px 10px rgba(0,0,0,0.6), -8px -8px 10px rgba(0,0,0,0.6)
-      border-round: 5px
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.6)
+      border-radius: 5px
 
       @media (max-width: $md)
         width: 24vw
@@ -159,7 +159,7 @@ export default {
     will-change: opacity, transform
     transition: all .5s
 
-  .fade-enter, .fade-leave-top
+  .fade-enter, .fade-leave-to
     opacity: 0
     transform: translateX(-50px)
 

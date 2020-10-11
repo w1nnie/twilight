@@ -1,6 +1,6 @@
 <template lang="pug">
   .drop
-    img(:src="fall" :style="`transform: translateY(${scrollY*0.5}px)`")
+    img(:src="fall" :style="`transform: translateY(${scrollY*0.5}px) scale(${1-scrollY/5000})`")
 </template>
 
 <script>
@@ -32,4 +32,5 @@ export default {
     width: 70%
     height: auto
     z-index: -7
+    transform-origin: center
 </style>
