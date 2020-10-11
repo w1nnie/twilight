@@ -2,9 +2,9 @@
   .about-content-wrapper(:style="height" @scroll="scroll()")
     img.bg(:src="bg" :style="`transform: translateY(${scrollY*0.8}px)`")
     img.negi(:src="negi" :style="`transform: translateY(${negiY}px)`")
-    drop.section(:scr="scrollY")
-    profile.section
-    skills.section
+    drop.section(:scrollY="scrollY")
+    profile.section(:scrollY="scrollY")
+    skills.section(:scrollY="scrollY")
     study.section
     catch.section
     link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet")
@@ -25,9 +25,13 @@ export default {
     return {
       bg: bg,
       negi: negi,
-      scrollY: 0
+      scrollY: 0,
+      scrollBreakPoint: 0
     };
   },
+  // mounted: function() {
+  //   // this.scrollBreakPoint = window.innerHeight;
+  // },
   computed: {
     height() {
       return {
@@ -42,6 +46,11 @@ export default {
         y = this.scrollY * 0.3 + window.innerHeight * 2.75;
       }
       return y;
+    },
+    isScrollProfile() {
+      let is = this.scrollY > 800;
+      console.log(is);
+      return is;
     }
   },
   methods: {

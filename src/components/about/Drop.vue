@@ -1,6 +1,6 @@
 <template lang="pug">
   .drop
-    img(:src="fall" :style="`transform: translateY(${scr*0.5}px)`")
+    img(:src="fall" :style="`transform: translateY(${scrollY*0.5}px)`")
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
   },
   computed: {},
   methods: {},
-  props: ["scr"]
+  props: ["scrollY"]
 };
 </script>
 

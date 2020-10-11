@@ -1,33 +1,34 @@
 <template lang="pug">
   .profile
-    .box
-      .item
-        .matter ♦︎ Screen Name
-        .description 白葱 / うぃにおん
-      .item
-        .matter ♦︎ Date of Birth
-        .description 1997.05.30
-      .item
-        .matter ♦︎ Education
-        .description 東京工業大学 2016.4 - 2020.3<br>東京工業大学大学院 2020.4 -
-      .item
-        .matter ♦︎ Major
-        .description 心理物理学
-      .item
-        .matter ♦︎ Hobby
-        .description お絵かき / ドット絵 / デザイン / 音楽鑑賞 / 散歩 / ゲーム / 写真
-      .item
-        .matter ♦︎ Fav Tech
-        .description CSS Animation / AR / Image Processing
-      .item
-        .matter ♦︎ Certificate
-        .description 基本情報処理技術者試験<br>画像処理エンジニア検定 エキスパート
-      .item
-        .matter ♦︎ Links
-        .link
-          a(href="https://twitter.com/_winnie_ill" target="_blank" rel="noopener noreferrer") Twitter<br>
-          a(href="https://www.pixiv.net/users/21090759" target="_blank" rel="noopener noreferrer") Pixiv<br>
-          a(href="https://github.com/w1nnie" target="_blank" rel="noopener noreferrer") Github
+    transition(name="fade")
+      .box(v-show="isPassedProfile")
+        .item
+          .matter ♦︎ Screen Name
+          .description 白葱 / うぃにおん
+        .item
+          .matter ♦︎ Date of Birth
+          .description 1997.05.30
+        .item
+          .matter ♦︎ Education
+          .description 東京工業大学 2016.4 - 2020.3<br>東京工業大学大学院 2020.4 -
+        .item
+          .matter ♦︎ Major
+          .description 心理物理学
+        .item
+          .matter ♦︎ Hobby
+          .description お絵かき / ドット絵 / デザイン / 音楽鑑賞 / 散歩 / ゲーム / 写真
+        .item
+          .matter ♦︎ Fav Tech
+          .description CSS Animation / AR / Image Processing
+        .item
+          .matter ♦︎ Certificate
+          .description 基本情報処理技術者試験<br>画像処理エンジニア検定 エキスパート
+        .item
+          .matter ♦︎ Links
+          .link
+            a(href="https://twitter.com/_winnie_ill" target="_blank" rel="noopener noreferrer") Twitter<br>
+            a(href="https://www.pixiv.net/users/21090759" target="_blank" rel="noopener noreferrer") Pixiv<br>
+            a(href="https://github.com/w1nnie" target="_blank" rel="noopener noreferrer") Github
 
 </template>
 
@@ -35,7 +36,16 @@
 export default {
   name: "Profile",
   data() {
-    return {};
+    return {
+      appear: "appear",
+      disappear: "disappear"
+    };
+  },
+  props: ["scrollY"],
+  computed: {
+    isPassedProfile() {
+      return this.scrollY > window.innerHeight / 2;
+    }
   }
 };
 </script>
@@ -96,4 +106,12 @@ export default {
         a
           color: #88aadd
           text-decoration: none
+
+  .fade-enter-active, .fade-leave-active
+    will-change: opacity, transform
+    transition: all .5s
+
+  .fade-enter, .fade-leave-top
+    opacity: 0
+    transform: translateX(50px)
 </style>

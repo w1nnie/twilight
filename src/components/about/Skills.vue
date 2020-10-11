@@ -1,13 +1,14 @@
 <template lang="pug">
   .skills
-    .content
-      .item(v-for="(tool, index) in tools")
-        .pic
-          .icon
-            img(:src="'/twilight/img/skills/'+src[index]")
-          svg(:width="size" :height="size")
-            circle(:cx="size/2" :cy="size/2" :r="radius" :style="styles(index)")
-        .label {{tool}}
+    transition(name="fade")
+      .content(v-show="isPassedSkills")
+        .item(v-for="(tool, index) in tools")
+          .pic
+            .icon
+              img(:src="'/twilight/img/skills/'+src[index]")
+            svg(:width="size" :height="size")
+              circle(:cx="size/2" :cy="size/2" :r="radius" :style="styles(index)")
+          .label {{tool}}
 </template>
 
 <script>
@@ -43,6 +44,7 @@ export default {
       ]
     };
   },
+  props: ["scrollY"],
   methods: {
     styles(index) {
       return {
@@ -63,6 +65,9 @@ export default {
         size = this.width;
       }
       return size;
+    },
+    isPassedSkills() {
+      return this.scrollY > window.innerHeight * 1.5;
     }
   }
 };
@@ -149,6 +154,14 @@ export default {
 
         @media (max-width: $md)
           height: 6vw
+
+  .fade-enter-active, .fade-leave-active
+    will-change: opacity, transform
+    transition: all .5s
+
+  .fade-enter, .fade-leave-top
+    opacity: 0
+    transform: translateX(-50px)
 
 @keyframes circle
   0%
