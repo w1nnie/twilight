@@ -40,10 +40,10 @@ export default {
     },
     negiY() {
       let y;
-      if (this.scrollY < window.innerHeight * 2.5) {
-        y = this.scrollY * 1.2;
+      if (this.scrollY < window.innerHeight * 2.2) {
+        y = this.scrollY * 1.6 - 300;
       } else {
-        y = this.scrollY * 0.3 + window.innerHeight * 2.75;
+        y = this.scrollY * 0.4 + window.innerHeight * 2.64 - 300;
       }
       return y;
     },
