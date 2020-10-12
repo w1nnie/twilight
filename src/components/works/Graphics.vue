@@ -1,10 +1,10 @@
 <template lang="pug">
-.graphics-container
+.graphics-container(:style="height")
   .graphics-tags
     .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
   transition-group.graphics-item-container(name="filter")
     .item(v-for="(item, index) in sortedData"
-     :style="styles"
+     :style="xmove"
      :key="item.filename"
      @click="showModal(index)")
       img.item-img(:style="{objectPosition: item.position}" v-lazy="'/twilight/img/thumbnail/'+item.filename+item.thm_ext")
@@ -53,12 +53,17 @@ export default {
       });
       return data;
     },
-    styles() {
+    xmove() {
       return {
         "--xmove":
           this.activeTagIndex == -1
             ? 0
             : this.oldActiveTagIndex - this.activeTagIndex
+      };
+    },
+    height() {
+      return {
+        "--height": window.innerHeight + "px"
       };
     }
   },
@@ -102,8 +107,10 @@ export default {
   border-radius: 10px
 
 .graphics-container
+  --height: 0
+
   width: 100%
-  height: 100%
+  height: var(--height)
   display: flex
   flex-direction: column
 

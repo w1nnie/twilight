@@ -52,7 +52,6 @@ export default {
     },
     isScrollProfile() {
       let is = this.scrollY > 800;
-      console.log(is);
       return is;
     }
   },
