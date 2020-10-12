@@ -2,7 +2,6 @@
   .about-container
     about-svg.about-svg
     .shutter
-      .bg
     router-link.collapse(:to="'/'") ×
     about-content.content
 </template>
