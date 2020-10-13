@@ -154,6 +154,7 @@ $shadows-big:    multiple-box-shadow(100)
     height: auto
     top: 36%
     z-index: -5
+    user-select: none
 
   .section
     width: 100%

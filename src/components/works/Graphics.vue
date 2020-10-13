@@ -1,5 +1,5 @@
 <template lang="pug">
-.graphics-container(:style="height")
+.graphics-container
   .graphics-tags
     .graphics-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
   transition-group.graphics-item-container(name="filter")
@@ -107,10 +107,8 @@ export default {
   border-radius: 10px
 
 .graphics-container
-  --height: 0
-
   width: 100%
-  height: var(--height)
+  height: 100%
   display: flex
   flex-direction: column
 
@@ -159,9 +157,9 @@ export default {
       @extend .morph
       background-color: $color-base
       border-radius: 30px
-      width: 37vh
+      width: 41vh
       height: 33vh
-      margin: 2vh
+      margin: 1vh
       border: solid 10px $color-base
       box-sizing: border-box
       box-shadow: 12px 12px 15px $color-dark

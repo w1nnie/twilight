@@ -1,5 +1,5 @@
 <template lang="pug">
-  .works-container
+  .works-container(:style="height")
     .header Gallery
       router-link.collapse(:to="'/'") ×
     .body
@@ -21,6 +21,13 @@ export default {
   },
   components: {
     Graphics
+  },
+  computed: {
+    height() {
+      return {
+        "--height": window.innerHeight + "px"
+      };
+    }
   },
   methods: {
     clickGraphics() {
@@ -46,9 +53,11 @@ export default {
   border-radius: 10px
 
 .works-container
+  --height: 0
+
   position: absolute
   width: 100vw
-  height: 100vh
+  height: var(--height)
   top: 0
   left: 0
   background-color: $color-bg
@@ -57,7 +66,7 @@ export default {
   .header
     @extend .morph
     width: 100%
-    height: 8vh
+    height: 8%
     top: 0
     display: flex
     align-items: center
@@ -95,7 +104,7 @@ export default {
 
   .body
     width: 100%
-    height: 92vh
+    height: 92%
     overflow: scroll
 
 

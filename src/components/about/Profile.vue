@@ -16,7 +16,7 @@
           .description 心理物理学
         .item
           .matter ♦︎ Hobby
-          .description お絵かき / ドット絵 / デザイン / 音楽鑑賞 / 散歩 / ゲーム / 写真
+          .description お絵かき / ドット絵 / デザイン / 音楽 / 散歩 / ゲーム / VTuber
         .item
           .matter ♦︎ Fav Tech
           .description CSS Animation / AR / Image Processing
@@ -63,7 +63,7 @@ export default {
 
   .box
     position: absolute
-    width: 43%
+    width: 41%
     height: 70%
     top: 15%
     left: 20%

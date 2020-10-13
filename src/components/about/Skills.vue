@@ -97,7 +97,7 @@ export default {
     .item
       margin: 1%
       width: 12vw
-      height: 14vw
+      height: 16vw
       background-color: rgba(0,0,0,0.6)
       color: #fff
       display: flex
@@ -149,7 +149,7 @@ export default {
         display: flex
         justify-content: center
         align-items: center
-        height: 2vw
+        height: 4vw
         font-size: 1.2vw
 
         @media (max-width: $md)
