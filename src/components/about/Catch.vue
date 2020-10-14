@@ -1,5 +1,5 @@
 <template lang="pug">
-  .catch catch
+  .catch
 </template>
 
 <script>

@@ -85,7 +85,7 @@ export default {
   position: relative
 
   .title
-    font-size: 3rem
+    font-size: 40px
 
   .content
     position: absolute

@@ -17,7 +17,7 @@
           .description 心理物理学
         .item
           .matter ♦︎ Hobby
-          .description お絵かき / ドット絵 / デザイン / 音楽 / 散歩 / ゲーム / VTuber
+          .description お絵かき / ドット絵 / デザイン / 散歩 / ゲーム / VTuber
         .item
           .matter ♦︎ Fav Tech
           .description CSS Animation / AR / Image Processing
@@ -63,11 +63,11 @@ export default {
   // background: rgba(255,255,255,0.1)
 
   .title
-    font-size: 3rem
+    font-size: 40px
 
   .box
     position: absolute
-    width: 48%
+    width: 55%
     height: 78%
     top: 15%
     left: 20%
@@ -92,14 +92,15 @@ export default {
         font-size: 0.6rem
 
       .matter
-        width: 32%
+        width: 28.5%
+        margin-left: 1.5%
         display: flex
         justify-content: start
         align-items: center
         text-shadow: #4455ff 0 0 8px, #4455ff 0 0 15px
 
       .description
-        width: 68%
+        width: 70%
         display: flex
         justify-content: start
         align-items: center
