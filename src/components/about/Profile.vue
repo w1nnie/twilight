@@ -1,5 +1,6 @@
 <template lang="pug">
   .profile
+    .title Profile
     transition(name="fade")
       .box(v-show="isPassedProfile")
         .item
@@ -61,10 +62,13 @@ export default {
   color: white
   // background: rgba(255,255,255,0.1)
 
+  .title
+    font-size: 3rem
+
   .box
     position: absolute
-    width: 41%
-    height: 70%
+    width: 48%
+    height: 78%
     top: 15%
     left: 20%
     display: flex
@@ -74,18 +78,18 @@ export default {
     border-radius: 10px
     overflow: scroll
 
-    @media (max-width: $md)
+    @media only screen and (max-width: $md)
       width: 77%
       left: 12.5%
 
     .item
       display: flex
-      font-size: 1.3rem
+      font-size: 1.3vw
       margin: 0.3rem 0 0.75rem 0.1rem
       border-bottom: 1px dotted rgba(255,255,255,0.3)
 
-      @media (max-width: $md)
-        font-size: 0.3rem
+      @media only screen and (max-width: $md)
+        font-size: 0.6rem
 
       .matter
         width: 32%

@@ -1,5 +1,6 @@
 <template lang="pug">
   .skills
+    .title Skills
     transition(name="fade")
       .content(v-show="isPassedSkills")
         .item(v-for="(tool, index) in tools")
@@ -80,13 +81,17 @@ export default {
 .skills
   width: 100%
   height: 100%
-  display: flex
-  justify-content: center
-  align-items: center
+  color: white
+  position: relative
+
+  .title
+    font-size: 3rem
 
   .content
+    position: absolute
     width: 90%
     height: 80%
+    left: 5%
     display: flex
     justify-content: space-around
     align-items: center
@@ -106,7 +111,7 @@ export default {
       box-shadow: 0px 0px 5px rgba(0,0,0,0.6)
       border-radius: 5px
 
-      @media (max-width: $md)
+      @media only screen and (max-width: $md)
         width: 24vw
         height: 32vw
 
@@ -152,7 +157,7 @@ export default {
         height: 4vw
         font-size: 1.2vw
 
-        @media (max-width: $md)
+        @media only screen and (max-width: $md)
           height: 6vw
 
   .fade-enter-active, .fade-leave-active

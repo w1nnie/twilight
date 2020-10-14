@@ -3,7 +3,7 @@
     .stars
     .stars2
     .stars3
-    img.negi(:src="negi" :style="`transform: translateY(${negiY}px)`")
+    img.negi(:src="negi" :style="`transform: translateY(${negiY}px) scale(${1-scrollY/4000}`")
     drop.section(:scrollY="scrollY")
     profile.section(:scrollY="scrollY")
     skills.section(:scrollY="scrollY")
