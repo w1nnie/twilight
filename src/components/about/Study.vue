@@ -1,6 +1,7 @@
 <template lang="pug">
   .study 
     .title Study
+    .content
 </template>
 
 <script>
@@ -31,7 +32,18 @@ export default {
   width: 100%
   height: 100%
   color: white
+  position: relative
 
   .title
     font-size: 40px
+    margin-bottom: 20px
+
+  .content
+    position: absolute
+    width: 90%
+    height: 80%
+    left: 5%
+    background: rgba(0,0,0,0.6)
+    border-radius: 10px
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6)
 </style>

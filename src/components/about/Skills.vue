@@ -32,10 +32,10 @@ export default {
         "MATLAB"
       ],
       src: [
-        "",
+        "no_image.png",
         "aseprite.png",
-        "",
-        "",
+        "no_image.png",
+        "no_image.png",
         "html5.png",
         "css3.png",
         "javascript.png",
