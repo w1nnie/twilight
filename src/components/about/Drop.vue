@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import fall from "@/assets/fall/fall.png";
+import fall from "@/assets/fall/fall2.png";
 
 export default {
   name: "Drop",
@@ -31,7 +31,7 @@ export default {
   img
     width: 70%
     height: auto
-    z-index: -7
+    z-index: 0
     transform-origin: center
     user-select: none
 </style>

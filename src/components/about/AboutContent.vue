@@ -18,14 +18,12 @@ import Profile from "@/components/about/Profile.vue";
 import Skills from "@/components/about/Skills.vue";
 import Study from "@/components/about/Study.vue";
 import Catch from "@/components/about/Catch.vue";
-import bg from "@/assets/fall/bg.png";
 import negi from "@/assets/fall/negi.png";
 
 export default {
   name: "AboutContent",
   data() {
     return {
-      bg: bg,
       negi: negi,
       scrollY: 0,
       scrollBreakPoint: 0
@@ -153,7 +151,7 @@ $shadows-big:    multiple-box-shadow(100)
     width: 50%
     height: auto
     top: 36%
-    z-index: -5
+    z-index: 1
     user-select: none
 
   .section
