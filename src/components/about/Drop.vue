@@ -34,4 +34,11 @@ export default {
     z-index: 0
     transform-origin: center
     user-select: none
+    animation: pop 3s ease-out
+
+@keyframes pop
+  0%
+    transform: translateY(200px)
+  100%
+    transform: translateY(0px)
 </style>

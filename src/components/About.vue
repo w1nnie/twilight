@@ -75,20 +75,10 @@ export default {
     position: absolute
     width: 100%
     height: 100%
-    top: -100%
+    top: 100%
     background-color: rgba(0,0,0,0.8)
     animation: shutterAnim 3s forwards
     animation-timing-function: ease-in
-
-    .bg
-      position: absolute
-      width: 100%
-      height: 100%
-      opacity: 0
-      background: linear-gradient(-135deg, #a59e4c, #131348)
-      background-size: 750% 750%
-      animation: fadeIn 3s forwards, vibrate 5s forwards
-      // inifinite??
 
   .content
     animation: cardAnim 2.5s forwards
@@ -122,7 +112,7 @@ export default {
 
 @keyframes shutterAnim
   40%
-    top: -200vh
+    top: 200vh
   70%
     top: 0
     opacity: 1
@@ -143,12 +133,4 @@ export default {
     opacity: 0
   100%
     opacity: 0.7
-
-@keyframes vibrate
-  0%
-    background-position: 0% 50%
-  50%
-    background-position: 50% 100%
-  100%
-    background-position: 0% 50%
 </style>
