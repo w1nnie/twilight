@@ -107,11 +107,11 @@ export default {
     },
     handleAnimGallery(anim) {
       this.ganim = anim;
-      this.ganim.setSpeed(2);
+      this.ganim.setSpeed(1.5);
     },
     handleAnimAbout(anim) {
       this.aanim = anim;
-      this.aanim.setSpeed(2);
+      this.aanim.setSpeed(1.5);
     },
     stop(anim) {
       anim.stop();

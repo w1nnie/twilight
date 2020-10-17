@@ -153,6 +153,7 @@ $shadows-big:    multiple-box-shadow(100)
     top: 36%
     z-index: 1
     user-select: none
+    opacity: 0
 
   .section
     width: 100%

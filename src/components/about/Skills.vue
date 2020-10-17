@@ -129,7 +129,7 @@ export default {
           align-items: center
 
           img
-            width: 65%
+            width: 58%
             height: auto
 
         svg
