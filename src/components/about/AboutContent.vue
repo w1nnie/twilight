@@ -3,7 +3,8 @@
     .stars
     .stars2
     .stars3
-    img.negi(:src="negi" :style="`transform: translateY(${negiY}px) scale(${1-scrollY/4000}`")
+    .negi-container
+      img.negi(:src="negi" :style="`transform: translateY(${negiY}px) scale(${1-scrollY/10000}) rotate(${-scrollY/100}deg)`")
     drop.section(:scrollY="scrollY")
     profile.section(:scrollY="scrollY")
     skills.section(:scrollY="scrollY")
@@ -42,9 +43,9 @@ export default {
     negiY() {
       let y;
       if (this.scrollY < window.innerHeight * 2.2) {
-        y = this.scrollY * 1.6 - 300;
+        y = this.scrollY * 1.6;
       } else {
-        y = this.scrollY * 0.4 + window.innerHeight * 2.64 - 300;
+        y = this.scrollY * 0.4 + window.innerHeight * 2.64;
       }
       return y;
     },
@@ -146,17 +147,28 @@ $shadows-big:    multiple-box-shadow(100)
       background: transparent
       box-shadow: $shadows-big
 
-  .negi
+  .negi-container
     position: absolute
-    width: 70%
-    top: 25%
-    left: 25%
-    height: auto
-    z-index: 1
-    user-select: none
-    opacity: 1
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .negi
+      width: 70%
+      height: auto
+      z-index: 1
+      user-select: none
+      animation: negiPop 3s ease-out
 
   .section
     width: 100%
-    heigth: 100%
+    height: 100%
+
+@keyframes negiPop
+  0%
+    transform: translateY(100px)
+  100%
+    transform: translateY(0px)
 </style>
