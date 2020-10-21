@@ -148,12 +148,13 @@ $shadows-big:    multiple-box-shadow(100)
 
   .negi
     position: absolute
-    width: 50%
+    width: 70%
+    top: 25%
+    left: 25%
     height: auto
-    top: 36%
     z-index: 1
     user-select: none
-    opacity: 0
+    opacity: 1
 
   .section
     width: 100%

@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import fall from "@/assets/fall/fall2.png";
+import fall from "@/assets/fall/fall.png";
 
 export default {
   name: "Drop",
