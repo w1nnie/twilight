@@ -45,7 +45,7 @@ export default {
       if (this.scrollY < 2.0) {
         y = this.scrollY * 1.6 * window.innerHeight;
       } else {
-        y = (this.scrollY * 0.4 + 2.4) * window.innerHeight;
+        y = (this.scrollY * 0.3 + 2.6) * window.innerHeight;
       }
       return y;
     },
@@ -58,9 +58,9 @@ export default {
         "translateY(" +
         this.negiY +
         "px) scale(" +
-        (1 - this.scrollY / 5) +
+        (1 - this.scrollY / 6) +
         ") rotate(" +
-        -this.scrollY * 100 +
+        -this.scrollY * 90 +
         "deg)"
       );
     },
