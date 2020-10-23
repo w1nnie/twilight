@@ -65,7 +65,7 @@ export default {
       );
     },
     negiBrightness() {
-      let isNegiBlack = this.scrollY < 2 ? 1 : 0.05;
+      let isNegiBlack = this.scrollY < 2 ? 1 : 0.1;
       return "brightness(" + 100 * isNegiBlack + "%)";
     }
   },
@@ -109,7 +109,7 @@ $shadows-big:    multiple-box-shadow(100)
   font-family: a-otf-futo-min-a101-pr6n, serif
   font-weight: 400;
   font-style: normal;
-  background: radial-gradient(circle at 50% 500%, hsl(213, 83%, 60%) calc(var(--y)*0.02%), hsl(223, 40%, 5%) 100%)
+  background: radial-gradient(circle at 50% 500%, hsl(350, 53%, 88%) calc(var(--y)*20%), hsl(223, 75%, 7%) 100%)
 
   .stars
     width: 1px

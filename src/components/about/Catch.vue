@@ -35,5 +35,4 @@ export default {
   .sunlight
     width: 100%
     height: 100%
-    background: radial-gradient(circle at 50% 100%, #ffffff 0%, #000000 100%)
 </style>
