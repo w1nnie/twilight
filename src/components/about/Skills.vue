@@ -68,7 +68,7 @@ export default {
       return size;
     },
     isPassedSkills() {
-      return this.scrollY > window.innerHeight * 1.5;
+      return this.scrollY > 1.5;
     }
   }
 };
@@ -158,7 +158,7 @@ export default {
         font-size: 1.2vw
 
         @media only screen and (max-width: $md)
-          height: 6vw
+          height: 0.6rem
 
   .fade-enter-active, .fade-leave-active
     will-change: opacity, transform

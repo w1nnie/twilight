@@ -45,7 +45,7 @@ export default {
   props: ["scrollY"],
   computed: {
     isPassedProfile() {
-      return this.scrollY > window.innerHeight / 2;
+      return this.scrollY > 0.5;
     }
   }
 };

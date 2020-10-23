@@ -1,5 +1,6 @@
 <template lang="pug">
   .catch
+    .sunlight
 </template>
 
 <script>
@@ -30,4 +31,9 @@ export default {
   width: 100%
   height: 100%
   color: white
+
+  .sunlight
+    width: 100%
+    height: 100%
+    background: radial-gradient(circle at 50% 100%, #ffffff 0%, #000000 100%)
 </style>

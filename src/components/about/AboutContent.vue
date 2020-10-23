@@ -4,7 +4,7 @@
     .stars2
     .stars3
     .negi-container
-      img.negi(:src="negi" :style="`transform: translateY(${negiY}px) scale(${1-scrollY/10000}) rotate(${-scrollY/100}deg), filter: brightness(100%)`")
+      img.negi(:src="negi" :style="{transform: negiTransform, filter: negiBrightness}")
     drop.section(:scrollY="scrollY")
     profile.section(:scrollY="scrollY")
     skills.section(:scrollY="scrollY")
@@ -42,22 +42,37 @@ export default {
     },
     negiY() {
       let y;
-      if (this.scrollY < window.innerHeight * 2.2) {
-        y = this.scrollY * 1.6;
+      if (this.scrollY < 2.0) {
+        y = this.scrollY * 1.6 * window.innerHeight;
       } else {
-        y = this.scrollY * 0.4 + window.innerHeight * 2.64;
+        y = (this.scrollY * 0.4 + 2.4) * window.innerHeight;
       }
       return y;
     },
     isScrollProfile() {
-      let is = this.scrollY > 800;
+      let is = this.scrollY > 0.8;
       return is;
+    },
+    negiTransform() {
+      return (
+        "translateY(" +
+        this.negiY +
+        "px) scale(" +
+        (1 - this.scrollY / 5) +
+        ") rotate(" +
+        -this.scrollY * 100 +
+        "deg)"
+      );
+    },
+    negiBrightness() {
+      let isNegiBlack = this.scrollY < 2 ? 1 : 0.05;
+      return "brightness(" + 100 * isNegiBlack + "%)";
     }
   },
   methods: {
     scroll() {
       let acw = document.getElementsByClassName("about-content-wrapper")[0];
-      this.scrollY = acw.scrollTop;
+      this.scrollY = acw.scrollTop / window.innerHeight;
     }
   },
   components: { Drop, Profile, Skills, Study, Catch }
@@ -94,7 +109,7 @@ $shadows-big:    multiple-box-shadow(100)
   font-family: a-otf-futo-min-a101-pr6n, serif
   font-weight: 400;
   font-style: normal;
-  background: radial-gradient(circle at 50% 400%, hsl(213, 83%, 60%) calc(var(--y)*0.02%), hsl(223, 40%, 5%) 100%)
+  background: radial-gradient(circle at 50% 500%, hsl(213, 83%, 60%) calc(var(--y)*0.02%), hsl(223, 40%, 5%) 100%)
 
   .stars
     width: 1px
@@ -149,6 +164,8 @@ $shadows-big:    multiple-box-shadow(100)
 
   .negi-container
     position: absolute
+    top: 0
+    left: 0
     width: 100%
     height: 100%
     display: flex

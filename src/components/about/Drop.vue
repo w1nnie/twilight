@@ -1,6 +1,6 @@
 <template lang="pug">
   .drop
-    img(:src="fall" :style="`transform: translateY(${scrollY*0.3}px) scale(${1-scrollY/5000}) rotate(${scrollY/25}deg)`")
+    img(:src="fall" :style="{transform: dropTransform}")
 </template>
 
 <script>
@@ -13,7 +13,19 @@ export default {
       fall: fall
     };
   },
-  computed: {},
+  computed: {
+    dropTransform() {
+      return (
+        "translateY(" +
+        this.scrollY * 0.3 * window.innerHeight +
+        "px) scale(" +
+        (1 - this.scrollY / 5) +
+        ") rotate(" +
+        this.scrollY * 50 +
+        "deg)"
+      );
+    }
+  },
   methods: {},
   props: ["scrollY"]
 };
