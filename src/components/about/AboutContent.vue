@@ -4,7 +4,7 @@
     .stars2
     .stars3
     .negi-container
-      img.negi(:src="negi" :style="`transform: translateY(${negiY}px) scale(${1-scrollY/10000}) rotate(${-scrollY/100}deg)`")
+      img.negi(:src="negi" :style="`transform: translateY(${negiY}px) scale(${1-scrollY/10000}) rotate(${-scrollY/100}deg), filter: brightness(100%)`")
     drop.section(:scrollY="scrollY")
     profile.section(:scrollY="scrollY")
     skills.section(:scrollY="scrollY")

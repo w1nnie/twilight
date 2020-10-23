@@ -369,7 +369,8 @@
         "links": ["https://trap.jp/post/480/","https://www.titech.ac.jp/news/2018/043127.html","https://apps.apple.com/jp/app/ninja-flicker/id1330300477","https://play.google.com/store/apps/details?id=com.traP.ninjaflicker"],
         "linkText": ["作品記事","大学ニュース記事","App Store","Google Play"],
         "tags": [
-            "ドット絵"
+            "ドット絵",
+            "プロダクト"
         ]
     }
 ]
