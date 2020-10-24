@@ -16,7 +16,7 @@
           .matter ♦︎ Major
           .description 心理物理学
         .item
-          .matter ♦︎ Hobby
+          .matter ♦︎ Interest
           .description お絵かき / ドット絵 / デザイン / 散歩 / ゲーム / VTuber
         .item
           .matter ♦︎ Fav Tech
@@ -24,6 +24,9 @@
         .item
           .matter ♦︎ Certificate
           .description 基本情報処理技術者試験<br>画像処理エンジニア検定 エキスパート
+        .item
+          .matter ♦︎ Comment
+          .description 良い・楽しい・新しい"見ため"の作品を見たり実現したりするのが好きです。<br>研究では"見ため"と脳の仕組みの関係を調べています。
         .item
           .matter ♦︎ Links
           .link
