@@ -113,7 +113,7 @@ export default {
 
       @media only screen and (max-width: $md)
         width: 24vw
-        height: 32vw
+        height: 34vw
 
       .pic
         position: relative
@@ -158,7 +158,7 @@ export default {
         font-size: 1.2vw
 
         @media only screen and (max-width: $md)
-          height: auto
+          height: 10vw
           font-size: 0.6rem
 
   .fade-enter-active, .fade-leave-active

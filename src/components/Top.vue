@@ -1,6 +1,6 @@
 <template lang="pug">
   .content
-    #img-container
+    .img-container
       img.middle.far(:src='layers[0]' :style="{filter: farFilter, transform: middleZoom, opacity: farOpacity}")
       img.middle.far(:src='layers[1]' :style="{filter: farFilter, transform: middleZoom, opacity: blurOpacities[0]}")
       img.middle(:src='layers[2]' :style="{filter: middleFilter,transform: middleZoom}")
@@ -169,12 +169,13 @@ export default {
   background-color: $color-bg
   overflow: hidden
 
-  #img-container
+  .img-container
     position: absolute
     width: 100%
     height: 100%
     perspective: 20px
     perspective-origin: 60% 50%
+    animation: fadein 2s
 
   img
     position: absolute
@@ -245,4 +246,10 @@ export default {
 .fade-enter, .fade-leave-to
   opacity: 0
   transition-delay: 0s
+
+@keyframes fadein
+  0%
+  opacity: 0
+  100%
+  opacity: 1
 </style>

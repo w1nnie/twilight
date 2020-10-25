@@ -27,7 +27,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.l = false;
-    }, 3000);
+    }, 5000);
   }
 };
 </script>
@@ -39,6 +39,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

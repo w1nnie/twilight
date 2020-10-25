@@ -1,43 +1,45 @@
-<template>
-  <div v-show="loading">
-    <div class="fullview">
-      <div class="loading-spacer"></div>
-      <vue-loading
-        type="balls"
-        color="#aaa"
-        :size="{ width: '100px', height: '100px' }"
-      >
-      </vue-loading>
-    </div>
-  </div>
+<template lang="pug">
+  .loading(v-show="loading")
+    img.loading-spacer(:src="p_load")
 </template>
 
 <script>
-import { VueLoading } from "vue-loading-template";
+import p_load from "@/assets/p_load.gif";
 
 export default {
   name: "Loading",
   data() {
     return {
-      loading: true
+      loading: true,
+      p_load: p_load
     };
-  },
-  components: {
-    VueLoading
   }
 };
 </script>
 
-<style>
-.fullview {
-  width: 100%;
-  height: 100%;
-  background: #fefefe;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.loading-spacer {
-  height: 30%;
-}
+<style scoped lang="sass">
+.loading
+  height: 100%
+  width: 100%
+  background: #dcdcdc
+  position: fixed
+  top: 0
+  left: 0
+  animation: fadeout 5s
+  display: flex
+  justify-content: center
+  align-items: center
+
+  img
+    height: 30vh
+    image-rendering: pixelated
+    animation: fadeout 5s
+
+@keyframes fadeout
+  0%
+    opacity: 1
+  90%
+    opacity: 1
+  100%
+    opacity: 0
 </style>
