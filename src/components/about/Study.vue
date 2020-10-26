@@ -1,7 +1,8 @@
 <template lang="pug">
   .study 
     .title Study
-    .content
+    transition(name="fade")
+      .content(v-show="isPassedStudy")
 </template>
 
 <script>
@@ -13,6 +14,7 @@ export default {
       pct: 1.2
     };
   },
+  props: ["scrollY"],
   computed: {
     styles() {
       return {
@@ -22,6 +24,9 @@ export default {
     },
     radius() {
       return this.size / 2.3;
+    },
+    isPassedStudy() {
+      return this.scrollY > 2.5;
     }
   }
 };
@@ -46,4 +51,12 @@ export default {
     background: rgba(0,0,0,0.6)
     border-radius: 10px
     box-shadow: 0px 0px 10px rgba(0,0,0,0.6)
+
+.fade-enter-active, .fade-leave-active
+  will-change: opacity, transform
+  transition: all 1s ease-out
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+  transform: translateY(150px)
 </style>

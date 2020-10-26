@@ -319,7 +319,7 @@
         "filename": "portfolio",
         "raw_ext": ".png",
         "thm_ext": ".png",
-        "title": "Twilight",
+        "title": "twilight",
         "desc": "このポートフォリオサイト。やりたい表現や見た目が面白そうな表現を手当たり次第に実装し、楽しげなサイトにした。イラストのフィルター操作やCSSアニメーション、lottieを使ったSVGアニメーションなどを用いて動きの表現の幅を追求した。",
         "date": 20201101,
         "position": "50% 50%",

@@ -8,7 +8,7 @@
     drop.section(:scrollY="scrollY")
     profile.section(:scrollY="scrollY")
     skills.section(:scrollY="scrollY")
-    study.section
+    //- study.section(:scrollY="scrollY")
     catch.section
     link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet")
 </template>
@@ -30,9 +30,6 @@ export default {
       scrollBreakPoint: 0
     };
   },
-  // mounted: function() {
-  //   // this.scrollBreakPoint = window.innerHeight;
-  // },
   computed: {
     acw() {
       return {
@@ -42,11 +39,22 @@ export default {
     },
     negiY() {
       let y;
-      if (this.scrollY < 2.0) {
-        y = this.scrollY * 1.6 * window.innerHeight;
+      // with study section
+      //
+      // if (this.scrollY < 2.0) {
+      //   y = this.scrollY * 1.6 * window.innerHeight;
+      // } else {
+      //   y = (this.scrollY * 0.3 + 2.6) * window.innerHeight;
+      // }
+
+      // without study section
+
+      if (this.scrollY < 1) {
+        y = this.scrollY * 2.5 * window.innerHeight;
       } else {
-        y = (this.scrollY * 0.3 + 2.6) * window.innerHeight;
+        y = (this.scrollY * 0.2 + 2.2) * window.innerHeight;
       }
+
       return y;
     },
     isScrollProfile() {
@@ -55,17 +63,36 @@ export default {
     },
     negiTransform() {
       return (
+        // with study section
+        //
+        // "translateY(" +
+        // this.negiY +
+        // "px) scale(" +
+        // (1 - this.scrollY / 6) +
+        // ") rotate(" +
+        // -this.scrollY * 90 +
+        // "deg)"
+
+        // without study section
+
         "translateY(" +
         this.negiY +
         "px) scale(" +
-        (1 - this.scrollY / 6) +
+        (1 - this.scrollY / 4.5) +
         ") rotate(" +
-        -this.scrollY * 90 +
+        -this.scrollY * 120 +
         "deg)"
       );
     },
     negiBrightness() {
-      let isNegiBlack = this.scrollY < 2 ? 1 : 0.1;
+      // with study section
+      //
+      // let isNegiBlack = this.scrollY < 2 ? 1 : 0.1;
+
+      // without study section
+
+      let isNegiBlack = this.scrollY < 1.4 ? 1 : 0.5;
+
       return "brightness(" + 100 * isNegiBlack + "%)";
     }
   },
@@ -109,7 +136,7 @@ $shadows-big:    multiple-box-shadow(100)
   font-family: a-otf-futo-min-a101-pr6n, serif
   font-weight: 400;
   font-style: normal;
-  background: radial-gradient(circle at 50% 500%, hsl(350, 53%, 88%) calc(var(--y)*20%), hsl(223, 75%, 7%) 100%)
+  background: radial-gradient(circle at 50% 300%, hsl(350, 53%, 88%) calc(var(--y)*20%), hsl(223, 75%, 7%) 100%)
 
   .stars
     width: 1px
