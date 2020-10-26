@@ -16,6 +16,8 @@
       router-link.works(to="/gallery" :style="{left:`${windowSize.x * 0.53 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
 
+    .shutter(:style="`pointer-events: ${shutter}`")
+
     transition(name="fade")
       router-view
   
@@ -50,7 +52,8 @@ export default {
       nearZoom: "translate3D(0,0,0)",
       isClicked: false,
       farOpacity: 1,
-      blurOpacities: [0, 0, 0]
+      blurOpacities: [0, 0, 0],
+      shutter: "auto"
     };
   },
   components: { Lottie },
@@ -107,11 +110,11 @@ export default {
     },
     handleAnimGallery(anim) {
       this.ganim = anim;
-      this.ganim.setSpeed(1.5);
+      this.ganim.setSpeed(1.7);
     },
     handleAnimAbout(anim) {
       this.aanim = anim;
-      this.aanim.setSpeed(1.5);
+      this.aanim.setSpeed(1.7);
     },
     stop(anim) {
       anim.stop();
@@ -122,6 +125,9 @@ export default {
   },
   mounted() {
     window.addEventListener("resize", this.onResize);
+    setTimeout(() => {
+      this.shutter = "none";
+    }, 7000);
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.onResize);
@@ -195,6 +201,13 @@ export default {
     transform: translate3d(0,0,0)
     transition: all .5s
     transition-timing-function: ease
+
+  .shutter
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
 
 .links

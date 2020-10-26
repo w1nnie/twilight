@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <loading v-show="l" />
-    <top v-show="!l" />
+    <transition name="fade">
+      <top v-show="!l" />
+    </transition>
     <about v-show="false" />
   </div>
 </template>
@@ -32,12 +34,19 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style scoped lang="sass">
+#app
+  font-family: "Avenir", Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+
+.fade-enter-active, .fade-leave-active
+  transition: all 0.9s ease
+  transition-delay: 0.5s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+  transition-delay: 0s
 </style>

@@ -16,7 +16,7 @@
           .matter ♦︎ Major
           .description 心理物理学
         .item
-          .matter ♦︎ Interest
+          .matter ♦︎ Likes
           .description お絵かき / ドット絵 / デザイン / 散歩 / ゲーム / VTuber
         .item
           .matter ♦︎ Fav Tech
@@ -119,9 +119,9 @@ export default {
 
   .fade-enter-active, .fade-leave-active
     will-change: opacity, transform
-    transition: all .5s
+    transition: all 1s ease-out
 
   .fade-enter, .fade-leave-to
     opacity: 0
-    transform: translateX(50px)
+    transform: translateY(150px)
 </style>

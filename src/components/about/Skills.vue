@@ -163,11 +163,11 @@ export default {
 
   .fade-enter-active, .fade-leave-active
     will-change: opacity, transform
-    transition: all .5s
+    transition: all 1s ease-out
 
   .fade-enter, .fade-leave-to
     opacity: 0
-    transform: translateX(-50px)
+    transform: translateY(150px)
 
 @keyframes circle
   0%
