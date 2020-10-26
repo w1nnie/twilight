@@ -99,6 +99,7 @@ export default {
 <style scoped lang="sass">
 
 @import "@/assets/colors.sass"
+@import "@/assets/media.sass"
 
 .morph
   background-color: $color-bg
@@ -135,6 +136,13 @@ export default {
       box-shadow: -5px -5px 15px $color-light, 5px 5px 15px $color-dark
       transition: all .1s
       user-select: none
+      font-size: 15px
+      font-family: vdl-logojr, sans-serif
+      font-weight: 400
+      font-style: normal
+
+      @media only screen and (max-width: $md)
+        font-size: 10px
 
     .graphics-tags-item-active
       @extend .graphics-tags-item

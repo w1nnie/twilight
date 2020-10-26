@@ -43,6 +43,9 @@ export default {
   cursor: initial
   background-color: rgba(0,0,0,0.75)
   text-decoration: none
+  font-family: vdl-logojr, sans-serif
+  font-weight: 400
+  font-style: normal
 
   .modal-content
     width: 100%
@@ -69,6 +72,9 @@ export default {
       // background: rgba(255,255,255,0.5)
       text-align: left
       color: #ffffff
+      font-family: ryo-gothic-plusn, sans-serif
+      font-weight: 300
+      font-style: normal
 
       .title
         font-size: 1.5rem

@@ -10,6 +10,64 @@
 <script>
 import Graphics from "@/components/works/Graphics.vue";
 
+(function(d) {
+  var config = {
+      kitId: "wqc5xpv",
+      scriptTimeout: 3000,
+      async: true
+    },
+    h = d.documentElement,
+    t = setTimeout(function() {
+      h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+    }, config.scriptTimeout),
+    tk = d.createElement("script"),
+    f = false,
+    s = d.getElementsByTagName("script")[0],
+    a;
+  h.className += " wf-loading";
+  tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+  tk.async = true;
+  tk.onload = tk.onreadystatechange = function() {
+    a = this.readyState;
+    if (f || (a && a != "complete" && a != "loaded")) return;
+    f = true;
+    clearTimeout(t);
+    try {
+      Typekit.load(config);
+    } catch (e) {}
+  };
+  s.parentNode.insertBefore(tk, s);
+})(document);
+
+(function(d) {
+  var config = {
+      kitId: "wqc5xpv",
+      scriptTimeout: 3000,
+      async: true
+    },
+    h = d.documentElement,
+    t = setTimeout(function() {
+      h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+    }, config.scriptTimeout),
+    tk = d.createElement("script"),
+    f = false,
+    s = d.getElementsByTagName("script")[0],
+    a;
+  h.className += " wf-loading";
+  tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+  tk.async = true;
+  tk.onload = tk.onreadystatechange = function() {
+    a = this.readyState;
+    if (f || (a && a != "complete" && a != "loaded")) return;
+    f = true;
+    clearTimeout(t);
+    try {
+      Typekit.load(config);
+    } catch (e) {}
+  };
+  s.parentNode.insertBefore(tk, s);
+})(document);
+
 export default {
   name: "Works",
   data() {
@@ -45,6 +103,7 @@ export default {
 <style scoped lang="sass">
 
 @import "@/assets/colors.sass"
+@import "@/assets/media.sass"
 
 .morph
   background-color: $color-bg
@@ -73,6 +132,12 @@ export default {
     justify-content: center
     font-size: 3rem
     box-shadow: 5px 5px 10px $color-dark
+    font-family: vdl-logojr, sans-serif
+    font-weight: 400
+    font-style: normal
+
+    @media only screen and (max-width: $md)
+      font-size: 2.3rem
 
   .genre-tab
     @extend .morph
@@ -116,7 +181,7 @@ export default {
     width: 8vh
     height: 8vh
     z-index: 1000
-    font-size: 6vh
+    font-size: 4vh
     text-align: center
     text-decoration: none
     color: $color-text
