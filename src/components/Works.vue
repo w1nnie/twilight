@@ -70,13 +70,6 @@ import Graphics from "@/components/works/Graphics.vue";
 
 export default {
   name: "Works",
-  data() {
-    return {
-      activeFlags: [true, false],
-      activeClass: "active-tag",
-      inactiveClass: "inactive-tag"
-    };
-  },
   components: {
     Graphics
   },
@@ -85,16 +78,6 @@ export default {
       return {
         "--height": window.innerHeight + "px"
       };
-    }
-  },
-  methods: {
-    clickGraphics() {
-      this.activeFlags = [true, false];
-      console.log(this.activeFlags);
-    },
-    clickProducts() {
-      this.activeFlags = [false, true];
-      console.log(this.activeFlags);
     }
   }
 };
@@ -138,34 +121,6 @@ export default {
 
     @media only screen and (max-width: $md)
       font-size: 2.3rem
-
-  .genre-tab
-    @extend .morph
-    width: 100%
-    height: 0vh
-    display: flex
-    align-items: center
-    justify-content: center
-    box-shadow: none
-    display: none
-
-    .works-links
-      @extend .morph
-      width: 5rem
-      height: 70%
-      margin: 1.5%
-      display: flex
-      align-items: center
-      justify-content: center
-      text-decoration: none
-      box-shadow: 5px 5px 10px $color-dark, -5px -5px 10px $color-light
-      overflow: hidden
-
-    .active-tag
-      box-shadow: inset 1px 1px 2px $color-dark, inset -1px -1px 2px $color-light
-
-    .inactive-tag
-
 
   .body
     width: 100%
