@@ -47,6 +47,7 @@ export default {
     transform-origin: center
     user-select: none
     animation: pop 3s ease-out
+    will-change: transform
 
 @keyframes pop
   0%

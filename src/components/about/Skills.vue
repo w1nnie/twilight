@@ -97,6 +97,7 @@ export default {
     align-items: center
     flex-wrap: wrap
     overflow: scroll
+    will-change: transform, opacity
 
 
     .item
@@ -148,6 +149,7 @@ export default {
             stroke-width: var(--strokeWidth)
             stroke-linecap: round
             animation: circle 2s ease forwards
+            will-change: stroke-dasharray
 
       .label
         position: relative

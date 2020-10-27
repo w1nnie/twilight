@@ -205,6 +205,7 @@ $shadows-big:    multiple-box-shadow(100)
       z-index: 1
       user-select: none
       animation: negiPop 3s ease-out
+      will-change: transform, filter
 
   .section
     width: 100%

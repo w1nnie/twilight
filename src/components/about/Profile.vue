@@ -81,6 +81,7 @@ export default {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.6)
     border-radius: 10px
     overflow: scroll
+    will-change: transform, opacity
 
     @media only screen and (max-width: $md)
       width: 77%

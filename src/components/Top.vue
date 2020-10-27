@@ -182,6 +182,7 @@ export default {
     perspective: 20px
     perspective-origin: 60% 50%
     animation: fadein 2s
+    will-change: filter, transform, opacity
 
   img
     position: absolute
