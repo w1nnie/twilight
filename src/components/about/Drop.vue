@@ -19,7 +19,7 @@ export default {
         "translateY(" +
         this.scrollY * 0.3 * window.innerHeight +
         "px) scale(" +
-        (1 - this.scrollY / 5) +
+        (1 - this.scrollY / 3) +
         ") rotate(" +
         this.scrollY * 50 +
         "deg)"
@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "@/assets/media.sass"
+
 .drop
   width: 100%
   height: 100%
@@ -41,13 +43,16 @@ export default {
   color: white
 
   img
-    width: 70%
-    height: auto
+    height: 90%
+    width: auto
     z-index: 0
     transform-origin: center
     user-select: none
     animation: pop 3s ease-out
     will-change: transform
+
+    @media only screen and (max-width: $md)
+      height: 60%
 
 @keyframes pop
   0%

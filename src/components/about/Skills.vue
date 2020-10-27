@@ -17,7 +17,7 @@ export default {
   name: "Skills",
   data() {
     return {
-      width: window.innerWidth / 8.35,
+      width: window.innerWidth / 8.9,
       pcts: [0.95, 0.85, 0.6, 0.4, 0.9, 0.8, 0.4, 0.5, 0.2, 0.8],
       tools: [
         "CLIP STUDIO PAINT",
@@ -101,9 +101,9 @@ export default {
 
 
     .item
-      margin: 1%
-      width: 12vw
-      height: 16vw
+      margin: 1% 2% 1% 2%
+      width: 11vw
+      height: 15vw
       background-color: rgba(0,0,0,0.6)
       color: #fff
       display: flex
@@ -113,8 +113,9 @@ export default {
       border-radius: 5px
 
       @media only screen and (max-width: $md)
-        width: 24vw
-        height: 34vw
+        margin: 0 0.5% 0 0.5%
+        width: 22vw
+        height: 30vw
 
       .pic
         position: relative

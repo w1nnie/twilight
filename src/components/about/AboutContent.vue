@@ -4,7 +4,7 @@
     .stars2
     .stars3
     .negi-container
-      img.negi(:src="negi" :style="{transform: negiTransform, filter: negiBrightness}")
+      img.negi(:src="negi" :style="{transform: negiTransform, filter: negiFilter}")
     drop.section(:scrollY="scrollY")
     profile.section(:scrollY="scrollY")
     skills.section(:scrollY="scrollY")
@@ -50,9 +50,9 @@ export default {
       // without study section
 
       if (this.scrollY < 1) {
-        y = this.scrollY * 2.5 * window.innerHeight;
+        y = this.scrollY * 2 * window.innerHeight;
       } else {
-        y = (this.scrollY * 0.2 + 2.2) * window.innerHeight;
+        y = (this.scrollY * 0.2 + 2.1) * window.innerHeight;
       }
 
       return y;
@@ -84,16 +84,27 @@ export default {
         "deg)"
       );
     },
-    negiBrightness() {
+    negiFilter() {
       // with study section
       //
       // let isNegiBlack = this.scrollY < 2 ? 1 : 0.1;
 
       // without study section
 
-      let isNegiBlack = this.scrollY < 1.4 ? 1 : 0.5;
+      let negiBlack = this.scrollY < 1.4 ? "100%" : "40%";
 
-      return "brightness(" + 100 * isNegiBlack + "%)";
+      let negiHue = this.scrollY < 1.4 ? "0deg" : "90deg";
+      let negiSaturate = this.scrollY < 1.4 ? "100%" : "20%";
+
+      return (
+        "brightness( " +
+        negiBlack +
+        ") hue-rotate(" +
+        negiHue +
+        ") saturate(" +
+        negiSaturate +
+        ")"
+      );
     }
   },
   methods: {
@@ -200,12 +211,15 @@ $shadows-big:    multiple-box-shadow(100)
     align-items: center
 
     .negi
-      width: 70%
-      height: auto
+      height: 90%
+      width: auto
       z-index: 1
       user-select: none
       animation: negiPop 3s ease-out
       will-change: transform, filter
+
+      @media only screen and (max-width: $md)
+        height: 60%
 
   .section
     width: 100%

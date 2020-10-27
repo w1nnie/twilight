@@ -17,7 +17,7 @@
           .description 心理物理学
         .item
           .matter ♦︎ Likes
-          .description お絵かき / ドット絵 / デザイン / 散歩 / ゲーム / VTuber
+          .description お絵かき / ドット絵 / デザイン / ゲーム / 散歩 / VTuber
         .item
           .matter ♦︎ Fav Tech
           .description CSS Animation / AR / Image Processing
