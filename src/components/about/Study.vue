@@ -59,5 +59,5 @@ export default {
 
 .fade-enter, .fade-leave-to
   opacity: 0
-  transform: translateY(150px)
+  transform: translateY(100px)
 </style>

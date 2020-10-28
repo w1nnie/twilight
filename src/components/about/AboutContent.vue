@@ -154,7 +154,7 @@ $shadows-big:    multiple-box-shadow(100)
     height: 1px
     background: transparent
     box-shadow: $shadows-small
-    animation			: animStar 50s linear infinite
+    animation			: animStar 100s linear infinite
 
     &:after
       content: " "
@@ -171,7 +171,7 @@ $shadows-big:    multiple-box-shadow(100)
     border-radius: 50%
     background: transparent
     box-shadow: $shadows-medium
-    animation			: animStar 100s linear infinite
+    animation			: animStar 125s linear infinite
 
     &:after
       content: " "
@@ -230,4 +230,10 @@ $shadows-big:    multiple-box-shadow(100)
     transform: translateY(100px)
   100%
     transform: translateY(0px)
+
+@keyframes animStar
+  from
+    transform: translateY(0px)
+  to
+    transform: translate(500px, -2000px)
 </style>
