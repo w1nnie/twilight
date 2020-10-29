@@ -35,11 +35,11 @@
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "路地(夕方)",
-        "desc": "大学サークルのチームで制作したゲーム「Intuition」の背景として描いたイラスト。",
+        "desc": "大学サークルのチームで制作したゲーム「Intuition」に手伝いとして提供した背景グラフィック。",
         "date": 20190621,
         "position": "50% 50%",
-        "links": "",
-        "linkText": "",
+        "links": ["https://trap.jp/post/763/"],
+        "linkText": ["ゲーム紹介記事"],
         "tags": [
             "イラスト",
             "オリジナル"
@@ -107,58 +107,12 @@
         ]
     },
     {
-        "filename": "msw_maid",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "うちのこメイド",
-        "desc": "",
-        "date": 20191103,
-        "position": "50% 50%",
-        "links": "",
-        "linkText": "",
-        "tags": [
-            "イラスト",
-            "オリジナル"
-        ]
-    },
-    {
-        "filename": "milkey",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "天の川",
-        "desc": "天の川の習作。",
-        "date": 20190320,
-        "position": "50% 50%",
-        "links": "",
-        "linkText": "",
-        "tags": [
-            "イラスト",
-            "オリジナル",
-            "星空"
-        ]
-    },
-    {
-        "filename": "main_mikage",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "みかげ",
-        "desc": "",
-        "date": 20190823,
-        "position": "50% 50%",
-        "links": "",
-        "linkText": "",
-        "tags": [
-            "イラスト",
-            "オリジナル"
-        ]
-    },
-    {
         "filename": "woofar",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "ウーファ",
-        "desc": "所属サークルの東京工業大学デジタル創作同好会traPの企画、traP1drawにて制作したオリジナルキャラクター。",
-        "date": 20190704,
+        "desc": "大学サークルの企画、traP1drawにて制作したオリジナルキャラクター。",
+        "date": 20180704,
         "position": "50% 50%",
         "links": "",
         "linkText": "",
@@ -201,7 +155,7 @@
         "filename": "toko_fish",
         "raw_ext": ".gif",
         "thm_ext": ".gif",
-        "title": "釣りとこ",
+        "title": "釣りいぬい",
         "desc": "推しVTuber「戌亥とこ」のファンアート。フレームレート小さめで緻密な動きを表現するための習作。",
         "date": 20200526,
         "position": "50% 50%",
@@ -248,11 +202,11 @@
         "raw_ext": ".jpg",
         "thm_ext": ".jpg",
         "title": "traP5th記念イラスト",
-        "desc": "大学サークルの創立5周年を祝して描いたイラスト。サークルのマスコットキャラクターを主人公とし、大学構内を舞台とした探索RPG系のゲーム画面を模し、ポストアポカリプス的な世界観を描いた。デザインはunipotaが担当。",
+        "desc": "大学サークルの創立5周年を祝して描いたイラスト。サークルのマスコットキャラクターを主人公とし、大学構内を舞台とした探索RPG系のゲーム画面を模し、ポストアポカリプス的な世界観を描いた。HUDデザインはunipotaが担当。",
         "date": 20200321,
         "position": "30% 50%",
-        "links": ["https://twiter.com/unipota"],
-        "linkText": ["unipota(Twitter)"],
+        "links": ["https://trap.jp/post/1012/", "https://twiter.com/unipota"],
+        "linkText": ["traP5周年記念ブログ", "unipota(Twitter)"],
         "tags": [
             "イラスト",
             "二次創作"
@@ -273,13 +227,13 @@
         ]
     },
     {
-        "filename": "main_steria",
+        "filename": "shf",
         "raw_ext": ".png",
         "thm_ext": ".jpg",
-        "title": "うちのこステリア",
-        "desc": "",
-        "date": 20191006,
-        "position": "50% 30%",
+        "title": "機械鳥城",
+        "desc": "大学サークルのチームで制作したゲームの背景グラフィック。",
+        "date": 20180403,
+        "position": "50% 50%",
         "links": "",
         "linkText": "",
         "tags": [
@@ -355,7 +309,8 @@
         "linkText": "",
         "tags": [
             "イラスト",
-            "デザイン"
+            "デザイン",
+            "プロダクト"
         ]
     },
     {
@@ -363,7 +318,7 @@
         "raw_ext": ".png",
         "thm_ext": ".png",
         "title": "Ninja Flicker",
-        "desc": "大学サークルのチームで制作した、スマートフォン向けプラットフォーマーアクションゲーム。背景をフリックして動かす感覚で、主人公の忍者を動かしてゴールを目指すという独特な操作方法で城の頂上を目指す。2018年の第1回Google Play | Indie Games Festivalにてトップ10に入賞し、大学のニュースに掲載された。主にマップチップと敵mobのアニメーションの多くと一部のギミックのグラフィックを担当した。",
+        "desc": "大学サークルのチームで制作した、スマートフォン向けプラットフォーマーアクションゲーム。背景をフリックして動かす感覚で、主人公の忍者を動かすという独特な操作方法で城の頂上を目指す。2018年の第1回Google Play | Indie Games Festivalにてトップ10に入賞し、大学のニュースに掲載された。主にマップチップと敵mobのアニメーションの多くと一部のギミックのグラフィックを担当した。",
         "date": 20171226,
         "position": "50% 50%",
         "links": ["https://trap.jp/post/480/","https://www.titech.ac.jp/news/2018/043127.html","https://apps.apple.com/jp/app/ninja-flicker/id1330300477","https://play.google.com/store/apps/details?id=com.traP.ninjaflicker"],
@@ -371,6 +326,35 @@
         "tags": [
             "ドット絵",
             "プロダクト"
+        ]
+    },
+    {
+        "filename": "blanc",
+        "raw_ext": ".gif",
+        "thm_ext": ".png",
+        "title": "ちぇすとなっつ！",
+        "desc": "弾幕を避けながら栗を拾うアクションゲーム。グラフィックを担当。プログラムはunipotaが担当。",
+        "date": 20190323,
+        "position": "50% 50%",
+        "links": ["https://twiter.com/unipota"],
+        "linkText": ["unipota(Twitter)"],
+        "tags": [
+            "ドット絵",
+            "プロダクト"
+        ]
+    },
+    {
+        "filename": "steria_sd",
+        "raw_ext": ".png",
+        "thm_ext": ".png",
+        "title": "ステリア(SD)",
+        "desc": "オリジナルキャラクター「ステリア」のSDイラスト。",
+        "date": 20201024,
+        "position": "50% 50%",
+        "links": "",
+        "linkText": "",
+        "tags": [
+            "イラスト"
         ]
     }
 ]

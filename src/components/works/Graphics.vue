@@ -184,10 +184,12 @@ export default {
 
   .filter-enter-active, .filter-move
     transition: transform 1s ease .2s, opacity .3s ease .2s
+    pointer-events: none
 
   .filter-leave-active
     position: absolute
     transition: transform 1s ease 0s, opacity .15s ease 0s
+    pointer-events: none
 
   .filter-enter
     --xmove: 0
