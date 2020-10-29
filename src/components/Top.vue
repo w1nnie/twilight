@@ -14,7 +14,7 @@
       router-link.about.rl(to="/about" @mouseover.native="showProfileHover" 
        @mouseout.native="neutral" @click.native="showProfile")
        .hover-sign(:style="{opacity: hoverSignOpacity}")
-      router-link.works.rl(to="/gallery" :style="{left:`${windowSize.x * 0.54 - windowSize.y * 0.5}px`}" 
+      router-link.works.rl(to="/gallery" :style="{left:`${Math.max(windowSize.x * 0.54 - windowSize.y * 0.5, 0)}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
        .hover-sign(:style="{opacity: hoverSignOpacity}")
 
@@ -78,7 +78,7 @@ export default {
       this.nearZoom = "translate3D(400px,0,20px)";
       this.isClicked = true;
       this.blurOpacities = [0, 0, 0];
-      this.hoverSignOpacity = 1;
+      this.hoverSignOpacity = 0;
     },
     showProfileHover() {
       this.play(this.aanim);
@@ -164,6 +164,7 @@ export default {
 <style scoped lang="sass">
 
 @import "@/assets/colors.sass"
+@import "@/assets/media.sass"
 
 $hover-sign-size: 50px
 
@@ -177,7 +178,7 @@ $hover-sign-size: 50px
   flex-wrap: wrap
   justify-content: center
   align-items: center
-  background-color: $color-bg
+  background-color: #000
   overflow: hidden
 
   .img-container
@@ -189,6 +190,9 @@ $hover-sign-size: 50px
     user-select: none
     animation: fadein 2s
     will-change: filter, transform, opacity
+
+    @media only screen and (max-width: $md)
+      height: 70%
 
     img
       position: absolute
@@ -243,7 +247,6 @@ $hover-sign-size: 50px
 
     .button
       position: inherit
-      background-color: rgba(255,255,255,0)
 
     .about
       @extend .button
@@ -252,11 +255,23 @@ $hover-sign-size: 50px
       width: 35vh
       height: 80%
 
+      @media only screen and (max-width: $md)
+        top: auto
+        width: 40%
+        bottom: 15%
+        height: 55%
+
+
     .works
       @extend .button
       top: 0%
       width: 50vh
       height: 70%
+
+      @media only screen and (max-width: $md)
+        top: 15%
+        width: 50%
+        height: 50%
 
     .rl
       display: flex

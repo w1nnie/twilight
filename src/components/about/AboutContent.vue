@@ -10,6 +10,7 @@
     skills.section(:scrollY="scrollY")
     //- study.section(:scrollY="scrollY")
     catch.section
+    .scroll-nav
     link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet")
 </template>
 
@@ -155,6 +156,7 @@ $shadows-big:    multiple-box-shadow(100)
     background: transparent
     box-shadow: $shadows-small
     animation			: animStar 100s linear infinite
+    will-change: transform
 
     &:after
       content: " "
@@ -164,6 +166,7 @@ $shadows-big:    multiple-box-shadow(100)
       height: 1px
       background: transparent
       box-shadow: $shadows-small
+      will-change: transform
 
   .stars2
     width: 2px
@@ -172,6 +175,7 @@ $shadows-big:    multiple-box-shadow(100)
     background: transparent
     box-shadow: $shadows-medium
     animation			: animStar 125s linear infinite
+    will-change: transform
 
     &:after
       content: " "
@@ -181,6 +185,7 @@ $shadows-big:    multiple-box-shadow(100)
       height: 2px
       background: transparent
       box-shadow: $shadows-medium
+      will-change: transform
 
   .stars3
     width: 3px
@@ -189,6 +194,7 @@ $shadows-big:    multiple-box-shadow(100)
     background: transparent
     box-shadow: $shadows-big
     animation			: animStar 150s linear infinite
+    will-change: transform
 
     &:after
       content: " "
@@ -199,6 +205,7 @@ $shadows-big:    multiple-box-shadow(100)
       border-radius: 50%
       background: transparent
       box-shadow: $shadows-big
+      will-change: transform
 
   .negi-container
     position: absolute
@@ -220,6 +227,10 @@ $shadows-big:    multiple-box-shadow(100)
 
       @media only screen and (max-width: $md)
         height: 60%
+
+    .scroll-nav
+      position: fixed
+
 
   .section
     width: 100%
