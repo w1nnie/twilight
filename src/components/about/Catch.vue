@@ -3,6 +3,8 @@
     .sunlight
     .mt-container
       img.mt(:src="mt")
+    .footer
+      .text shironegi, 2020
 </template>
 
 <script>
@@ -12,22 +14,10 @@ export default {
   name: "Catch",
   data() {
     return {
-      size: window.innerWidth / 10,
-      pct: 1.2,
       mt: mt
     };
   },
-  computed: {
-    styles() {
-      return {
-        "--dashArray": this.radius * 2 * Math.PI * this.pct,
-        "--strokeWidth": this.size / 10
-      };
-    },
-    radius() {
-      return this.size / 2.3;
-    }
-  }
+  computed: {}
 };
 </script>
 
@@ -36,7 +26,7 @@ export default {
   position: relative
   width: 100%
   height: 100%
-  color: white
+  color: hsl(220, 5%, 60%)
 
   .sunlight
     position: absolute
@@ -54,4 +44,16 @@ export default {
       width: 100%
       object-fit: cover
       object-position: 40% 100%
+
+  .footer
+    position: absolute
+    width: 100%
+    height: 5%
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .text
+      font-size: 20px
 </style>
