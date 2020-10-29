@@ -11,10 +11,12 @@
       lottie.g-svg(:options="lottieGallery" :width="logoWidth" v-on:animCreated="handleAnimGallery")
       lottie.a-svg(:options="lottieAbout" :width="logoWidth" v-on:animCreated="handleAnimAbout")
     .links(@neutralize="neutral")
-      router-link.about(to="/about" @mouseover.native="showProfileHover" 
+      router-link.about.rl(to="/about" @mouseover.native="showProfileHover" 
        @mouseout.native="neutral" @click.native="showProfile")
-      router-link.works(to="/gallery" :style="{left:`${windowSize.x * 0.53 - windowSize.y * 0.5}px`}" 
+       .hover-sign(:style="{opacity: hoverSignOpacity}")
+      router-link.works.rl(to="/gallery" :style="{left:`${windowSize.x * 0.54 - windowSize.y * 0.5}px`}" 
        @mouseover.native="goToGalleryHover" @mouseout.native="neutral" @click.native="goToGallery")
+       .hover-sign(:style="{opacity: hoverSignOpacity}")
 
     .shutter(:style="`pointer-events: ${shutter}`")
 
@@ -53,7 +55,8 @@ export default {
       isClicked: false,
       farOpacity: 1,
       blurOpacities: [0, 0, 0],
-      shutter: "auto"
+      shutter: "auto",
+      hoverSignOpacity: 1
     };
   },
   components: { Lottie },
@@ -66,6 +69,7 @@ export default {
       this.nearZoom = "translate3D(10px,60px,8px)";
       this.middleZoom = "translate3D(0,60px,5px)";
       this.blurOpacities = [0, 1, 1];
+      this.hoverSignOpacity = 0;
     },
     goToGallery() {
       this.stop(this.ganim);
@@ -74,6 +78,7 @@ export default {
       this.nearZoom = "translate3D(400px,0,20px)";
       this.isClicked = true;
       this.blurOpacities = [0, 0, 0];
+      this.hoverSignOpacity = 1;
     },
     showProfileHover() {
       this.play(this.aanim);
@@ -83,6 +88,7 @@ export default {
       this.nearFilter = "brightness(130%)";
       this.nearZoom = "translate3D(-20px,0,5px)";
       this.blurOpacities = [1, 1, 0];
+      this.hoverSignOpacity = 0;
     },
     showProfile() {
       this.stop(this.aanim);
@@ -98,6 +104,7 @@ export default {
         this.middleZoom = "translate3D(0,0,0)";
         this.nearZoom = "translate3D(0,0,0)";
         this.blurOpacities = [0, 0, 0];
+        this.hoverSignOpacity = 1;
       } else {
         this.isClicked = false;
         setTimeout(() => {
@@ -133,10 +140,6 @@ export default {
     window.removeEventListener("resize", this.onResize);
   },
   computed: {
-    calcWorksLeft() {
-      let left = this.windowSize.x * 0.62 - this.windowSize.y * 0.5;
-      return left + "px";
-    },
     lottieGallery() {
       return {
         animationData: svgGallery,
@@ -162,6 +165,8 @@ export default {
 
 @import "@/assets/colors.sass"
 
+$hover-sign-size: 50px
+
 .content
   width: 100%
   height: 100%
@@ -185,24 +190,24 @@ export default {
     animation: fadein 2s
     will-change: filter, transform, opacity
 
-  img
-    position: absolute
-    object-fit: cover
-    object-position: 60% 50%
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
+    img
+      position: absolute
+      object-fit: cover
+      object-position: 60% 50%
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
 
-  .middle
-    transform: translate3d(0,0,0)
-    transition: all .5s
-    transition-timing-function: ease
+    .middle
+      transform: translate3d(0,0,0)
+      transition: all .5s
+      transition-timing-function: ease
 
-  .near
-    transform: translate3d(0,0,0)
-    transition: all .5s
-    transition-timing-function: ease
+    .near
+      transform: translate3d(0,0,0)
+      transition: all .5s
+      transition-timing-function: ease
 
   .shutter
     position: absolute
@@ -211,48 +216,80 @@ export default {
     width: 100%
     height: 100%
 
-
-.links
-  position: absolute
-  width: inherit
-  height: inherit
-  opacity: 1
-
-.button
-  position: inherit
-  background-color: rgba(255,255,255,0)
-
-.about
-  @extend .button
-  top: 20%
-  left: 60%
-  width: 35vh
-  height: 80%
-
-.works
-  @extend .button
-  top: 0%
-  width: 50vh
-  height: 70%
-
-.text
-  font-size: 4rem
-  font-family: fantasy
-  color: white
-  z-index: 100
-  pointer-events: none
-
-  .g-svg
-    position: absolute
+  .text
+    font-size: 4rem
+    font-family: fantasy
+    color: white
+    z-index: 100
     pointer-events: none
-    right: 4%
-    top: 0%
 
-  .a-svg
+    .g-svg
+      position: absolute
+      pointer-events: none
+      right: 4%
+      top: 0%
+
+    .a-svg
+      position: absolute
+      pointer-events: none
+      left: 20%
+      top: 0%
+
+  .links
     position: absolute
-    pointer-events: none
-    left: 20%
-    top: 0%
+    width: inherit
+    height: inherit
+    opacity: 1
+
+    .button
+      position: inherit
+      background-color: rgba(255,255,255,0)
+
+    .about
+      @extend .button
+      top: 20%
+      left: 58%
+      width: 35vh
+      height: 80%
+
+    .works
+      @extend .button
+      top: 0%
+      width: 50vh
+      height: 70%
+
+    .rl
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .hover-sign
+        position: relative
+        width: $hover-sign-size
+        height: $hover-sign-size
+        opacity: 0%
+        border: 3px solid #ccc
+        border-radius: 50%
+        box-sizing: border-box
+        transition: opacity .3s
+        will-change: opacity
+        pointer-events: none
+        user-select: none
+
+        &:after
+          content: ""
+          position: absolute
+          top: -3px
+          left: -3px
+          width: $hover-sign-size
+          height: $hover-sign-size
+          opacity: 100%
+          border: 3px solid #ccc
+          border-radius: 50%
+          box-sizing: border-box
+          animation: pikon 2s infinite
+          will-change: transform, opacity
+
 
 .fade-enter-active, .fade-leave-active
   transition: all 0.9s ease
@@ -267,4 +304,12 @@ export default {
   opacity: 0
   100%
   opacity: 1
+
+@keyframes pikon
+  0%
+    transform: scale(1)
+    opacity: 1
+  100%
+    transform: scale(2)
+    opacity: 0
 </style>
