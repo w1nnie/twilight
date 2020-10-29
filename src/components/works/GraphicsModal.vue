@@ -5,7 +5,7 @@
     .text
       .title {{data[index].title}}
       .description {{data[index].desc}}
-      a.links(v-for="(link, i) in data[index].links" :href="data[index].links[i]") {{data[index].linkText[i]}} 
+      a.links(v-for="(link, i) in data[index].links" target="_blank" rel="noopener noreferrer" :href="data[index].links[i]") {{data[index].linkText[i]}} 
         br
     .m-collapse(@click="closeModal") ×
 </template>
