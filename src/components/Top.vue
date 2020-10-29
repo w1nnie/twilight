@@ -181,6 +181,7 @@ export default {
     height: 100%
     perspective: 20px
     perspective-origin: 60% 50%
+    user-select: none
     animation: fadein 2s
     will-change: filter, transform, opacity
 
