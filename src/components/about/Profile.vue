@@ -5,7 +5,7 @@
       .box(v-show="isPassedProfile")
         .item
           .matter ♦︎ Screen Name
-          .description 白葱 / うぃにおん
+          .description しろねぎ / うぃにおん
         .item
           .matter ♦︎ Date of Birth
           .description 1997.05.30
