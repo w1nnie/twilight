@@ -74,7 +74,7 @@
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "ウーファ",
-        "desc": "自身初のオリジナルキャラクター。",
+        "desc": "ドット絵「ウーファ」をイラストに起こしたもの。",
         "date": 20191120,
         "position": "50% 50%",
         "links": "",
@@ -246,8 +246,8 @@
         "desc": "カラーサークル上でのピクセル値の位置が見えるカラーピッカーのchrome拡張機能。自分がイラストを制作する上で、参考にするイラストがどんな色を使っているのか、よく使うソフトウェアに馴染みの深いフォーマットで、かつweb上で簡単に調べられたら便利だと思ったので制作した。",
         "date": 20200422,
         "position": "0% 50%",
-        "links": ["https://chrome.google.com/webstore/detail/colorpicker-with-colorcir/ibpfjoicndbgalmjigfplcdjoabhdmnh?hl=ja&"],
-        "linkText": ["chrome ウェブストア"],
+        "links": ["https://chrome.google.com/webstore/detail/colorpicker-with-colorcir/ibpfjoicndbgalmjigfplcdjoabhdmnh?hl=ja&", "https://github.com/w1nnie/Chrome_CP4D"],
+        "linkText": ["chrome ウェブストア", "Github"],
         "tags": [
             "プロダクト"
         ]
@@ -260,8 +260,8 @@
         "desc": "このポートフォリオサイト。やりたい表現や見た目が面白そうな表現を手当たり次第に実装し、楽しげなサイトにした。イラストのフィルター操作やCSSアニメーション、lottieを使ったSVGアニメーションなどを用いて動きの表現の幅を追求した。",
         "date": 20201030,
         "position": "50% 50%",
-        "links": "",
-        "linkText": "",
+        "links": ["https://github.com/w1nnie/twilight"],
+        "linkText": ["Github"],
         "tags": [
             "プロダクト"
         ]
@@ -274,8 +274,8 @@
         "desc": "予めvuforiaでイラストをマーカーとして登録し、検知されたマーカーと同じ座標にドット絵のアニメーションをオーバーレイすることで、あたかも絵が動き出したように見せるというもの。同人誌即売会で頒布する本にARの要素を付加したら面白いのではないかと考え制作した。ドット絵でなくLive2Dでも試してみたいと考えている。",
         "date": 20191221,
         "position": "50% 50%",
-        "links": ["https://twitter.com/_winnie_ill/status/1208209385840730113?s=20"],
-        "linkText": ["動画"],
+        "links": ["https://twitter.com/_winnie_ill/status/1208209385840730113?s=20", "https://github.com/w1nnie/Ponar"],
+        "linkText": ["動画", "Github"],
         "tags": [
             "プロダクト"
         ]
