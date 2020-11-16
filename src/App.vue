@@ -4,14 +4,12 @@
     <transition name="fade">
       <top v-show="!l" />
     </transition>
-    <about v-show="false" />
   </div>
 </template>
 
 <script>
 import Loading from "@/components/Loading.vue";
 import Top from "@/components/Top.vue";
-import About from "@/components/About.vue";
 import Works from "@/components/Works.vue";
 
 (function(d) {
@@ -52,7 +50,6 @@ export default {
   },
   components: {
     Top,
-    About,
     Loading
   },
   mounted() {
