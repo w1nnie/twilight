@@ -82,9 +82,17 @@ export default {
         padding: 20px 20px 10px 20px
         font-weight: bold
 
+        @media (min-width:800px)
+          font-size: 1.2rem
+          padding: 15px 20px 7px 20px
+
       .description
         font-size: 1rem
         padding: 0 20px 10px 20px
+
+        @media (min-width:800px)
+          font-size: 0.7rem
+          padding: 0 20px 5px 20px
 
       .links
         padding: 10px 20px 10px 20px
