@@ -18,12 +18,13 @@ export default {
   data() {
     return {
       width: window.innerWidth / 8.9,
-      pcts: [0.95, 0.85, 0.6, 0.4, 0.9, 0.8, 0.4, 0.5, 0.2, 0.7],
+      pcts: [0.95, 0.85, 0.6, 0.4, 0.5, 0.9, 0.8, 0.4, 0.5, 0.2, 0.7],
       tools: [
         "CLIP STUDIO PAINT",
         "Aseprite",
         "Adobe Photoshop",
         "Adobe Illustrator",
+        "Live2D",
         "HTML5",
         "CSS3",
         "JavaScript",
@@ -36,6 +37,7 @@ export default {
         "aseprite.png",
         "no_image.png",
         "no_image.png",
+        "Live2D.png",
         "html5.png",
         "css3.png",
         "javascript.png",

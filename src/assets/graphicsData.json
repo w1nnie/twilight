@@ -339,5 +339,20 @@
         "tags": [
             "イラスト"
         ]
+    },
+    {
+        "filename": "steria?????",
+        "raw_ext": ".gif",
+        "thm_ext": ".png",
+        "title": "うごくうちのこステリア",
+        "desc": "オリジナルキャラクター「ステリア」をLive2DとVTube Studioを用いて動かしたもの。",
+        "date": 20210212,
+        "position": "50% 50%",
+        "links": "",
+        "linkText": "",
+        "tags": [
+            "イラスト",
+            "プロダクト"
+        ]
     }
 ]
