@@ -341,15 +341,15 @@
         ]
     },
     {
-        "filename": "steria?????",
-        "raw_ext": ".gif",
+        "filename": "steria_live2d",
+        "raw_ext": ".png",
         "thm_ext": ".png",
         "title": "うごくうちのこステリア",
-        "desc": "オリジナルキャラクター「ステリア」をLive2DとVTube Studioを用いて動かしたもの。",
+        "desc": "オリジナルキャラクター「ステリア」をLive2Dでモデリングし、VTube Studioを用いて動かしたもの。",
         "date": 20210212,
-        "position": "50% 50%",
-        "links": "",
-        "linkText": "",
+        "position": "70% 20%",
+        "links": ["https://twitter.com/_winnie_ill/status/1364880836714065929"],
+        "linkText": ["動画"],
         "tags": [
             "イラスト",
             "プロダクト"
