@@ -30,7 +30,7 @@
         .item
           .matter ♦︎ Links
           .link
-            a(href="https://twitter.com/_winnie_ill" target="_blank" rel="noopener noreferrer") Twitter<br>
+            a(href="https://twitter.com/wh_negi" target="_blank" rel="noopener noreferrer") Twitter<br>
             a(href="https://www.pixiv.net/users/21090759" target="_blank" rel="noopener noreferrer") Pixiv<br>
             a(href="https://github.com/w1nnie" target="_blank" rel="noopener noreferrer") Github
 

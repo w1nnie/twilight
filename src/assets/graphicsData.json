@@ -274,7 +274,7 @@
         "desc": "予めvuforiaでイラストをマーカーとして登録し、検知されたマーカーと同じ座標にドット絵のアニメーションをオーバーレイすることで、あたかも絵が動き出したように見せるというもの。同人誌即売会で頒布する本にARの要素を付加したら面白いのではないかと考え制作した。ドット絵でなくLive2Dでも試してみたいと考えている。",
         "date": 20191221,
         "position": "50% 50%",
-        "links": ["https://twitter.com/_winnie_ill/status/1208209385840730113?s=20", "https://github.com/w1nnie/Ponar"],
+        "links": ["https://twitter.com/wh_negi/status/1208209385840730113?s=20", "https://github.com/w1nnie/Ponar"],
         "linkText": ["動画", "Github"],
         "tags": [
             "プロダクト"
@@ -348,7 +348,7 @@
         "desc": "オリジナルキャラクター「ステリア」をLive2Dでモデリングし、VTube Studioを用いて動かしたもの。",
         "date": 20210212,
         "position": "70% 20%",
-        "links": ["https://twitter.com/_winnie_ill/status/1364880836714065929"],
+        "links": ["https://twitter.com/wh_negi/status/1364880836714065929"],
         "linkText": ["動画"],
         "tags": [
             "イラスト",
