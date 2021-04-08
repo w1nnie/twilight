@@ -36,8 +36,8 @@ export default {
       src: [
         "no_image.png",
         "aseprite.png",
-        "no_image.png",
-        "no_image.png",
+        "Photoshop.png",
+        "Illustrator.png",
         "Live2D.png",
         "html5.png",
         "css3.png",
