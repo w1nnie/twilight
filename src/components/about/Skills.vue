@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       width: window.innerWidth / 8.9,
-      pcts: [0.95, 0.85, 0.6, 0.4, 0.4, 0.9, 0.8, 0.4, 0.5, 0.2, 0.7],
+      pcts: [0.95, 0.85, 0.6, 0.4, 0.4, 0.9, 0.8, 0.4, 0.5, 0.2, 0.7, 0.25],
       tools: [
         "CLIP STUDIO PAINT",
         "Aseprite",
@@ -30,7 +30,8 @@ export default {
         "JavaScript",
         "Vue.js",
         "Unity",
-        "MATLAB"
+        "MATLAB",
+        "Python3"
       ],
       src: [
         "no_image.png",
@@ -43,7 +44,8 @@ export default {
         "javascript.png",
         "vuejs.png",
         "unity.png",
-        "matlab.png"
+        "matlab.png",
+        "Python3.png"
       ]
     };
   },
