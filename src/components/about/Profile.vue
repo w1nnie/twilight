@@ -11,7 +11,7 @@
           .description 1997.05.30
         .item
           .matter ♦︎ Education
-          .description 東京工業大学 2016.4 - 2020.3<br>東京工業大学大学院 2020.4 -
+          .description 東京工業大学 2016.4 - 2020.3<br>東京工業大学大学院 2020.4 - 2021.3
         .item
           .matter ♦︎ Major
           .description 心理物理学
@@ -26,7 +26,7 @@
           .description 基本情報処理技術者試験<br>画像処理エンジニア検定 エキスパート
         .item
           .matter ♦︎ Comment
-          .description 良い・楽しい・新しい見ための作品を見たり作ったりするのが好きです。<br>研究では見ためと脳の仕組みの関係を調べています。
+          .description 楽しくて新しい見ための作品を作ったり見たりするのが好き。
         .item
           .matter ♦︎ Links
           .link
