@@ -18,7 +18,7 @@
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "少し特別な帰り道",
-        "desc": "ノスタルジーかつ風光明媚な理想の景色に憧れを抱いて描いたイラスト。pixivにて3000ブックマークを記録した。",
+        "desc": "ノスタルジーかつ風光明媚な理想の景色に憧れを抱いて描いたイラスト。",
         "date": 20191225,
         "position": "50% 50%",
         "links": ["https://www.pixiv.net/artworks/78489630"],
@@ -173,7 +173,7 @@
         "raw_ext": ".png",
         "thm_ext": ".jpg",
         "title": "なつやすみゃ",
-        "desc": "推しVTuber「天宮こころ」のファンアート。配信のサムネイルに使っていただいた。",
+        "desc": "推しVTuber「天宮こころ」のファンアート。",
         "date": 20200731,
         "position": "45% 50%",
         "links": "",
@@ -222,20 +222,6 @@
         "linkText": "",
         "tags": [
             "イラスト"
-        ]
-    },
-    {
-        "filename": "nero",
-        "raw_ext": ".png",
-        "thm_ext": ".jpg",
-        "title": "そろそろ寝たらどうですか？",
-        "desc": "淡い配色を使ったkawaii系ロゴの習作。",
-        "date": 20200522,
-        "position": "50% 50%",
-        "links": "",
-        "linkText": "",
-        "tags": [
-            "デザイン"
         ]
     },
     {

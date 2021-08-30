@@ -8,10 +8,10 @@
           .description しろねぎ
         .item
           .matter ♦︎ Date of Birth
-          .description 1997.05.30
+          .description 05.30
         .item
           .matter ♦︎ Education
-          .description 東京工業大学 2016.4 - 2020.3<br>東京工業大学大学院 2020.4 - 2021.3
+          .description 東京工業大学 2016.4 - 2020.3
         .item
           .matter ♦︎ Major
           .description 心理物理学
